@@ -99,31 +99,6 @@ $color_2: #0563bf;
 	}
 
 
-
-	.o-menu{
-		.navmenu{
-			background: $color_2;
-			z-index: 500;
-			right: 0;
-		}
-
-		.close-menu{
-			display: block;
-		}
-
-		.mobinfo{
-			padding-left: 1rem;
-			a{
-				color: $color_1;
-				display: block;
-				margin: 1.8rem;
-				text-decoration: none;
-				&:hover{
-					text-decoration: underline;
-				}
-			}
-		}
-
 		.show-sm{
 			@include font-size(1.5);
 			padding-left: 3rem;
@@ -138,6 +113,23 @@ $color_2: #0563bf;
 				}
 			}
 		}
+		
+
+
+	.o-menu{
+		.navmenu{
+			background: $color_2;
+			z-index: 500;
+			right: 0;
+		}
+
+		.close-menu{
+			display: block;
+		}
+
+
+
+
 	}
 
 	.close-menu{

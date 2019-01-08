@@ -22,6 +22,7 @@
 
 <title>Главная</title>
 <link rel="stylesheet" href="/template/css/styles.min.css" />
+<script src="/template/js/modernizr-custom-webp.js"></script>
 <script src="/template/js/libs.min.js"></script>
 
 
@@ -36,55 +37,89 @@
 <body>
 
 <div class="main-grid">
-	<!-- =top -->
-	<div class="top">
-
-	</div>
-	<!-- =/top -->
 
 	<!-- =header -->
 	<header class="header">
-		<!-- =nav -->
-		<div class="navmenu">
-			<div class="navmenu__inner">
-				<nav id="navbar" class="mainnav">
-					<div class="mainnav__list">
-						<ul class="nav nav-tabs">
-							<li class="folder"> 
-								<a href="#">Меню 1</a>
-								<div class="subnav">
-									<ul>
-										<li><a href="#">Меню 1</a></li>
-										<li><a href="#">Меню 2</a></li>
-										<li><a href="#">Меню 3</a></li>
-										<li><a href="#">Меню 4</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="folder">
-								<a href="#">Меню 2</a>
-								<div class="subnav">
-									<ul>
-										<li><a href="#">Меню 1</a></li>
-										<li><a href="#">Меню 2</a></li>
-										<li><a href="#">Меню 3</a></li>
-										<li><a href="#">Меню 4</a></li>
-									</ul>
-								</div>
-							</li>
-							<li><a href="#">Меню 3</a></li>
-							<li><a href="#">Меню 4</a></li>
-							<li><a href="#">Меню 5</a></li>
-						</ul>
-						<div class="show-sm">
-							<a href="tel:+123456789">+1234 56-78-89</a>
-							<a href="mailto:info@transliftrus.ru">info@site.site</a>
+		<div class="container">
+			<div class="d-flex justify-content-between">
+				<div class="header__logo">
+					<a href="/" title="">
+						<picture>
+							<source srcset="/template/images/logo.webp" type="image/webp">
+							<img src="/template/images/logo.png" alt="" />
+						</picture>
+					</a>
+				</div>
+
+				<!-- =center -->
+				<div class="header__center">
+					<div class="header__contacts d-flex justify-content-between">
+						<div class="header__address">
+							<p>г. Королёв, мкр. Костино</p>
+							<p>ул. Калининградская, д.17, корп.1, офис 01</p>
+						</div>
+						<div class="header__phones">
+							<p>+7 (495) 552 4924</p>
+							<p>+7 (926) 552 4924</p>
 						</div>
 					</div>
-				</nav>	
-				<button type="button" class="close-menu"><img src="/template/images/close.png" alt="Закрыть меню" /></button>
+					<!-- =menu -->
+					<div class="navmenu">
+						<div class="navmenu__inner">
+							<nav id="navbar" class="mainnav">
+								<div class="mainnav__list">
+									<ul class="nav nav-tabs">
+										<li><a href="#" title="">О наc</a></li>
+										<li><a href="#" title="">Наши полы</a></li>
+										<li><a href="#" title="">Услуги</a></li>
+										<li><a href="#" title="">Оплата</a></li>
+										<li><a href="#" title="">Дизайнерам</a></li>
+										<li><a href="#" title="">ТехИнфо</a></li>
+										<li class="folder">
+											<a href="#" title="">СМИ</a>
+											<div class="subnav">
+												<ul>
+													<li><a href="#" title="">Фото</a></li>
+													<li><a href="#" title="">Видео</a></li>
+													<li><a href="#" title="">Статьи</a></li>
+													<li><a href="#" title="">Вопросы и Ответы</a></li>
+													<li><a href="#" title="">Отзывы</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="#" title="">Контакты</a></li>
+									</ul>
+									<div class="show-sm">
+										<a href="tel:+123456789">+1234 56-78-89</a>
+										<a href="mailto:info@transliftrus.ru">info@site.site</a>
+									</div>
+								</div>
+							</nav>	
+							<button type="button" class="close-menu"><img src="/template/images/close.png" alt="Закрыть меню" /></button>
+						</div>
+					</div>
+					<!-- =/menu -->					
+				</div>
+				<!-- =/center -->
+
+				<!-- =right -->
+				<div class="header__right">
+					<button type="button" class="btn btn-white" id="callback" data-modal="modal" data-target="callback-form">консультация по телефону</button>
+					<form action="#" class="sisea-search-form">
+						<fieldset>
+							<label>
+								<span class="visually-hidden">поиск по сайту</span>
+								<input class="form-control" type="text" name="search" id="search" value="" placeholder="поиск по сайту">
+							</label>
+							<input type="hidden" name="id" value="">
+							<button type="submit" class="submit" aria-label="найти"></button>
+						</fieldset>
+					</form>
+				</div>
+				<!-- =/right -->
 			</div>
 		</div>
+		<!-- =nav -->
 		<button type="button" class="navbar-toggle" aria-label="Показать/Скрыть меню">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -93,6 +128,29 @@
 		<!-- =/nav -->
 	</header>
 	<!-- =/header -->
+
+	<!-- =homeslider -->
+	<div class="homeslider" id="homeslider">
+		<div>
+			<img src="images/homeslider/homeslider-1.jpg" alt="" class="img-responsive" />
+			<div class="text">
+				НАПОЛЬНЫЕ ПОКРЫТИЯ <br>
+				СОЗДАЮЩИЕ АТМОСФЕРУ <br>
+				УЮТа <br>
+				В ВАШЕМ ДОМЕ
+			</div>
+		</div>
+		<div>
+			<img src="images/homeslider/homeslider-1.jpg" alt="" class="img-responsive" />
+			<div class="text">
+				НАПОЛЬНЫЕ ПОКРЫТИЯ <br>
+				СОЗДАЮЩИЕ АТМОСФЕРУ <br>
+				УЮТа <br>
+				В ВАШЕМ ДОМЕ
+			</div>
+		</div>
+	</div>
+	<!-- =/homeslider -->
 
 	<!-- =main -->
 	<div class="main">

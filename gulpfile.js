@@ -46,7 +46,7 @@ gulp.task('css-libs', ['scss'],  function(){
 // автоперезагрузка страницы браузера
 gulp.task('browser-sync', function(){
 	browserSync({
-		proxy: "subdomain.autoservice.local",
+		proxy: "subdomain.polvinil.local",
 		notify: false
 	})
 });
