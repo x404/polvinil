@@ -1,0 +1,87 @@
+.homeslider{
+	font-size: 3rem;
+	color: $color2;
+	.slick-slide{
+		position: relative; 
+	}
+	.container{
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translateX(25%);
+		margin-left: -8px;
+		height: 100%;
+	}
+	.text{
+		left: 0;
+		margin-left: 14rem;
+		padding: 2rem 14rem 2rem 2.4rem;
+		position: absolute;
+		top: 0;		
+		transform: translateY(55%);
+		background: rgba(61, 22, 6, .65);
+	}
+
+	.slick-dots{
+		background: rgba(67, 74, 84, .85);
+		height: 25px;
+		display: flex;
+		align-items: center;
+		border-radius: 25px;
+		justify-content: center;
+		padding: 0 2px;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		&:before{
+			@extend .before;
+			height: 25px;			
+			border-radius: 25px;
+			bottom: -25px;
+			width: 100%;
+			background: linear-gradient(to bottom, rgba(67, 74, 84, .7), rgba(0,0,0,0) 35% );
+
+		}
+		&:after{
+			@extend .before;
+			background: linear-gradient(to right, rgba(255,255,255,0), #fff 50%, rgba(255,255,255,0) 100%);
+			bottom: 0;
+			height: 1px;
+			left: -25px;
+			opacity: .5;
+			width: calc(100% + 50px);
+		}
+		li{
+			margin: 0 5px;
+			button{
+				background: #808080;
+				border-radius: 50%;
+				border: none;
+				display: block;
+				height: 10px;
+				overflow: hidden;
+				font-size: 0;
+				padding: 0;
+				width: 10px;
+				&:after{
+					@extend .before;
+					background: linear-gradient(to bottom, #808080, rgba(0,0,0,0) 50% );
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					bottom: -17px;
+				}
+			}
+
+			&.slick-active{
+				button{
+					background: #fff;
+					&:after{
+						background: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(0,0,0,0) 50% );
+					}
+				}
+			}
+		}
+	}
+}

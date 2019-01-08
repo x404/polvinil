@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+	$('#homeslider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		appendArrows: false,
+		dots: true,
+		autoplay: false,
+		autoplaySpeed: 5000
+	})
+
 
 	// mobile-menu
 	$('#navbar').each(function(){
