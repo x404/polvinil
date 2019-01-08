@@ -118,16 +118,35 @@ button{
 	font-size: 1.4rem;
 	white-space: nowrap;
 	transition: .3s;
+	border-radius: 10px;
 	&-white{
 		background: #fff;
 		color: $color3;
-		border-radius: 10px;
 		&:hover{
 			color: $color4;
 		}
 	}
+
+	&-green{
+		background: $color4;
+		border: 2px solid $color4;
+		color: $color2;
+		margin: 2.5rem 0;
+		padding: 1rem 1.8rem;
+
+		&:hover{
+			color: $color4;
+			border-color: inherit;
+			background-color: $color2;
+		}
+	}
 }
 
+.center-block{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 input[type="text"]{
 	font-family: Corbel;
@@ -263,7 +282,7 @@ input[type="text"]{
 			&:last-child{
 				margin-right: 0;
 			}
-			
+
 			&:focus-within,
 			&:hover{
 				& > a{
