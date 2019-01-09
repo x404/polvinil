@@ -94,7 +94,7 @@
 
 .rubric{
 	&__img{
-		filter: drop-shadow(3px 5px 5px #000);
+		filter: drop-shadow(0 0 5px rgba(0,0,0,.85));
 	}
 
 	&__plate{
@@ -147,3 +147,160 @@
 		font-style: italic;
 	}
 }
+
+
+.htitle{
+	background-color: rgba(255,255,255,.8);
+	display: inline-block;
+	font-size: 3rem;
+	font-weight: normal;
+	letter-spacing: -.02em;
+	padding: .5rem 2rem;
+	text-transform: uppercase;
+}
+
+
+.home-section{
+	background-size: cover;
+	padding-bottom: .8rem;
+	background-repeat: no-repeat;
+}
+
+//advantages
+.advantages{
+	background-image: url(../images/advantages-bg.jpg);
+	background-color: #c87f54;
+	margin-top: 3.5rem;
+
+	.d-grid{
+		grid-template-columns: repeat(7, 156px);
+		justify-content: space-between;
+		// grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+	}
+
+	header{
+		text-align: center;
+		padding: 2.5rem 0 3.3rem;
+	}
+}
+.advantage{
+	&__item{
+		margin-bottom: 1.6rem;
+		white-space: nowrap;
+	}
+	&__link{
+		color: $color6;
+		text-transform: uppercase;
+		text-align: center;
+		display: block;
+		&:hover{
+			color: $color6;
+			text-decoration: none;
+			img{
+				filter: none
+			}
+		}
+		img{
+			display: block;
+			filter: grayscale(1) brightness(1.6);
+			margin: 0 auto 1.4rem;
+			transition: filter .3s
+		}
+	}
+}
+///advantages
+
+
+// =aboutcifr
+.aboutcifr{
+	background-color: $color6;
+	padding: 1.5rem 0 1px;
+	.cifr,
+	.green{
+		color: $color4;
+		font-size: 6rem;
+		line-height: 1;
+	}
+	.cifr{
+		letter-spacing: -.05em;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	.green{
+		font-size: 3.6rem;
+	}
+}
+.about{
+	&__wrapper{
+		padding-bottom: 60px;
+	}
+	&__item{
+		font-size: 2.4rem;
+		text-transform: uppercase;
+		position: relative;
+		padding-left: 30px;
+		&:after{
+			background: url(../images/arrow-long.png) no-repeat;
+			@extend .before;
+			left: 0;
+			width: 362px;
+			height: 56px;
+			bottom: -60px;
+		}
+	}
+}
+// =#aboutcifr
+
+
+// =locks
+.connections{
+	background-color: #aba08a;
+	background-image: url(../images/connection-bg.jpg);
+	padding-top: 7.2rem;
+
+}
+.connection{
+	&__plate{
+		margin: 6rem 0 5rem;
+	}
+
+	&__link{
+		color: $color2;
+		display: block;
+		position: relative;
+		&:hover{
+			color: $color2;
+		}
+	}
+
+	&__desc{
+		padding: 1.2rem .6rem;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__title{
+		font-weight: normal;
+		color: $color2;
+		font-size: 3rem;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+	&__subtitle{
+		font-size: 3rem;
+		line-height: 1;
+		margin-top: 1.8rem;
+	}
+
+	&__text{
+		background-color: rgba(0,0,0,.5);
+		margin-top: 1.6rem;
+		padding: .2rem;
+		font-size: 1.3rem;
+	}
+}
+// =/locks
