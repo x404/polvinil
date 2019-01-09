@@ -340,6 +340,7 @@
 // =steps
 .steps{
 	background-image: url(../images/steps-bg.webp);
+	background-color: #4a311d;
 	min-height: 42rem;
 	padding: 3rem 0;
 	.container{
@@ -481,3 +482,70 @@
 
 }
 // =/steps
+
+
+
+// =reviews
+.reviews{
+	background-image: url(../images/reviews-bg.webp);
+	background-color: #bfa892;
+	padding: 3.5rem 0 1rem;
+	min-height: 315px;
+	#reviews-carousel{
+		margin-top: 3.4rem;
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__more{
+		display: inline-block;
+		font-style: italic;
+		font-size: 1.8rem;
+		margin-top: 1rem;
+		&:hover{
+			color: $color7;
+			text-decoration: underline;			
+		}
+	}
+
+	.slick{
+		&-arrow{
+			background: url(../images/carousel-arrow.webp) no-repeat;
+			border:none;
+			filter: grayscale(1) brightness(3);
+			height: 57px;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			margin-top: -26px;
+			transition: filter .3s;
+			width: 26px;
+			&:hover{
+				filter: none;
+			}
+		}
+		&-prev{
+			left: -50px;
+		}
+		&-next{
+			transform: rotate(180deg);
+			right: -50px;
+		}
+	}
+}
+.review{
+	&__item{
+		min-height: 165px;
+		box-shadow: inset 0 0 9px rgba(205, 205, 205, 0.75);
+		background-color: rgba(255, 255, 255, 0.65);
+		border-radius: 10px;
+		padding: 1.8rem 2.2rem;
+	}
+	&__title{
+		font-size: 1.8rem;
+	}
+	&__text{
+		margin-top: 1rem;
+	}
+}
+// =/reviews
