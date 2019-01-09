@@ -48,15 +48,15 @@
 
 
 /* font-family: "SegoeUIRegular"; */
-// @font-face {
-// 	font-family: "SegoeUIRegular";
-// 	src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
-// 	src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
-// 	url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
-// 	url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
-// 	font-style: normal;
-// 	font-weight: normal;
-// }
+@font-face {
+	font-family: "SegoeUI";
+	src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+	src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+	url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
 // /* font-family: "SegoeUIBold"; */
 // @font-face {
 // 	font-family: "SegoeUIBold";

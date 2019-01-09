@@ -508,31 +508,41 @@
 		}
 	}
 
-	.slick{
-		&-arrow{
-			background: url(../images/carousel-arrow.webp) no-repeat;
-			border:none;
+
+}
+
+
+.slick{
+	&-arrow{
+		background: url(../images/carousel-arrow.webp) no-repeat;
+		border:none;
+		height: 57px;
+		padding: 0;
+		position: absolute;
+		top: 50%;
+		margin-top: -26px;
+		transition: filter .3s;
+		width: 26px;
+		&:hover{
+			filter: none;
+		}
+		&-white{
 			filter: grayscale(1) brightness(3);
-			height: 57px;
-			padding: 0;
-			position: absolute;
-			top: 50%;
-			margin-top: -26px;
-			transition: filter .3s;
-			width: 26px;
-			&:hover{
-				filter: none;
-			}
 		}
-		&-prev{
-			left: -50px;
-		}
-		&-next{
-			transform: rotate(180deg);
-			right: -50px;
+		&-gray{
+			filter: grayscale(1) brightness(1.8)
 		}
 	}
+	&-prev{
+		left: -50px;
+	}
+	&-next{
+		transform: rotate(180deg);
+		right: -50px;
+	}
 }
+
+
 .review{
 	&__item{
 		min-height: 165px;
@@ -549,3 +559,91 @@
 	}
 }
 // =/reviews
+
+
+// =info__tabs
+.info__tabs{
+	background-color: $color8;
+	padding: 2.5rem 0;
+	min-height: 430px;
+	.nav-tabs{
+		justify-content: center;
+	}
+	.nav-item{
+		background-color: $color3;
+		border-radius: 8px;
+		color: $color2;
+		font-family: "SegoeUI";
+		margin: 0 .9rem;
+		padding: .5rem 2rem;
+		text-transform: uppercase;
+		font-style: normal;
+		&.active,
+		&:hover{
+			color: $color2;
+			background-color: $color4;
+		}
+	}
+
+	.tab-content{
+		.more{
+			font-size: 1.8rem;
+			font-style: italic;
+			margin-top: 2.5rem;
+			text-align: center;
+			&__link{
+				@extend .tdn;				
+				color: $color7;
+			}
+		}
+	}
+}
+
+#photo-carousel{
+	display: flex;
+	margin-top: 6.5rem;
+	&.slick-initialized{
+		display: block;
+	}
+
+	.photo{
+		&__item{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.photo{
+	&__item{
+		width: 366px;
+	}
+	&__link{
+		display: block;
+		position: relative;
+		&:hover{
+			.photo{
+				&__title{
+					background-color: rgba(71, 178, 89, .75);
+				}
+			}
+		}
+	}
+	&__title{
+		color: $color2;
+		display: flex;
+		height: 100%;
+		left: 0;
+		padding: 0 1rem;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		transition: background .3s;
+		top: 0;
+		width: 100%;
+		span{
+			margin: auto;
+		}
+	}
+}
+// =/info__tabs

@@ -12,14 +12,25 @@ $(document).ready(function(){
 
 
 	$('#reviews-carousel').slick({
- 		prevArrow: '<button type="button" class="slick-prev slick-arrow" aria-label="Назад"></button>',
-        nextArrow: '<button type="button" class="slick-next slick-arrow" aria-label="Вперёд"></button>',
+ 		prevArrow: '<button type="button" class="slick-prev slick-arrow slick-arrow-white" aria-label="Назад"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow slick-arrow-white" aria-label="Вперёд"></button>',
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		adaptiveHeight: true,
 		autoplay: false,
 		autoplaySpeed: 5000
+	});
+
+
+	$('#photo-carousel').slick({
+ 		prevArrow: '<button type="button" class="slick-prev slick-arrow slick-arrow-gray" aria-label="Назад"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow slick-arrow-gray" aria-label="Вперёд"></button>',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 5000
 	})
+
 
 
 	// mobile-menu
