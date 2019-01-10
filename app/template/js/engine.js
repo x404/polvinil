@@ -30,7 +30,18 @@ $(document).ready(function(){
 		autoplay: false,
 		autoplaySpeed: 5000
 	})
+	$('#video-carousel').slick({
+ 		prevArrow: '<button type="button" class="slick-prev slick-arrow slick-arrow-gray" aria-label="Назад"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow slick-arrow-gray" aria-label="Вперёд"></button>',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 5000
+	})
 
+$('#nav-video-tab').on('shown.bs.tab', function (e) {
+	$('#video-carousel').slick('setPosition');
+})
 
 
 	// mobile-menu
