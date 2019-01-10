@@ -59,8 +59,11 @@ input::-moz-focus-inner{
 /*** standart classes *****/
 p{}
 a{
-	color: $color1;
-	transition: .3s
+	color: $color4;
+	transition: .3s;
+	&:hover{
+		color: $color4;
+	}
 }
 h1{font-size:2.5rem}
 h2{font-size:2.4rem}
@@ -417,4 +420,93 @@ input[type="text"]{
 	};
 }
 /* =/share
+---------------------------*/
+
+
+
+/* =footer
+---------------------------*/
+.footer{
+	background: $color9;
+	font-family: "Segoe UI";
+	font-style: italic;
+	margin-top: 2.5rem;
+	padding: 3rem 0 0;
+
+	&__left{
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+		max-width: 440px;
+	}
+
+	&__logo{
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 6rem;
+	}
+
+	&__right{
+		width: 40%;
+	}
+
+	&__contacts,
+	.social{
+		align-items: center;
+		border-bottom: 1px solid #d5d5d5;
+		border-top: 1px solid #d5d5d5;
+		display: flex;
+		justify-content: center;
+		min-height: 13rem;
+	}
+
+	
+	&__contacts{
+		flex-direction: column;
+		.tel{
+			font-size: 1.8rem;
+			color: $color4;
+		}
+	}
+
+	.copyright{
+		white-space: nowrap;
+	}
+
+	.copyright,
+	.creators{
+		align-items: center;
+		color: $color1;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		padding: 1rem 0;		
+		text-align: center;
+	}
+
+
+	.social{
+		display: flex;
+		padding-top: 1rem;
+		a{
+			margin-right: .5rem;
+			opacity: .5;
+			transition: opacity .3s;
+			&:last-child{
+				margin-right: 0;
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+
+	&__right{
+		min-height: 13rem;
+	}
+}
+/* =/footer
 ---------------------------*/
