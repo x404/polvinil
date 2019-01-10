@@ -148,6 +148,11 @@ button{
 			background-color: $color2;
 		}
 	}
+
+	&-faq{
+		padding: 1.8rem 0;
+		width: 23rem;
+	}
 }
 
 .d-grid{
@@ -383,5 +388,33 @@ input[type="text"]{
 
 
 #ymap{
-	height: 50rem;
+	height: 33rem;
 }
+
+
+
+/* =share
+---------------------------*/
+.share{
+	color: #808080;
+	font-family: "Segoe UI";
+	font-size: 1.8rem;
+	font-style: italic;
+	margin-top: 4rem;
+	position: relative;
+	padding-top: 2rem;
+	text-align: center;
+	p{
+		padding-bottom: 1rem;
+	}
+	&:before{
+		@extend .before;
+		border-top: 1px solid #a3d8ac;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%);
+		width: 382px;
+	};
+}
+/* =/share
+---------------------------*/
