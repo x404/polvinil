@@ -605,6 +605,19 @@
 	<!-- =/info -->
 
 	<button type="button" class="btn btn-green center-block">ПРИГЛАСИТЬ СПЕЦИАЛИСТА</button>
+
+
+	<div class="map">
+		<div id="ymap"></div>
+	</div>
+		
+	<!-- =vcard -->
+	<div class="vcard text-center">
+		<p>г. Королёв, мкр. Костино, ул. Калининградская д.17, корп.1, офис XX</p>
+		<p>+7 (495) 552 49 24  |  <a href="mailto:info@polvinil.ru" title="">info@polvinil.ru</a></p>
+	</div>
+	<!-- =/vcard -->
+
 	<button type="button" class="btn btn-green center-block">ОСТАЛИСЬ ВОПРОСЫ?</button>
 
 
@@ -631,5 +644,34 @@
 <script type="text/javascript" src="/template/js/slick.min.js"></script>
 <script src="/template/js/jquery.fancybox.min.js"></script>
 <script src="/template/js/engine.js"></script>
+
+
+<script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
+<script>
+var map;
+var myCollection;	
+ymaps.ready(function () {
+	map = new ymaps.Map('ymap', {
+		center: [ 55.764394, 37.655095 ],
+		zoom: 17
+	});
+    myPlacemark = new ymaps.Placemark(map.getCenter(), {
+            balloonContent: 'г. Королёв, мкр. Костино, ул. Калининградская д.17, корп.1, офис XX',
+            iconCaption: ''
+    }, {
+         preset: 'islands#redDotIcon'
+    }),
+	map.behaviors.disable('scrollZoom'); 
+	map.geoObjects.add(myPlacemark);
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+})
+</script>
+
 </body>
 </html>

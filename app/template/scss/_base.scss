@@ -370,7 +370,7 @@ input[type="text"]{
 	}
 }
 
-
+ 
 
 .visually-hidden{
 	position: absolute;
@@ -378,4 +378,10 @@ input[type="text"]{
 	height: 1px;
 	overflow: hidden;
 	clip: rect(0 0 0 0);
+}
+
+
+
+#ymap{
+	height: 50rem;
 }

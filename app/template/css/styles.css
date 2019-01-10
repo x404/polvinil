@@ -3517,7 +3517,7 @@ em strong {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after {
   content: "";
   display: block;
   position: absolute; }
@@ -3710,6 +3710,9 @@ input[type="text"] {
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0); }
+
+#ymap {
+  height: 50rem; }
 
 .homeslider {
   font-size: 3rem;
@@ -4108,6 +4111,7 @@ input[type="text"] {
 .info__tabs {
   background-color: #f2f2f2;
   padding: 2.5rem 0;
+  margin-bottom: 3rem;
   min-height: 430px; }
   .info__tabs .nav-tabs {
     justify-content: center; }
@@ -4258,6 +4262,33 @@ input[type="text"] {
   border-top: 1px solid #fff;
   padding: .6rem 0;
   position: relative; }
+
+.map {
+  position: relative; }
+  .map:before, .map:after {
+    z-index: 999; }
+  .map:after {
+    background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAHCAQAAABjRe8fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAQoSIR5n61XGAAAAHUlEQVQI12NgsGJi+MLE8JmJ4QsTwzcGBlYGBiYAML4EG8OqhRoAAAAASUVORK5CYII=") repeat-x;
+    width: 100%;
+    height: 7px;
+    z-index: 998;
+    top: 0px;
+    left: 0; }
+  .map:before {
+    background: url(../images/map-top.png) center top;
+    height: 79px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 406px; }
+
+.vcard {
+  font-family: "Segoe UI";
+  font-size: 1.5rem;
+  margin-top: 1.5rem; }
+  .vcard a {
+    color: #47b259; }
+    .vcard a:hover {
+      text-decoration: underline; }
 
 /* =mobile-menu
 ---------------------------*/
