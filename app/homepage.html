@@ -104,7 +104,7 @@
 
 				<!-- =right -->
 				<div class="header__right">
-					<button type="button" class="btn btn-white" id="callback" data-modal="modal" data-target="callback-form">консультация по телефону</button>
+					<button type="button" class="btn btn-white" data-toggle="modal" data-target="#callback">консультация по телефону</button>
 					<form action="#" class="sisea-search-form">
 						<fieldset>
 							<label>
@@ -673,10 +673,48 @@
 	<!-- =/footer -->	
 </div>
 
+
+<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="callback-form">
+				<fieldset>
+					<label for="callback-name" class="visually-hidden">как вас зовут</label>
+				    <input type="name" name="name" id="callback-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" autofocus /><span class="error"></span>
+
+				    <label for="callback-tel" class="visually-hidden" tabindex="1">ваш телефон</label>
+					<input type="tel" name="tel" id="callback-tel" class="form-control required tel" value="" placeholder="Ваш телефон" /><span class="error"></span>
+
+					<input type="submit" name="callback_submit" class="submit" tabindex="2" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox1" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
+						<label for="checkbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="/template/css/jquery.fancybox.min.css" />
 <script type="text/javascript" src="/template/js/slick.min.js"></script>
 <script src="/template/js/jquery.fancybox.min.js"></script>
+
+<script src="/template/js/inputmask/inputmask.js"></script>
+<script src="/template/js/inputmask/inputmask.phone.extensions.js"></script>
+<script src="/template/js/inputmask/jquery.inputmask.js"></script>
+
+
 <script src="/template/js/engine.js"></script>
 
 <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>

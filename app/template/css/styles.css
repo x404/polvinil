@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1425,125 +1426,6 @@ template {
   -ms-overflow-style: -ms-autohiding-scrollbar; }
   .table-responsive > .table-bordered {
     border: 0; }
-
-.modal-open {
-  overflow: hidden; }
-  .modal-open .modal {
-    overflow-x: hidden;
-    overflow-y: auto; }
-
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  display: none;
-  overflow: hidden;
-  outline: 0; }
-
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 0.5rem;
-  pointer-events: none; }
-  .modal.fade .modal-dialog {
-    transition: transform 0.3s ease-out;
-    transform: translate(0, -25%); }
-    @media screen and (prefers-reduced-motion: reduce) {
-      .modal.fade .modal-dialog {
-        transition: none; } }
-  .modal.show .modal-dialog {
-    transform: translate(0, 0); }
-
-.modal-dialog-centered {
-  display: flex;
-  align-items: center;
-  min-height: calc(100% - (0.5rem * 2)); }
-  .modal-dialog-centered::before {
-    display: block;
-    height: calc(100vh - (0.5rem * 2));
-    content: ""; }
-
-.modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0; }
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  background-color: #000; }
-  .modal-backdrop.fade {
-    opacity: 0; }
-  .modal-backdrop.show {
-    opacity: 0.5; }
-
-.modal-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 0px solid #e9ecef;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem; }
-  .modal-header .close {
-    padding: 1rem;
-    margin: -1rem -1rem -1rem auto; }
-
-.modal-title {
-  margin-bottom: 0;
-  line-height: 1.5; }
-
-.modal-body {
-  position: relative;
-  flex: 1 1 auto;
-  padding: 1rem; }
-
-.modal-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 1rem;
-  border-top: 0px solid #e9ecef; }
-  .modal-footer > :not(:first-child) {
-    margin-left: .25rem; }
-  .modal-footer > :not(:last-child) {
-    margin-right: .25rem; }
-
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll; }
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 500px;
-    margin: 1.75rem auto; }
-  .modal-dialog-centered {
-    min-height: calc(100% - (1.75rem * 2)); }
-    .modal-dialog-centered::before {
-      height: calc(100vh - (1.75rem * 2)); }
-  .modal-sm {
-    max-width: 300px; } }
-
-@media (min-width: 992px) {
-  .modal-lg {
-    max-width: 800px; } }
 
 .nav {
   display: flex;
@@ -3509,15 +3391,19 @@ em strong {
   font-weight: normal;
   font-family: "SegoeUIBoldItalic"; }
 
-.tdn, .info__tabs .tab-content .more__link {
+.tdn, .info__tabs .tab-content .more__link, #callback form .policy a {
   text-decoration: none; }
-  .tdn:hover, .info__tabs .tab-content .more__link:hover {
+  .tdn:hover, .info__tabs .tab-content .more__link:hover, #callback form .policy a:hover {
     text-decoration: underline; }
 
 .tdu {
   text-decoration: underline; }
   .tdu:hover {
     text-decoration: none; }
+
+.form-control {
+  font-family: "SegoeUI";
+  font-style: italic; }
 
 .before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after {
   content: "";
@@ -3570,6 +3456,57 @@ input[type="text"] {
   font-size: 1.4rem;
   padding-left: 1rem;
   padding-right: 1rem; }
+
+.user-access + label {
+  cursor: pointer;
+  color: #808080; }
+
+.user-access:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.user-access:not(checked) + label {
+  display: block;
+  position: relative;
+  /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 40px;
+  /* оставляем слева от label место под псевдочекбокс */ }
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #307a56;
+  background-color: #fff;
+  border-radius: 3px; }
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+  border-color: #307a56; }
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+  content: '*';
+  position: absolute;
+  top: -5px;
+  left: 7px;
+  width: 22px;
+  height: 22px;
+  font-size: 30px;
+  border-radius: 3px; }
+
+input.submit:disabled {
+  background: rgba(128, 128, 128, 0.3) !important;
+  cursor: default; }
+  input.submit:disabled:hover {
+    opacity: 1 !important; }
+
+.policy a {
+  color: #307a56; }
 
 /* =header
 ---------------------------*/
@@ -3803,6 +3740,13 @@ input[type="text"] {
 
 /* =/footer
 ---------------------------*/
+label.error {
+  display: none !important; }
+
+.form-control.error {
+  outline: none;
+  border-color: red !important; }
+
 .homeslider {
   font-size: 3rem;
   color: #fff; }
@@ -4608,6 +4552,184 @@ input[type="text"] {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+.modal-open {
+  overflow: hidden; }
+  .modal-open .outerwrapper {
+    filter: blur(6px); }
+
+.modal {
+  font-family: "SegoeUI";
+  font-style: italic;
+  position: fixed;
+  top: 16%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  overflow: hidden;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+    transform: translate(0, -25%); }
+  .modal.show .modal-dialog {
+    transform: translate(0, 0); }
+  .modal-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1200px; }
+  .modal .submit {
+    background-color: #47b259;
+    background-image: linear-gradient(to top, #307a56 0%, #8bbaa3 100%);
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: "SegoeUI";
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    padding: .8rem 5rem; }
+    .modal .submit:hover {
+      background-image: linear-gradient(to top, #8bbaa3 0%, #307a56 100%); }
+
+.sending,
+.thank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -1px;
+  height: auto;
+  left: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  right: 0;
+  top: 0;
+  font-size: 1.8rem;
+  padding: 8rem 0 9rem; }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  background-color: #f7f7f7;
+  position: relative;
+  width: auto;
+  top: 0;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .modal-dialog .container {
+    position: relative; }
+  .modal-dialog .close-modal {
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .modal-dialog .close-modal svg {
+      transition: transform .3s; }
+    .modal-dialog .close-modal:hover svg {
+      transform: rotate(90deg); }
+  .modal-dialog .title {
+    color: #333;
+    text-transform: uppercase;
+    padding-bottom: 1rem; }
+  .modal-dialog .form-control {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px; }
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1071;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.show {
+    opacity: .5 !important; }
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+.close-modal {
+  background: none;
+  border: none;
+  color: #307a56;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  cursor: pointer; }
+  .close-modal line {
+    stroke: #47b259;
+    stroke-width: 4; }
+  .close-modal:hover span {
+    text-decoration: underline; }
+  .close-modal span {
+    color: #47b259; }
+
+form .thank {
+  color: #808080;
+  padding: 5rem 0;
+  margin-bottom: 3rem; }
+
+#callback .modal-dialog {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 98px;
+  padding: 4rem 0 4px;
+  width: 100%; }
+
+#callback form .form-control {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #808080;
+  text-align: center;
+  height: 3.8rem;
+  width: 100%; }
+  #callback form .form-control:disabled {
+    background-color: #EAEBE3; }
+
+#callback form .policy {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  color: #808080; }
+
+#about .modal__content {
+  background-color: #fff;
+  border: 1px solid #47b259;
+  color: #808080;
+  line-height: 1.7;
+  padding: 2rem 1.5rem; }
+  #about .modal__content .title {
+    padding-bottom: .5rem;
+    text-transform: uppercase; }
+
+.submit:disabled {
+  cursor: default !important;
+  background-color: #ccc !important; }
 
 /* =mobile-menu
 ---------------------------*/

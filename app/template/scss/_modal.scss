@@ -1,0 +1,265 @@
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and stuff
+
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+  .outerwrapper{
+  	filter: blur(6px);
+  }
+}
+
+// Container that the modal scrolls within
+.modal {
+	font-family: "SegoeUI";
+	font-style: italic;
+	position: fixed;
+	top: 16%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	overflow: hidden;
+	// Prevent Chrome on Windows from adding a focus outline. For details, see
+	// https://github.com/twbs/bootstrap/pull/10951.
+	outline: 0;
+	// We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
+	// gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
+	// See also https://github.com/twbs/bootstrap/issues/17695
+
+	// When fading in the modal, animate it to slide down
+	&.fade .modal-dialog {
+		transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+	transform: translate(0, -25%);
+	}
+	&.show .modal-dialog { transform: translate(0, 0); }
+
+	&-container{
+	  	margin-left: auto;
+	  	margin-right: auto;
+	  	position: relative;
+	  	width: 1200px;
+	}
+
+
+	.submit{
+		background-color: $color4;
+		background-image: linear-gradient(to top, #307a56 0%, #8bbaa3 100%);
+		border-radius: 4px;
+		border: none;
+		color: $color2;
+		cursor: pointer;
+		display: block;
+		font-family: "SegoeUI";
+		font-size: 1.4rem;
+		font-style: italic;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;
+		padding: .8rem 5rem;
+		&:hover{
+			background-image: linear-gradient(to top, #8bbaa3 0%, #307a56 100%);
+		}
+	}
+}
+
+.sending,
+.thank{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: -1px;
+	height: auto;
+	left: 0;
+	margin-bottom: 0;
+	font-size: 1.5rem;
+	right: 0;
+	top: 0;
+	font-size: 1.8rem;
+	padding: 8rem 0 9rem;
+}
+
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+	background-color: $color11;
+	position: relative;
+	width: auto;
+	// margin: 10px;
+	top: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	.container{
+		position: relative;
+	}
+
+	.close-modal{
+		top: -32px;
+		left: 50%;
+		transform: translateX(-50%);
+		svg{
+			transition: transform .3s;			
+		}
+		&:hover{
+			svg{
+				transform: rotate(90deg);				
+			}
+		}
+	}
+
+	.title{
+		// @include font-size(1.8);
+		color: $color10;
+		text-transform: uppercase;
+		padding-bottom: 1rem;
+	}
+
+	.form-control{
+		background: #fff;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+	}
+}
+
+// Actual modal
+.modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	outline: 0;
+}
+
+// Modal background
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1071;
+	background-color: #000;
+
+	// Fade for backdrop
+	&.fade { opacity: 0; }
+	&.show { opacity: .5 !important }
+}
+
+
+
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.close-modal{
+	background: none;
+	border: none;
+	color: $color7;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 99;
+	cursor: pointer;
+        line{
+			stroke: $color4;
+			stroke-width:4
+        }
+	&:hover{
+		span{
+			text-decoration: underline;
+		}
+	}
+	span{
+		color: $color4;
+	}
+}
+
+form{
+	.thank{
+		color: $color3;
+		// background-color: $color2;
+		// border: 1px solid $color4;
+		padding: 5rem 0;
+		margin-bottom: 3rem;
+	}
+}
+
+#callback{
+	.modal-dialog{
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 98px;
+		padding: 4rem 0 4px;
+		width: 100%;
+	}
+
+
+	form{
+		// background-color: $color2;
+		$color: $color10;
+		.form-control{
+			margin-bottom: 1rem;
+			font-size: 1.8rem;
+			// border:1px solid $color;
+			color: $color3;
+			text-align: center;
+			height: 3.8rem;
+			width: 100%;
+			&:disabled{
+				background-color: #EAEBE3;
+			}
+		}
+
+
+		.policy{
+			margin-top: 2.2rem;
+			margin-bottom: 1rem;
+			color: $color3;
+			a{
+				@extend .tdn;
+			}
+		}
+	}
+}
+
+#about{
+	.modal__content{
+		.title{
+			padding-bottom: .5rem;
+			text-transform: uppercase;
+		}
+
+		background-color: $color2;
+		border: 1px solid $color4;
+		color: $color3;
+		line-height: 1.7;
+		padding: 2rem 1.5rem;
+	}
+}
+
+.submit:disabled{
+	cursor: default !important;
+	background-color: #ccc !important;
+}
