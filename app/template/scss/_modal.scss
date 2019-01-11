@@ -206,7 +206,11 @@ form{
 	}
 }
 
-#callback{
+#callback,
+
+.modal
+
+{
 	.modal-dialog{
 		margin-left: 0;
 		margin-right: 0;
@@ -220,6 +224,7 @@ form{
 		// background-color: $color2;
 		$color: $color10;
 		.form-control{
+			font-family: SegoeUI;
 			margin-bottom: 1rem;
 			font-size: 1.8rem;
 			// border:1px solid $color;

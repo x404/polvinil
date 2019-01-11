@@ -95,10 +95,10 @@ $(document).ready(function(){
 	// validation forms
 	$('#callback-form').validate({
         rules : {
-            tel:{validphone:true}           
+            tel:{validphone:true}
         },
 		submitHandler: function(form){
-			var strSubmit=$(form).serialize();
+			var strSubmit=$(form).serialize();  
 			$(form).find('fieldset').hide();
 			$(form).append('<div class="sending">Идет отправка ...</div>');
 
@@ -109,7 +109,39 @@ $(document).ready(function(){
 				success: function(){
 					document.querySelector('.sending').remove();
 					$(form).append(thankcallback);
-					startClock('callback-form');
+					// startClock($(form).attr('id'));
+					startClock($(form));
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
+	$('#examples-form').validate({
+        rules : {
+            tel:{validphone:true}           
+        },
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();  
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					document.querySelector('.sending').remove();
+					$(form).append(thankcallback);
+					// startClock($(form).attr('id'));
+					startClock($(form));
 				},
 				error: function(){
 					alert(errorTxt);
@@ -162,6 +194,15 @@ function showTime(sendform){
 	if (sec <=0) {
 		stopClock();
 
+		modal = $('#' + sendform).closest('.modal');
+		modal.modal('hide');
+		setTimeout(function(){
+			modal.find('.thank').remove();
+			modal.find('.form-control, textarea').val('');
+			modal.find('fieldset').show();
+		}, 1000)
+
+
 		switch (sendform){
 			// case 'qorder-form':
 			// 	$('.qorder__box .thank').fadeOut('normal',function(){
@@ -169,13 +210,13 @@ function showTime(sendform){
 			// 		$('.qorder__box .form-control, .qorder__box textarea').val('');
 			// 	});
 			// 	break;
-			case 'callback-form':
-				$('#callback .thank').fadeOut('normal',function(){
-					$('#callback .thank').remove();
-					$('#callback .form-control, #callback textarea').val('');
-					$('#callback fieldset').show();
-				});
-				break;
+			// case 'general-form':
+			// 	$('#callback .thank').fadeOut('normal',function(){
+			// 		$('#callback .thank').remove();
+			// 		$('#callback .form-control, #callback textarea').val('');
+			// 		$('#callback fieldset').show();
+			// 	});
+			// 	break;
 			// case 'cart-form':
 			// 	$('.cart .thank').fadeOut('normal',function(){
 			// 		$('.cart .thank').remove();
@@ -184,10 +225,7 @@ function showTime(sendform){
 			// 	});
 			// 	break;	
 			default:
-				modal = $("#" + sendform).closest('.modal');
-				modal.modal('hide');
-				modal.find('.thank').remove();
-				modal.find('.form-control, textarea').val('');
+
 				break;
 		}
 	}
@@ -201,5 +239,5 @@ function stopClock(){
 
 function startClock(sendform){
 	if (!timer)
-		timer = window.setInterval("showTime('" + sendform + "')",1000);
+		timer = window.setInterval("showTime('" + sendform.attr('id') + "')",1000);
 }

@@ -3391,9 +3391,11 @@ em strong {
   font-weight: normal;
   font-family: "SegoeUIBoldItalic"; }
 
-.tdn, .info__tabs .tab-content .more__link, #callback form .policy a {
+.tdn, .info__tabs .tab-content .more__link, #callback form .policy a,
+.modal form .policy a {
   text-decoration: none; }
-  .tdn:hover, .info__tabs .tab-content .more__link:hover, #callback form .policy a:hover {
+  .tdn:hover, .info__tabs .tab-content .more__link:hover, #callback form .policy a:hover,
+  .modal form .policy a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -4695,24 +4697,29 @@ form .thank {
   padding: 5rem 0;
   margin-bottom: 3rem; }
 
-#callback .modal-dialog {
+#callback .modal-dialog,
+.modal .modal-dialog {
   margin-left: 0;
   margin-right: 0;
   margin-top: 98px;
   padding: 4rem 0 4px;
   width: 100%; }
 
-#callback form .form-control {
+#callback form .form-control,
+.modal form .form-control {
+  font-family: SegoeUI;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   color: #808080;
   text-align: center;
   height: 3.8rem;
   width: 100%; }
-  #callback form .form-control:disabled {
+  #callback form .form-control:disabled,
+  .modal form .form-control:disabled {
     background-color: #EAEBE3; }
 
-#callback form .policy {
+#callback form .policy,
+.modal form .policy {
   margin-top: 2.2rem;
   margin-bottom: 1rem;
   color: #808080; }

@@ -197,7 +197,7 @@
 	</div>
 	<!-- =/rubrics -->
 
-	<button type="button" class="btn btn-green center-block">ВЫЗВАТЬ ЧЕЛОВЕКА С ОБРАЗЦАМИ</button>
+	<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#examples">ВЫЗВАТЬ ЧЕЛОВЕКА С ОБРАЗЦАМИ</button>
 
 
 	<!-- =advantages -->
@@ -674,6 +674,7 @@
 </div>
 
 
+<!-- =callback -->
 <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-container">
@@ -702,6 +703,48 @@
 		</div>
 	</div>
 </div>
+<!-- =/callback -->
+
+
+<!-- =examples -->
+<div class="modal fade " id="examples" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="examples-form">
+				<fieldset>
+					<label for="examples-name" class="visually-hidden">как вас зовут</label>
+				    <input type="name" name="name" id="examples-name" class="form-control required" value="" tabindex="10" placeholder="как вас зовут" autofocus /><span class="error"></span>
+
+				    <label for="examples-tel" class="visually-hidden" tabindex="11">ваш телефон</label>
+					<input type="tel" name="tel" id="examples-tel" class="form-control required tel" value="" placeholder="ваш телефон" /><span class="error"></span>
+
+
+				    <label for="examples-email" class="visually-hidden" tabindex="12">ваш e-mail</label>
+					<input type="email" name="email" id="examples-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>					
+
+				    <label for="examples-address" class="visually-hidden" tabindex="13">ваш адрес</label>
+					<input type="text" name="address" id="examples-address" class="form-control required" value="" placeholder="ваш адрес" /><span class="error"></span>
+
+
+
+					<input type="submit" name="examples_submit" class="submit" tabindex="15" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox2" value="" name="checkbox" checked="checked" class="user-access" tabindex="17" />
+						<label for="checkbox2">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/examples -->
 
 
 
