@@ -9,7 +9,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="robots" content="noindex,nofollow" />
 
-<link rel="apple-touch-icon" sizes="180x180" href="/the_favicon/apple-touch-icon.png">
+<!-- <link rel="apple-touch-icon" sizes="180x180" href="/the_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/the_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/the_favicon/favicon-16x16.png">
 <link rel="manifest" href="/the_favicon/site.webmanifest">
@@ -18,7 +18,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="/the_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff"> -->
 
 <title>Главная</title>
 <link rel="stylesheet" href="/template/css/styles.min.css" />
@@ -70,8 +70,30 @@
 								<div class="mainnav__list">
 									<ul class="nav nav-tabs">
 										<li><a href="#" title="">О наc</a></li>
-										<li><a href="#" title="">Наши полы</a></li>
-										<li><a href="#" title="">Услуги</a></li>
+										<li class="folder">
+											<a href="#" title="">Наши полы</a>
+											<div class="subnav">
+												<ul>
+													<li><a href="#" title="">Ламинат Alpinefloor</a></li>
+													<li><a href="#" title="">Ламинат FineFloor</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="folder">
+											<a href="#" title="">Услуги</a>
+											<div class="subnav">
+												<ul>
+													<li><a href="#" title="">Замер наполных покрытий</a></li>
+													<li><a href="#" title="">Укладка напольных покрытий</a></li>
+													<li><a href="#" title="">Укладка ламината</a></li>
+													<li><a href="#" title="">Укладка виниловых полов</a></li>
+													<li><a href="#" title="">Укладка модульного паркета</a></li>
+													<li><a href="#" title="">Укладка пробковых покрытий</a></li>
+													<li><a href="#" title="">Укладка паркетной доски</a></li>
+													<li><a href="#" title="">Укладка штучного паркета</a></li>
+												</ul>
+											</div>
+										</li>
 										<li><a href="#" title="">Оплата</a></li>
 										<li><a href="#" title="">Дизайнерам</a></li>
 										<li><a href="#" title="">ТехИнфо</a></li>
@@ -312,7 +334,7 @@
 				</div>				
 			</div>
 
-			<button type="button" class="btn btn-green center-block">УЗНАТЬ ПОДРОБНЕЕ</button>
+			<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#detail">УЗНАТЬ ПОДРОБНЕЕ</button>
 		</div>
 	</div>
 	<!-- =/aboutcifr -->
@@ -745,6 +767,38 @@
 	</div>
 </div>
 <!-- =/examples -->
+
+
+<!-- =detail -->
+<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="detail-form">
+				<fieldset>
+					<label for="detail-name" class="visually-hidden">как вас зовут</label>
+				    <input type="name" name="name" id="detail-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" autofocus /><span class="error"></span>
+
+				    <label for="detail-email" class="visually-hidden" tabindex="1">ваш e-mail</label>
+					<input type="email" name="email" id="detail-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>
+
+					<input type="submit" name="detail_submit" class="submit" tabindex="2" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox3" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
+						<label for="checkbox3">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/detail -->
 
 
 

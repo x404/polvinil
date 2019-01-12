@@ -154,6 +154,33 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	$('#detail-form').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();  
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					document.querySelector('.sending').remove();
+					$(form).append(thankcallback);
+					startClock($(form));
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
 });
 
 
