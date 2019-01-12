@@ -463,7 +463,7 @@
 	</section>
 	<!-- =/reviews -->
 
-	<button type="button" class="btn btn-green center-block">ХОЧУ ТАКЖЕ</button>
+	<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#iwant">ХОЧУ ТАКЖЕ</button>
 
 
 	<!-- =info -->
@@ -626,7 +626,7 @@
 	</div>
 	<!-- =/info -->
 
-	<button type="button" class="btn btn-green center-block">ПРИГЛАСИТЬ СПЕЦИАЛИСТА</button>
+	<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#invite">ПРИГЛАСИТЬ СПЕЦИАЛИСТА</button>
 
 
 	<div class="map">
@@ -640,7 +640,7 @@
 	</div>
 	<!-- =/vcard -->
 
-	<button type="button" class="btn btn-green center-block btn-faq">ОСТАЛИСЬ ВОПРОСЫ?</button>
+	<button type="button" class="btn btn-green center-block btn-faq" data-toggle="modal" data-target="#invite">ОСТАЛИСЬ ВОПРОСЫ?</button>
 
 
 	<!-- =share -->
@@ -658,7 +658,7 @@
 				<div class="footer__left">
 					<div class="footer__contacts">
 						<p class="tel">+7 (495) 552-49-24</p>
-						<p><a href="mailto: info@polvinil.ru" title="">info@polvinil.ru</a></p>
+						<p><a href="mailto:info@polvinil.ru" title="">info@polvinil.ru</a></p>
 						<p>С понедельника по воскресенье: с 09.00 до 19.00 </p>
 					</div>
 					<div class="copyright">
@@ -710,7 +710,7 @@
 			<form action="#" method="post" class="form-policy" id="callback-form">
 				<fieldset>
 					<label for="callback-name" class="visually-hidden">как вас зовут</label>
-				    <input type="name" name="name" id="callback-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" autofocus /><span class="error"></span>
+				    <input type="text" name="name" id="callback-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" autofocus /><span class="error"></span>
 
 				    <label for="callback-tel" class="visually-hidden" tabindex="1">ваш телефон</label>
 					<input type="tel" name="tel" id="callback-tel" class="form-control required tel" value="" placeholder="Ваш телефон" /><span class="error"></span>
@@ -742,7 +742,7 @@
 			<form action="#" method="post" class="form-policy" id="examples-form">
 				<fieldset>
 					<label for="examples-name" class="visually-hidden">как вас зовут</label>
-				    <input type="name" name="name" id="examples-name" class="form-control required" value="" tabindex="10" placeholder="как вас зовут" autofocus /><span class="error"></span>
+				    <input type="text" name="name" id="examples-name" class="form-control required" value="" tabindex="10" placeholder="как вас зовут" /><span class="error"></span>
 
 				    <label for="examples-tel" class="visually-hidden" tabindex="11">ваш телефон</label>
 					<input type="tel" name="tel" id="examples-tel" class="form-control required tel" value="" placeholder="ваш телефон" /><span class="error"></span>
@@ -783,7 +783,7 @@
 			<form action="#" method="post" class="form-policy" id="detail-form">
 				<fieldset>
 					<label for="detail-name" class="visually-hidden">как вас зовут</label>
-				    <input type="name" name="name" id="detail-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" autofocus /><span class="error"></span>
+				    <input type="text" name="name" id="detail-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" /><span class="error"></span>
 
 				    <label for="detail-email" class="visually-hidden" tabindex="1">ваш e-mail</label>
 					<input type="email" name="email" id="detail-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>
@@ -815,14 +815,14 @@
 			<form action="#" method="post" class="form-policy" id="costfloor-form">
 				<fieldset>
 					<label for="costfloor-name" class="visually-hidden">как вас зовут</label>
-				    <input type="name" name="name" id="costfloor-name" class="form-control required" value="" tabindex="50" placeholder="как вас зовут" autofocus /><span class="error"></span>
+				    <input type="text" name="name" id="costfloor-name" class="form-control required" value="" tabindex="50" placeholder="как вас зовут" /><span class="error"></span>
 
 				    <label for="costfloor-email" class="visually-hidden" tabindex="51">ваш e-mail</label>
 					<input type="email" name="email" id="costfloor-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>
 
 
 				    <label for="costfloor-city" class="visually-hidden" tabindex="52">город доставки</label>
-					<input type="city" name="city" id="costfloor-city" class="form-control required" value="" placeholder="город доставки" /><span class="error"></span>
+					<input type="text" name="city" id="costfloor-city" class="form-control required" value="" placeholder="город доставки" /><span class="error"></span>
 
 				    <label for="costfloor-area" class="visually-hidden" tabindex="51">площадь вашего помещения</label>
 					<input type="text" name="area" id="costfloor-area" class="form-control required" value="" placeholder="площадь вашего помещения" /><span class="error"></span>
@@ -858,7 +858,7 @@
 			<form action="#" method="post" class="form-policy" id="start-form">
 				<fieldset>
 					<label for="start-name" class="visually-hidden">как вас зовут</label>
-				    <input type="name" name="name" id="start-name" class="form-control required" value="" tabindex="60" placeholder="как вас зовут" autofocus /><span class="error"></span>
+				    <input type="text" name="name" id="start-name" class="form-control required" value="" tabindex="60" placeholder="как вас зовут"/><span class="error"></span>
 
 				    <label for="start-tel" class="visually-hidden" tabindex="61">ваш телефон</label>
 					<input type="tel" name="tel" id="start-tel" class="form-control required tel" value="" placeholder="ваш телефон" /><span class="error"></span>
@@ -882,6 +882,83 @@
 	</div>
 </div>
 <!-- =/start -->
+
+
+<!-- =iwant -->
+<div class="modal fade " id="iwant" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="iwant-form">
+				<fieldset>
+					<label for="iwant-name" class="visually-hidden">как вас зовут</label>
+				    <input type="text" name="name" id="iwant-name" class="form-control required" value="" tabindex="70" placeholder="как вас зовут" /><span class="error"></span>
+
+				    <label for="iwant-tel" class="visually-hidden" tabindex="71">ваш телефон</label>
+					<input type="tel" name="tel" id="iwant-tel" class="form-control required tel" value="" placeholder="ваш телефон" /><span class="error"></span>
+
+
+				    <label for="iwant-email" class="visually-hidden" tabindex="72">ваш e-mail</label>
+					<input type="email" name="email" id="iwant-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>					
+
+				    <label for="iwant-msg" class="visually-hidden" tabindex="73">ваш адрес</label>
+				    <textarea name="msg" id="iwant-msg" cols="30" rows="10" class="form-control required" placeholder="ваши пожелания: серия пола, количество м2, куда везем ..."></textarea>
+
+
+					<input type="submit" name="iwant_submit" class="submit" tabindex="76" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox7" value="" name="checkbox" checked="checked" class="user-access" tabindex="77" />
+						<label for="checkbox7">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/iwant -->
+
+
+<!-- =invite -->
+<div class="modal fade " id="invite" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="invite-form">
+				<fieldset>
+					<label for="invite-name" class="visually-hidden">как вас зовут</label>
+				    <input type="text" name="name" id="invite-name" class="form-control required" value="" tabindex="80" placeholder="как вас зовут" /><span class="error"></span>
+
+				    <label for="invite-tel" class="visually-hidden" tabindex="81">ваш телефон</label>
+					<input type="tel" name="tel" id="invite-tel" class="form-control required tel" value="" placeholder="ваш телефон" /><span class="error"></span>
+
+
+				    <label for="invite-address" class="visually-hidden" tabindex="82">адрес встречи</label>
+					<input type="text" name="address" id="invite-address" class="form-control required" value="" placeholder="адрес встречи" /><span class="error"></span>					
+
+					<input type="submit" name="invite_submit" class="submit" tabindex="76" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox8" value="" name="checkbox" checked="checked" class="user-access" tabindex="88" />
+						<label for="checkbox7">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/invite -->
+
 
 
 <div id="outdated"></div>
