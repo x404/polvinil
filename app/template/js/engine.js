@@ -293,6 +293,20 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+
+	$('#advantage').on('show.bs.modal', function (e) {
+		let $this = $(e.relatedTarget),
+			title = $this.data('title'),
+			url = $this.attr('href');
+
+			posting = $.post(url);
+			posting.done(function(data) {
+				document.querySelector('#advantage-title').innerText = title;
+				document.querySelector('#advantage-text').innerHTML = data;
+			});
+	})
+
 });
 
 
