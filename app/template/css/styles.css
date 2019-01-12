@@ -4098,6 +4098,7 @@ label.error {
     margin-left: auto;
     margin-right: auto; }
   .reviews__more {
+    color: #000;
     display: inline-block;
     font-style: italic;
     font-size: 1.8rem;
@@ -4717,6 +4718,13 @@ form .thank {
   #callback form .form-control:disabled,
   .modal form .form-control:disabled {
     background-color: #EAEBE3; }
+
+#callback form textarea.form-control,
+.modal form textarea.form-control {
+  height: 8.5rem;
+  text-align: left;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
 
 #callback form .policy,
 .modal form .policy {

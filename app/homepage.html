@@ -372,7 +372,7 @@
 	</section>
 	<!-- =/types locks -->
 
-	<button type="button" class="btn btn-green center-block">СТОИМОСТЬ МОЕГО ПОЛА</button>
+	<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#costfloor">СТОИМОСТЬ МОЕГО ПОЛА</button>
 
 
 	<!-- =steps -->
@@ -430,7 +430,7 @@
 	</section>
 	<!-- =/steps -->
 
-	<button type="button" class="btn btn-green center-block">НАЧНИ ОТСЮДА</button>
+	<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#start">НАЧНИ ОТСЮДА</button>
 
 
 
@@ -800,6 +800,88 @@
 </div>
 <!-- =/detail -->
 
+
+<!-- =costfloor -->
+<div class="modal fade" id="costfloor" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="costfloor-form">
+				<fieldset>
+					<label for="costfloor-name" class="visually-hidden">как вас зовут</label>
+				    <input type="name" name="name" id="costfloor-name" class="form-control required" value="" tabindex="50" placeholder="как вас зовут" autofocus /><span class="error"></span>
+
+				    <label for="costfloor-email" class="visually-hidden" tabindex="51">ваш e-mail</label>
+					<input type="email" name="email" id="costfloor-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>
+
+
+				    <label for="costfloor-city" class="visually-hidden" tabindex="52">город доставки</label>
+					<input type="city" name="city" id="costfloor-city" class="form-control required" value="" placeholder="город доставки" /><span class="error"></span>
+
+				    <label for="costfloor-area" class="visually-hidden" tabindex="51">площадь вашего помещения</label>
+					<input type="text" name="area" id="costfloor-area" class="form-control required" value="" placeholder="площадь вашего помещения" /><span class="error"></span>
+
+				    <label for="costfloor-series" class="visually-hidden" tabindex="51">серия понравившегося пола</label>
+					<input type="text" name="series" id="costfloor-series" class="form-control required" value="" placeholder="серия понравившегося пола" /><span class="error"></span>
+
+					<input type="submit" name="costfloor_submit" class="submit" tabindex="52" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox5" value="" name="checkbox" checked="checked" class="user-access" tabindex="58" />
+						<label for="checkbox5">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/costfloor -->
+
+
+
+<!-- =start -->
+<div class="modal fade " id="start" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="start-form">
+				<fieldset>
+					<label for="start-name" class="visually-hidden">как вас зовут</label>
+				    <input type="name" name="name" id="start-name" class="form-control required" value="" tabindex="60" placeholder="как вас зовут" autofocus /><span class="error"></span>
+
+				    <label for="start-tel" class="visually-hidden" tabindex="61">ваш телефон</label>
+					<input type="tel" name="tel" id="start-tel" class="form-control required tel" value="" placeholder="ваш телефон" /><span class="error"></span>
+
+
+				    <label for="start-email" class="visually-hidden" tabindex="62">ваш e-mail</label>
+					<input type="email" name="email" id="start-email" class="form-control required email" value="" placeholder="ваш e-mail" /><span class="error"></span>					
+
+				    <label for="start-msg" class="visually-hidden" tabindex="63">ваш адрес</label>
+				    <textarea name="msg" id="start-msg" cols="30" rows="10" class="form-control required" placeholder="ваш вопрос..."></textarea>
+
+
+					<input type="submit" name="start_submit" class="submit" tabindex="66" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox6" value="" name="checkbox" checked="checked" class="user-access" tabindex="67" />
+						<label for="checkbox6">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/start -->
 
 
 <div id="outdated"></div>
