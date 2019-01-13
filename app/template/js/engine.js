@@ -300,14 +300,20 @@ $(document).ready(function(){
 			title = $this.data('title'),
 			url = $this.attr('href');
 
-			posting = $.post(url);
-			posting.done(function(data) {
-				document.querySelector('#advantage-title').innerText = title;
-				document.querySelector('#advantage-text').innerHTML = data;
-			});
-	})
+		posting = $.post(url);
+		posting.done(function(data) {
+			document.querySelector('#advantage-title').innerText = title;
+			document.querySelector('#advantage-text').innerHTML = data;
+		});
+	});
 
 });
+
+
+$(function() {  
+	$('#advantage-text').scrollbar()
+});
+
 
 
 

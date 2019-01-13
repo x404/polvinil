@@ -256,20 +256,65 @@ form{
 	}
 }
 
-#about{
-	.modal__content{
-		.title{
-			padding-bottom: .5rem;
-			text-transform: uppercase;
+// #about{
+// 	.modal__content{
+// 		.title{
+// 			padding-bottom: .5rem;
+// 			text-transform: uppercase;
+// 		}
+
+// 		background-color: $color2;
+// 		border: 1px solid $color4;
+// 		color: $color3;
+// 		line-height: 1.7;
+// 		padding: 2rem 1.5rem;
+// 	}
+// }
+
+#advantage{
+
+	.modal{
+		&-dialog{
+			color: $color3;
+			padding-bottom: 3.2rem;
 		}
 
-		background-color: $color2;
-		border: 1px solid $color4;
-		color: $color3;
-		line-height: 1.7;
-		padding: 2rem 1.5rem;
+		&-title{
+			border: 1px solid #cccccc;
+			background-color: #ffffff;			
+			border-radius: 8px;
+			font-size: 1.8rem;
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+			text-align: center;
+			margin-bottom: 1.2rem;
+		}
+	}
+
+
+	.modal-text{
+		border: 1px solid #ccc;
+		background-color: #fff;			
+		border-radius: 8px;
+		padding: 1.5rem 1rem 0 1.2rem;
+		height: 210px;
+		p{
+			margin: 1rem 0;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+	}
+
+	#advantage-title{
+		text-transform: uppercase;
+	}
+
+	.scroll-wrapper>.scroll-content{
+		padding-right: 3rem;
 	}
 }
+
 
 .submit:disabled{
 	cursor: default !important;
