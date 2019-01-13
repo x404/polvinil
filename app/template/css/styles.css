@@ -3919,6 +3919,9 @@ label.error {
     letter-spacing: -.05em;
     margin-left: 1rem;
     margin-right: 1rem; }
+    .aboutcifr .cifr i {
+      font-family: Corbel;
+      font-style: normal; }
   .aboutcifr .green {
     font-size: 3.6rem; }
 
@@ -3932,10 +3935,10 @@ label.error {
   padding-left: 30px; }
   .about__item:after {
     background: url(../images/arrow-long.png) no-repeat;
-    left: 0;
-    width: 362px;
+    bottom: -60px;
     height: 56px;
-    bottom: -60px; }
+    left: 0;
+    width: 362px; }
 
 .connections {
   background-color: #aba08a;

@@ -322,15 +322,15 @@
 	<!-- =aboutcifr -->
 	<div class="aboutcifr">
 		<div class="container">
-			<div class="about__wrapper d-flex justify-content-between">
-				<div class="about__item">
-					на рынке <span class="cifr">70</span>лет
+			<div class="about__wrapper d-flex justify-content-between scroll">
+				<div class="about__item revealator-slideright revealator-once">
+					на рынке <span class="cifr"><i data-number="70" style="display:inline-block; width: 80px">70</i></span>лет
 				</div>
-				<div class="about__item">
-					продано <span class="green">></span> <span class="cifr">1000</span> м<sup>2</sup>
+				<div class="about__item revealator-slideright revealator-delay3 revealator-once">
+					продано <span class="green">></span> <span class="cifr"><i data-number="1000" style="display:inline-block; width: 108px">1000</i></span> м<sup>2</sup>
 				</div>
-				<div class="about__item">
-					рекомендуют <span class="cifr">90</span>%
+				<div class="about__item revealator-slideright revealator-delay5 revealator-once">
+					рекомендуют <span class="cifr"><i data-number="90" style="display:inline-block; width: 80px">90</i></span>%
 				</div>				
 			</div>
 
@@ -374,7 +374,6 @@
 
 	<button type="button" class="btn btn-green center-block" data-toggle="modal" data-target="#costfloor">СТОИМОСТЬ МОЕГО ПОЛА</button>
 
-
 	<!-- =steps -->
 	<section class="steps home-section">
 		<div class="container">
@@ -383,42 +382,42 @@
 			</header>
 
 			<div class="scheme">
-				<div class="step step-1">
+				<div class="step step-1 revealator-zoomin revealator-delay1 revealator-once">
 					<div class="step__num">1</div>
 					<div class="step__desc">
 						<div class="step__title">Созвонились, списались</div>
 						<div class="step__text">краткое описание пункта краткое описание пункта краткое описание пункта краткое описание пункта </div>
 					</div>
 				</div>
-				<div class="step step-2 step-inv">
+				<div class="step step-2 step-inv revealator-zoomin revealator-delay4 revealator-once">
 					<div class="step__num">2</div>
 					<div class="step__desc">
 						<div class="step__title">Поговорили, обсудили</div>
 						<div class="step__text">краткое описание пункта краткое описание пункта краткое описание пункта краткое описание пункта </div>
 					</div>
 				</div>
-				<div class="step step-3">
+				<div class="step step-3 revealator-zoomin revealator-delay5 revealator-once">
 					<div class="step__num">3</div>
 					<div class="step__desc">
 						<div class="step__title">Посчитали, уточнили наличие</div>
 						<div class="step__text">краткое описание пункта краткое описание пункта краткое описание пункта краткое описание пункта </div>
 					</div>
 				</div>
-				<div class="step step-4 step-inv">
+				<div class="step step-4 step-inv revealator-zoomin revealator-delay8 revealator-once">
 					<div class="step__num">4</div>
 					<div class="step__desc">
 						<div class="step__title">Заключили договор, оплатили</div>
 						<div class="step__text">краткое описание пункта краткое описание пункта краткое описание пункта краткое описание пункта </div>
 					</div>
 				</div>
-				<div class="step step-5">
+				<div class="step step-5 revealator-zoomin revealator-delay9 revealator-once">
 					<div class="step__num">5</div>
 					<div class="step__desc">
 						<div class="step__title">Доставили</div>
 						<div class="step__text">краткое описание пункта краткое описание пункта краткое описание пункта краткое описание пункта </div>
 					</div>
 				</div>
-				<div class="step step-6 step-inv">
+				<div class="step step-6 step-inv revealator-zoomin revealator-delay13 revealator-once">
 					<div class="step__num">6</div>
 					<div class="step__desc">
 						<div class="step__title">Отметили</div>
@@ -984,6 +983,7 @@
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="/template/css/jquery.fancybox.min.css" />
+<link rel="stylesheet" property="stylesheet" href="/template/css/animation.css" />
 <script type="text/javascript" src="/template/js/slick.min.js"></script>
 <script src="/template/js/jquery.fancybox.min.js"></script>
 
@@ -994,6 +994,10 @@
 <script src="/template/js/jquery.scrollbar.min.js"></script>
 
 <script src="/template/js/engine.js"></script>
+
+<script src="/template/js/fm.revealator.jquery.js"></script>
+<link rel="stylesheet" property="stylesheet" href="/template/css/fm.revealator.jquery.css" />
+
 
 <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>

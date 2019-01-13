@@ -226,6 +226,10 @@
 		letter-spacing: -.05em;
 		margin-left: 1rem;
 		margin-right: 1rem;
+		i{
+			font-family: Corbel;
+			font-style: normal;
+		}
 	}
 	.green{
 		font-size: 3.6rem;
@@ -241,12 +245,12 @@
 		position: relative;
 		padding-left: 30px;
 		&:after{
-			background: url(../images/arrow-long.png) no-repeat;
 			@extend .before;
+			background: url(../images/arrow-long.png) no-repeat;
+			bottom: -60px;
+			height: 56px;
 			left: 0;
 			width: 362px;
-			height: 56px;
-			bottom: -60px;
 		}
 	}
 }

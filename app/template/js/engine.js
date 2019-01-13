@@ -307,6 +307,60 @@ $(document).ready(function(){
 		});
 	});
 
+
+	// animated
+		$('.fadeIn, .cifr').css("opacity", "0");
+
+		var mobile = navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad|android)/);
+
+		if(mobile != null) {
+			// $('html').css('width', window.innerWidth + 'px');
+		} else {
+			$(".scroll").each(function () {
+				var block = $(this);
+				$(window).scroll(function() {
+					var top = block.offset().top;
+					var bottom = block.height()+top;
+					top = top - $(window).height();
+					var scroll_top = $(this).scrollTop();
+					if ((scroll_top > top) && (scroll_top < bottom)) {
+						if (!block.hasClass("animated")) {
+							block.addClass("animated");
+							block.trigger('animateIn');
+						}
+					}
+				});
+			});
+		};
+
+		/* Time Parser */
+		$(".cifr i").each(function() {
+		  $(this).attr("data-number", parseInt($(this).text()));
+		});
+
+		$(".about__wrapper").on("animateIn", function() {
+		  var inter = 1;
+		  $(this).find(".cifr i").each(function() {
+			var count = parseInt($(this).attr("data-number")),
+				block = $(this),
+				timeout = null,
+				step = 1;
+			timeout = setInterval(function() {
+			  if (step == 25) {
+				block.text(count.toString());
+				clearInterval(timeout);
+			  } else {
+				block.text((Math.floor(count*step/25)).toString());
+				step++;
+			  }
+			}, 60);
+		  });
+		}).on('animateOut', function() {
+		  $(this).find('.anim').each(function() {
+			$(this).css('opacity', 0.01);
+			$(this).css({'-webkit-transform': 'scale(0.7, 0.7)', '-moz-transform': 'scale(0.7, 0.7)'});
+		  });
+		});
 });
 
 

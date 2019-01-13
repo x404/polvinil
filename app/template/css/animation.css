@@ -1,0 +1,74 @@
+.fadeIn, .cifr{opacity:1;}
+.animated .cifr { -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity:0;}
+  100% { opacity:1;}
+}
+@keyframes fadeIn {
+  0% { opacity:0;}
+  100% { opacity:1;}
+}
+@-webkit-keyframes fadeInScale {
+  0% { opacity:0; -webkit-transform:scale(0.9);}
+  100% { opacity:1; -webkit-transform:scale(1);}
+}
+@keyframes fadeInScale {
+  0% { opacity:0; transform:scale(0.9);}
+  100% { opacity:1; transform:scale(1);}
+}
+@-webkit-keyframes slideMod1 {
+  0% { opacity:0; -webkit-transform:translateY(-60px);}
+  100% { opacity:1; -webkit-transform:translateY(0);}
+}
+@keyframes slideMod1 {
+  0% { opacity:0; transform:translateY(-60px);}
+  100% { opacity:1; transform:translateY(0);}
+}
+@keyframes fadeInRight {
+	0% {opacity: 0;transform: translateX(20px);}
+	100% {opacity: 1; transform: translateX(0px);}
+}
+@keyframes fadeInLeft {
+	0% {opacity: 0; transform: translateX(-20px);}
+	100% {opacity: 1; transform: translateX(0px);}
+}
+
+.fadeInRight.animated {
+    animation-name: fadeInRight;
+    -webkit-animation-duration:2s; animation-duration:2s;
+}
+
+.fadeInLeft.animated{
+    animation-name: fadeInLeft;
+    -webkit-animation-duration:2s; animation-duration:2s;
+}
+
+.fadeIn{-webkit-animation-name:fadeIn; animation-name:fadeIn; -webkit-animation-duration:3s; animation-duration:3s;}
+
+.animated .cifr
+{
+	/*http://css.yoksel.ru/css-animation/#animation-fill-mode*/
+	-webkit-animation-name:slideMod1; animation-name:slideMod1; 
+	-webkit-animation-duration:3s; animation-duration:3s;
+}
+
+/*.rewards .animated{
+	-webkit-animation-name:fadeInScale; animation-name:fadeInScale;
+	-webkit-animation-duration:2s; animation-duration:2s;	
+}
+
+.catalog .animated{
+	-webkit-animation-name:fadeInScale; animation-name:fadeInScale;
+	-webkit-animation-duration:1.2s; animation-duration:1.2s;
+}*/
+
+@media screen and (max-width: 1024px) {
+	.cifr{
+		-webkit-animation-name:none; animation-name:none; 
+		opacity: 1 !important
+	}
+	.fadeIn {
+		opacity: 1 !important
+	}
+}
