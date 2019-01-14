@@ -1,6 +1,8 @@
 .homeslider{
-	font-size: 3rem;
 	color: $color2;
+	font-size: 3rem;
+	height: 47rem;
+	position: relative;
 	.slick-slide{
 		position: relative; 
 	}
@@ -87,6 +89,42 @@
 }
 
 
+
+.btn{
+	&-gradient{
+		border: none;
+	}
+
+
+	&-need,
+	&-house,
+	&-rec
+	{
+		position: fixed;
+		transition: box-shadow .3s;
+		&:hover{
+			box-shadow: 0 0 8px rgba(255,255,255,.8)
+		}
+	}
+
+	&-need{
+		@include sprite($icon-btn-need);
+		left: 0;
+		top: 399px;
+	}
+	&-house{
+		@include sprite($icon-btn-house);
+		left: 0;
+		top: 600px;
+	}
+	&-rec{
+		@include sprite($icon-btn-rec);
+		right: 0;
+		top: 399px;
+	}
+
+
+}
 // rubrics
 .rubrics{
 	margin: 4rem 0 6rem;
