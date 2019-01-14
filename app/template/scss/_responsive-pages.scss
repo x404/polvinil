@@ -16,9 +16,16 @@
 	{
 		top: 535px;
 	}
-
 }
 
+
+
+@media (max-width: 1400px){
+	.about__item:after{
+		background-size: contain;
+		width: 330px;
+	}
+}
 
 
 @media (max-width: 1366px){
@@ -61,6 +68,20 @@
 	.advantages{
 		.d-grid{
 			grid-template-columns: repeat(5,156px);
+		}
+	}
+
+	// aboutcifr
+	.about__item{
+		font-size: 2rem;
+		&:after{
+			width: 260px;
+		}
+		.cifr{
+			font-size: 5rem;
+			i{
+				width: auto !important;
+			}
 		}
 	}
 }
@@ -135,6 +156,21 @@
 		&__item{
 			margin-left: .8rem;
 			margin-right: .8rem;			
+		}
+	}
+
+	// aboutcifr
+	.about{
+		&__wrapper{
+			flex-direction: column !important;
+			align-items: center;
+			padding-bottom: 0;
+		}
+		&__item{
+			padding-left: 0;
+			margin-bottom: 6rem;
+			width: 26rem;
+			text-align: center;
 		}
 	}
 }

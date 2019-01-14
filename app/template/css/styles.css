@@ -5240,6 +5240,11 @@ form .thank {
   .btn-house {
     top: 535px; } }
 
+@media (max-width: 1400px) {
+  .about__item:after {
+    background-size: contain;
+    width: 330px; } }
+
 @media (max-width: 1366px) {
   .btn-need,
   .btn-rec {
@@ -5261,7 +5266,15 @@ form .thank {
   .rubric__more {
     right: 15px; }
   .advantages .d-grid {
-    grid-template-columns: repeat(5, 156px); } }
+    grid-template-columns: repeat(5, 156px); }
+  .about__item {
+    font-size: 2rem; }
+    .about__item:after {
+      width: 260px; }
+    .about__item .cifr {
+      font-size: 5rem; }
+      .about__item .cifr i {
+        width: auto !important; } }
 
 @media (max-width: 1280px) {
   .btn-need,
@@ -5306,7 +5319,16 @@ form .thank {
     justify-content: space-around; }
   .advantage__item {
     margin-left: .8rem;
-    margin-right: .8rem; } }
+    margin-right: .8rem; }
+  .about__wrapper {
+    flex-direction: column !important;
+    align-items: center;
+    padding-bottom: 0; }
+  .about__item {
+    padding-left: 0;
+    margin-bottom: 6rem;
+    width: 26rem;
+    text-align: center; } }
 
 @media (max-width: 900px) {
   .slick-slide img {
