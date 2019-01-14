@@ -194,7 +194,6 @@ $color_2: #35694d;
 					text-decoration: none;
 					text-transform: none;
 					&:hover{
-						text-decoration: underline;
 						color: #fff;
 					}
 					&:before{
@@ -230,38 +229,6 @@ $color_2: #35694d;
 							right: 20px;
 							width: 8px;
 							top: 24px;
-							transition: transform .3s;
-						}
-						&.open{
-							&:after{
-								transform: rotate(90deg)
-							}
-						}
-					}
-
-					.subnav{
-						position: static;
-						width: 100%;
-						margin-left: 0;
-						ul{
-							background: none;
-							margin-top: -10px;
-							opacity: 1;
-							padding: 0;
-							li{
-								border-bottom: none;
-								a,span{
-									padding: 7px 0 7px 10px;
-								}
-								a{
-									&:hover{
-										text-decoration: underline;
-									}
-								}
-							}
-							&:before{
-								display: none;
-							}
 						}
 					}
 				}

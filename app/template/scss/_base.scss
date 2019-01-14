@@ -387,6 +387,12 @@ input.submit:disabled{
 					border-bottom-color: $color2;
 				}
 			}
+
+			&.menu-3{
+				.subnav{
+					width: 25rem;
+				}
+			}
 		}
 		.subnav{
 			left: 0;

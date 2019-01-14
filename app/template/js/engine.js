@@ -454,3 +454,15 @@ function startClock(sendform){
 	if (!timer)
 		timer = window.setInterval("showTime('" + sendform.attr('id') + "')",1000);
 }
+
+
+
+
+// показываем второй  уровень меню
+$(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
+	e.preventDefault();
+	var $this = $(this);
+	$this.next('.subnav').slideToggle('normal', function(){
+		$this.toggleClass('open')
+	});
+})

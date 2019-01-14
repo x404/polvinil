@@ -1,14 +1,98 @@
-@media (max-width: 1199px){
+@media (max-width: 1299px){
+	.header{
+		.d-flex{
+			flex-wrap: wrap;
+		}
+		&__logo{
+			// flex-grow: 1;
+			// padding-bottom: 1rem;			
+			// text-align: center;
+		}
+		&__center{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__right{
+			flex-grow: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			width: auto;
+			padding-bottom: 1rem;
+
+			.btn{
+				padding: 1rem 0;
+				width: 200px;
+				position: relative;
+			}
+			.sisea-search-form{
+				border-radius: 5px;
+				position: relative;
+				width: 250px;
+				&:before,
+				&:after{
+					display: none !important;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1024px){
+
 }
 
 @media (max-width: 991px){
+	.header{
+		&__logo{
+			flex-grow: 1;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
+		&__center{
+			flex-grow: 1
+		}
+	}
+
+	.navmenu .nav{
+		justify-content: space-between;
+		li{
+			margin-right: 0;
+		}
+	}
 }
 
 @media (max-width: 767px){
+	.header{
+		&__center{
+			flex-grow: 1;
+			width: 100%
+		}
+		&__contacts{
+			flex-direction: column;
+			text-align: center;
+		}
+		&__address{
+			margin-bottom: 1rem;
+		}
+		&__right{
+			flex-direction: column;
+			align-items: center;
+			.btn{
+				margin-bottom: 1rem;
+			}
+			.sisea-search-form{
+				left: 0;
+				.form-control{
+					text-align: center;
+				}
+			}
+		}
+	}
 }
 
-@media (max-width: 545px){
+@media (max-width: 450px){
+	.header__phones{
+		font-size: 2rem;
+	}
 }
