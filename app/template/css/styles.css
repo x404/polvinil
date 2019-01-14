@@ -5321,14 +5321,14 @@ form .thank {
     margin-left: .8rem;
     margin-right: .8rem; }
   .about__wrapper {
-    flex-direction: column !important;
     align-items: center;
+    flex-direction: column !important;
     padding-bottom: 0; }
   .about__item {
-    padding-left: 0;
     margin-bottom: 6rem;
-    width: 26rem;
-    text-align: center; } }
+    padding-left: 0;
+    text-align: center;
+    width: 26rem; } }
 
 @media (max-width: 900px) {
   .slick-slide img {

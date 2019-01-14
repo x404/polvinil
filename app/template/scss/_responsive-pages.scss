@@ -162,15 +162,15 @@
 	// aboutcifr
 	.about{
 		&__wrapper{
-			flex-direction: column !important;
 			align-items: center;
+			flex-direction: column !important;
 			padding-bottom: 0;
 		}
 		&__item{
-			padding-left: 0;
 			margin-bottom: 6rem;
-			width: 26rem;
+			padding-left: 0;
 			text-align: center;
+			width: 26rem;
 		}
 	}
 }
