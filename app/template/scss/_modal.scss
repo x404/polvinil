@@ -4,6 +4,33 @@
 // .modal-content   - actual modal w/ bg and corners and stuff
 
 
+
+@media (min-width: 576px){
+	.modal-container {
+	    max-width: 540px;
+	}
+}
+
+@media (min-width: 768px){ 
+	.modal-container {
+	    max-width: 720px;
+	}
+}
+
+@media (min-width: 992px){
+	.modal-container {
+	    max-width: 900px;
+	}
+}
+
+
+@media (min-width: 1360px){
+	.modal-container{
+		max-width: 1200px
+	}
+}
+
+
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
@@ -42,7 +69,8 @@
 	  	margin-left: auto;
 	  	margin-right: auto;
 	  	position: relative;
-	  	width: 1200px;
+	  	// width: 1200px;
+	  	width: 90%;
 	}
 
 
@@ -209,8 +237,8 @@ form{
 #callback,
 
 .modal
-
 {
+	padding-right: 0 !important; 
 	.modal-dialog{
 		margin-left: 0;
 		margin-right: 0;
@@ -256,20 +284,6 @@ form{
 	}
 }
 
-// #about{
-// 	.modal__content{
-// 		.title{
-// 			padding-bottom: .5rem;
-// 			text-transform: uppercase;
-// 		}
-
-// 		background-color: $color2;
-// 		border: 1px solid $color4;
-// 		color: $color3;
-// 		line-height: 1.7;
-// 		padding: 2rem 1.5rem;
-// 	}
-// }
 
 #advantage{
 

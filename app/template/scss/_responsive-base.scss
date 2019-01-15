@@ -1,3 +1,8 @@
+@media (max-width: 1320px){
+
+}
+
+
 @media (max-width: 1299px){
 	.header{
 		.d-flex{
@@ -60,6 +65,33 @@
 			margin-right: 0;
 		}
 	}
+
+	.footer{
+		text-align: center;
+		&__left,
+		&__right
+		{
+			max-width: 100%;
+			width: 100%;
+		}
+
+		&__left{
+			margin-bottom: 0;
+			order: 2;
+		}
+		&__logo{
+			order: 0;
+			padding-bottom: 2rem;
+		}
+		&__right{
+			order: 3;
+			padding-bottom: 1rem;
+		}
+		.social{
+			min-height: 0;
+			padding: 2rem 0;
+		}
+	}
 }
 
 @media (max-width: 767px){
@@ -94,5 +126,26 @@
 @media (max-width: 450px){
 	.header__phones{
 		font-size: 2rem;
+	}
+}
+
+
+@media (max-width: 385px){
+	.vcard{
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;		
+	}
+
+	.share{
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		margin-top: 2rem;
+		border-top: 1px solid $color4;
+		&:before{
+			display: none;
+		}
+		li{
+			margin: .5rem !important;
+		}
 	}
 }

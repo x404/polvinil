@@ -696,6 +696,8 @@
 
 .video{
 	&__item{
+		margin-left: auto;
+		margin-right: auto;
 		width: 365px;
 	}
 
@@ -755,6 +757,8 @@
 .article{
 	&__item{
 		font-family: "SegoeUI";
+		margin-left: auto;
+		margin-right: auto;
 		text-align: center;
 		width: 365px;
 	}
