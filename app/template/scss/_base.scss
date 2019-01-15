@@ -165,7 +165,12 @@ button{
 }
 
 .d-grid{
-	display: grid;
+	display: flex;
+}
+@supports (display:grid) {
+	.d-grid{
+		display: grid;
+	}
 }
 
 .center-block{

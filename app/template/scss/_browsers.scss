@@ -17,4 +17,40 @@ _::-webkit-full-page-media, _:future, :root .selector {
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.advantages .d-grid{
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.advantage{
+		&__item{
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+	}
+
+
+	.step__num{
+		text-align: center;
+		&:before{
+			left: 50%;
+			margin-left: -50px;
+		}
+	}
+
+	.photo__title{
+		padding-top: 8rem;
+	}
+
+	.article__desc{
+		display: block !important;
+	}
+	.article{
+		&__item{
+			height: 278px;
+		}
+		&__text{
+			margin: 1.2rem 0;
+		}
+	}
 }

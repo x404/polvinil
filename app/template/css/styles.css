@@ -3445,7 +3445,11 @@ button {
     width: 23rem; }
 
 .d-grid {
-  display: grid; }
+  display: flex; }
+
+@supports (display: grid) {
+  .d-grid {
+    display: grid; } }
 
 .center-block {
   display: block;
@@ -3751,6 +3755,18 @@ label.error {
   outline: none;
   border-color: red !important; }
 
+.webp .advantages {
+  background-image: url(../images/advantages-bg.webp); }
+
+.webp .connections {
+  background-image: url(../images/connection-bg.webp); }
+
+.webp .steps {
+  background-image: url(../images/steps-bg.webp); }
+
+.webp .reviews {
+  background-image: url(../images/reviews-bg.webp); }
+
 .homeslider {
   color: #fff;
   font-size: 3rem;
@@ -4040,7 +4056,7 @@ label.error {
   font-size: 1.3rem; }
 
 .steps {
-  background-image: url(../images/steps-bg.webp);
+  background-image: url(../images/steps-bg.jpg);
   background-color: #4a311d;
   min-height: 42rem;
   padding: 3rem 0; }
@@ -4129,7 +4145,7 @@ label.error {
     top: 100px; }
 
 .reviews {
-  background-image: url(../images/reviews-bg.webp);
+  background-image: url(../images/reviews-bg.jpg);
   background-color: #bfa892;
   padding: 3.5rem 0 1rem;
   min-height: 315px; }
@@ -5189,6 +5205,27 @@ form .thank {
 
 ::-ms-clear {
   display: none; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .advantages .d-grid {
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .advantage__item {
+    margin-left: 1rem;
+    margin-right: 1rem; }
+  .step__num {
+    text-align: center; }
+    .step__num:before {
+      left: 50%;
+      margin-left: -50px; }
+  .photo__title {
+    padding-top: 8rem; }
+  .article__desc {
+    display: block !important; }
+  .article__item {
+    height: 278px; }
+  .article__text {
+    margin: 1.2rem 0; } }
 
 @media (max-width: 1299px) {
   .header .d-flex {
