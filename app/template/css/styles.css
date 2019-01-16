@@ -3767,6 +3767,9 @@ label.error {
 .webp .reviews {
   background-image: url(../images/reviews-bg.webp); }
 
+.webp .slick-arrow {
+  background: url(../images/carousel-arrow.webp) no-repeat; }
+
 .homeslider {
   color: #fff;
   font-size: 3rem;
@@ -4095,7 +4098,11 @@ label.error {
       box-shadow: inset 0 0 9px rgba(71, 179, 89, 0.6);
       height: 100px;
       width: 100px;
-      transform: rotate(45deg); }
+      transform: rotate(45deg);
+      left: 50%;
+      top: 50%;
+      margin-left: -50px;
+      margin-top: -50px; }
   .step__desc {
     margin-left: 1.4rem;
     padding-top: 5.8rem; }
@@ -4165,7 +4172,7 @@ label.error {
       text-decoration: underline; }
 
 .slick-arrow {
-  background: url(../images/carousel-arrow.webp) no-repeat;
+  background: url(../images/carousel-arrow.png) no-repeat;
   border: none;
   height: 57px;
   padding: 0;
@@ -5315,7 +5322,11 @@ form .thank {
     .share:before {
       display: none; }
     .share li {
-      margin: .5rem !important; } }
+      margin: .5rem !important; }
+  .modal {
+    top: 7%; }
+  .modal.show .modal-dialog {
+    margin-top: 0; } }
 
 @media (max-width: 1800px) {
   .homeslider {
@@ -5447,7 +5458,27 @@ form .thank {
   .info__tabs .slick-next {
     right: -10px; }
   .reviews #reviews-carousel {
-    width: 95%; } }
+    width: auto; } }
+
+@media (max-width: 1024px) {
+  .slick-prev {
+    left: -20px; }
+  .slick-next {
+    right: -20px; }
+  #reviews-carousel .slick-prev {
+    left: -25px; }
+  #reviews-carousel .slick-next {
+    right: -25px; }
+  #reviews-carousel .slick-arrow {
+    transform: scale(0.6); }
+    #reviews-carousel .slick-arrow.slick-next {
+      transform: scale(0.6) rotate(180deg); } }
+
+@media (max-width: 1024px) and (max-height: 770px) {
+  #iwant .modal-dialog,
+  #invite .modal-dialog,
+  #advantage .modal-dialog {
+    margin-top: 40px; } }
 
 @media (max-width: 991px) {
   .rubric__plate {
@@ -5520,6 +5551,18 @@ form .thank {
   .connections {
     padding-top: 3rem; } }
 
+@media (max-width: 790px) and (max-height: 400px) {
+  .modal {
+    top: 0; }
+  .modal.show .modal-dialog {
+    transform: none;
+    margin-top: 10px; }
+  #callback .modal-dialog,
+  #detail .modal-dialog {
+    margin-top: 30px; }
+  #invite .modal-dialog {
+    margin-top: 20px; } }
+
 @media (max-width: 650px) {
   .btn-need, .btn-house, .btn-rec {
     display: none; } }
@@ -5562,9 +5605,9 @@ form .thank {
     padding-left: 0;
     padding-right: 0; }
   .review__item {
-    width: 90%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    width: 90%; }
   .vcard {
     padding-left: 1.5rem;
     padding-right: 1.5rem; } }
@@ -5652,17 +5695,19 @@ form .thank {
   .rubric__title {
     font-size: 2.4rem; }
   .rubric__text {
-    overflow: hidden;
-    height: 7rem;
-    padding-top: .5rem; } }
+    padding-top: .5rem; }
+  .map:before {
+    display: none !important; } }
 
 @media (max-width: 385px) {
   .rubrics {
     margin-top: 1rem; }
-  .rubric__text {
-    height: 4.2rem; }
   .rubric__more {
     right: 10px; }
+  .rubric__text {
+    height: 4.2rem;
+    overflow: hidden;
+    height: 6.8rem; }
   .photo__item,
   .video__item,
   .article__item {
@@ -5677,7 +5722,17 @@ form .thank {
     min-height: 340px; }
   .review__item {
     padding-left: 1rem;
-    padding-right: 1rem; } }
+    padding-right: 1rem; }
+  .step__title {
+    font-size: 2rem; }
+  .step__text {
+    font-size: 1.6rem; } }
+
+@media (max-width: 375px) {
+  .connection__plate {
+    height: 200px; }
+  .connection__img {
+    height: 200px; } }
 
 @media (max-width: 350px) {
   .homeslider {
@@ -5691,15 +5746,13 @@ form .thank {
   .photo__item,
   .video__item,
   .article__item {
-    width: 250px; } }
-
-@media (max-width: 375px) {
-  .connection__plate {
-    height: 200px; }
-  .connection__img {
-    height: 200px; } }
-
-@media (max-width: 350px) {
+    width: 250px; }
   .rubric__more {
     font-size: 1.3rem;
     right: 4px; } }
+
+@media (max-width: 320px) {
+  .rubric__text {
+    height: 6rem; }
+  .rubric__more {
+    bottom: -2px; } }

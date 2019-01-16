@@ -53,15 +53,6 @@
 	-webkit-animation-duration:3s; animation-duration:3s;
 }
 
-/*.rewards .animated{
-	-webkit-animation-name:fadeInScale; animation-name:fadeInScale;
-	-webkit-animation-duration:2s; animation-duration:2s;	
-}
-
-.catalog .animated{
-	-webkit-animation-name:fadeInScale; animation-name:fadeInScale;
-	-webkit-animation-duration:1.2s; animation-duration:1.2s;
-}*/
 
 @media screen and (max-width: 1024px) {
 	.cifr{

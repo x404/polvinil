@@ -1,5 +1,9 @@
-$(document).ready(function(){
+var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
+var thankfaq = '<div class="thank text-center"><p>Ваш вопрос отправлен</p></div>';
+var thankreview = '<div class="thank text-center"><p>Ваш отзыв отправлен</p></div>';
+var errorTxt = 'Форма не отправлена. Попробуйте позже.';
 
+$(document).ready(function(){
 	$('#homeslider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -47,7 +51,17 @@ $(document).ready(function(){
 				slidesToShow: 1,
 				slidesToScroll: 1,
 		        centerMode: true,
-		        centerPadding: '30px'
+		        centerPadding: '40px'
+			  }
+			},
+			{
+			  breakpoint: 400,
+			  settings: {
+			  	arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+		        centerMode: true,
+		        centerPadding: '25px'
 			  }
 			},
 			{
@@ -57,7 +71,7 @@ $(document).ready(function(){
 				slidesToShow: 1,
 				slidesToScroll: 1,
 		        centerMode: true,
-		        centerPadding: '15px'
+		        centerPadding: '10px'
 			  }
 			}
 		]
@@ -334,40 +348,37 @@ $(document).ready(function(){
 		else return false;
 	},"");
 
-
-	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
-	var thankfaq = '<div class="thank text-center"><p>Ваш вопрос отправлен</p></div>';
-	var thankreview = '<div class="thank text-center"><p>Ваш отзыв отправлен</p></div>';
-	var errorTxt = 'Форма не отправлена. Попробуйте позже.';
 	// validation forms
 	$('#callback-form').validate({
         rules : {
             tel:{validphone:true}
         },
 		submitHandler: function(form){
-			var strSubmit=$(form).serialize();  
-			$(form).find('fieldset').hide();
-			$(form).append('<div class="sending">Идет отправка ...</div>');
+			let strSubmit= $(form).serialize(),
+				url = $(form).attr('action');
 
-			$.ajax({
-				type: "POST",
-				url: $(form).attr('action'),
-				data: strSubmit,
-				success: function(){
-					document.querySelector('.sending').remove();
-					$(form).append(thankcallback);
-					// startClock($(form).attr('id'));
-					startClock($(form));
-				},
-				error: function(){
-					alert(errorTxt);
-					$(form).find('fieldset').show();
-					$('.sending').remove();
-				}
-			})
-			.fail(function(error){
-				alert(errorTxt);
-			});
+				sendform(url, strSubmit, form);
+
+			// $.ajax({
+			// 	type: "POST",
+			// 	url: $(form).attr('action'),
+			// 	data: strSubmit,
+			// 	success: function(){
+			// 		document.querySelector('.sending').remove();
+			// 		$(form).append(thankcallback);
+			// 		// startClock($(form).attr('id'));
+			// 		startClock($(form));
+			// 	},s
+			// 	error: function(){
+			// 		alert(errorTxt);
+			// 		$(form).find('fieldset').show();
+			// 		$('.sending').remove();
+			// 	}
+			// })
+			// .fail(function(error){
+			// 	alert(errorTxt);
+			// });
+			
 		}
 	});
 
@@ -713,3 +724,30 @@ $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(
 		$this.toggleClass('open')
 	});
 })
+
+
+function sendform(url, strSubmit, form){
+	$(form).find('fieldset').hide();
+	$(form).append('<div class="sending">Идет отправка ...</div>');
+	fetch(url, {
+		method: 'post',
+		headers: {
+	        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+		},
+		body: strSubmit 
+	})
+	.then(function(response){ 
+		if (response.status == '200'){
+			document.querySelector('.sending').remove();
+			$(form).append(thankcallback);
+			startClock($(form));
+		} else{
+			alert(errorTxt);
+			$(form).find('fieldset').show();
+			$('.sending').remove();	
+		}
+	})
+	.catch (function (error) {
+	    console.log('Request failed', error);
+	});
+}

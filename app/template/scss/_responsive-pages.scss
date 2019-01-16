@@ -228,7 +228,44 @@
 	}
 
 	.reviews #reviews-carousel{
-		width: 95%;
+		width: auto;
+	}
+}
+
+
+@media (max-width: 1024px){
+	.slick-prev{
+		left: -20px;
+	}
+	.slick-next{
+		right: -20px;
+	}
+
+	#reviews-carousel{
+		.slick-prev{
+			left: -25px;
+		}
+		.slick-next{
+			right: -25px;
+		}
+		.slick-arrow{
+			transform: scale(.6);
+			&.slick-next{
+				transform: scale(.6) rotate(180deg)
+			}
+		}
+	}
+
+}
+
+@media (max-width: 1024px) and (max-height: 770px){
+	#iwant,
+	#invite,
+	#advantage
+	{
+		.modal-dialog{
+			margin-top: 40px;
+		}
 	}
 }
 
@@ -382,11 +419,39 @@
 		width: 150px;
 	}
 
-.connections{
-	padding-top: 3rem;
+	.connections{
+		padding-top: 3rem;
+	}
 }
 
 
+@media (max-width: 790px) and (max-height: 400px){
+	.modal{
+		top: 0;
+	}
+
+	
+	.modal.show{
+		.modal-dialog{
+			transform: none;
+			margin-top: 10px;
+		}
+	}
+
+	#callback,
+	#detail
+	{
+		.modal-dialog{
+			margin-top: 30px;
+		}
+	}
+
+	#invite
+	{
+		.modal-dialog{
+			margin-top: 20px;
+		}
+	}
 }
 
 
@@ -473,9 +538,9 @@
 		}
 	}
 	.review__item{
-		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
+		width: 90%;
 	}
 
 	.vcard{
@@ -616,9 +681,6 @@
 			margin-top: 1rem;
 		}
 	}
-
-
-
 }
 
 @media (max-width: 425px){
@@ -637,12 +699,15 @@
 			font-size: 2.4rem;
 		}
 		&__text{
-			overflow: hidden;
-			height: 7rem;
 			padding-top: .5rem;
 		}
 	}
 
+	.map{
+		&:before{
+			display: none !important;
+		}
+	}
 }
 
 
@@ -653,11 +718,13 @@
 	}
 
 	.rubric{
-		&__text{
-			height: 4.2rem;
-		}
 		&__more{
 			right: 10px;
+		}
+		&__text{
+			height: 4.2rem;
+			overflow: hidden;
+			height: 6.8rem;
 		}
 	}
 
@@ -685,7 +752,31 @@
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+
+	.step{
+		&__title{
+			font-size: 2rem;
+		}
+		&__text{
+			font-size: 1.6rem;
+		}
+	}
 }
+
+
+
+@media (max-width: 375px){
+	// connection
+	.connection{
+		&__plate{
+			height: 200px;
+		}
+		&__img{
+			height: 200px;
+		}
+	}
+}
+
 
 @media (max-width: 350px){
 	.homeslider{
@@ -706,31 +797,25 @@
 	.article__item
 	{
 		width: 250px;
-	}	
-}
+	}
 
-
-
-
-@media (max-width: 375px){
-	// connection
-	.connection{
-		&__plate{
-			height: 200px;
-		}
-		&__img{
-			height: 200px;
+	.rubric{
+		&__more{
+			font-size: 1.3rem;
+			right: 4px;
 		}
 	}
 }
 
 
 
-@media (max-width: 350px){
+@media (max-width: 320px){
 	.rubric{
+		&__text{
+			height: 6rem;
+		}
 		&__more{
-			font-size: 1.3rem;
-			right: 4px;
+			bottom: -2px;
 		}
 	}
 }

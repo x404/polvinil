@@ -11,6 +11,10 @@
 	.reviews{
 		background-image: url(../images/reviews-bg.webp);
 	}
+
+	.slick-arrow{
+		background: url(../images/carousel-arrow.webp) no-repeat;
+	}
 }
 
 
@@ -451,6 +455,10 @@
 			height: 100px;
 			width: 100px;
 			transform: rotate(45deg);
+			left: 50%;
+			top: 50%;
+			margin-left: -50px;
+			margin-top: -50px;
 		}
 	}
 
@@ -572,7 +580,7 @@
 
 .slick{
 	&-arrow{
-		background: url(../images/carousel-arrow.webp) no-repeat;
+		background: url(../images/carousel-arrow.png) no-repeat;
 		border:none;
 		height: 57px;
 		padding: 0;

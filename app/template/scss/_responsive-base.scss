@@ -148,4 +148,11 @@
 			margin: .5rem !important;
 		}
 	}
+
+	.modal{
+		top: 7%;
+	}
+	.modal.show .modal-dialog{
+		margin-top: 0;
+	}
 }
