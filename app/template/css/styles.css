@@ -3407,11 +3407,12 @@ em strong {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after, .main h1:after {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after, .main h1:after, .reviews__list #comment-form-placeholder h3:after {
   content: "";
   display: block;
   position: absolute; }
 
+input[type="submit"],
 button {
   cursor: pointer; }
 
@@ -5066,6 +5067,70 @@ form .thank {
   .main p {
     margin: 1.5rem 0; }
 
+.reviews__list ol {
+  list-style: none; }
+
+.reviews__list .ticket-comment {
+  background-color: #f2f2f2;
+  font-style: italic;
+  margin: 3.4rem 0;
+  padding: 1rem .8rem 1.2rem 2.2rem; }
+  .reviews__list .ticket-comment-author {
+    border-bottom: 1px dashed;
+    color: #333;
+    font-size: 1.5rem; }
+  .reviews__list .ticket-comment-text {
+    color: #000;
+    margin-top: 1rem; }
+    .reviews__list .ticket-comment-text p {
+      margin: .3rem 0; }
+
+.reviews__list #comment-form-placeholder {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px; }
+  .reviews__list #comment-form-placeholder h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    color: #000; }
+    .reviews__list #comment-form-placeholder h3:after {
+      border-top: 2px solid #47b259;
+      width: 250px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0; }
+  .reviews__list #comment-form-placeholder .d-flex .form-group {
+    width: 48%; }
+
+.reviews__list .form-control {
+  border-radius: 5px;
+  background: #e6e6e6;
+  border: none;
+  margin-top: 1.8rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem; }
+
+.reviews__list input.form-control {
+  height: 3rem;
+  width: 100%;
+  flex-basis: 50%;
+  flex-shrink: 0; }
+
+.reviews__list textarea.form-control {
+  height: 9.5rem;
+  width: 100%; }
+
+.reviews__list .btn {
+  border-radius: 5px;
+  display: block;
+  height: 3rem;
+  margin: 1.2rem auto 0;
+  padding: 0;
+  width: 30rem; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
@@ -5567,7 +5632,9 @@ form .thank {
       margin-right: auto; }
     .scheme .step__desc {
       text-align: center !important;
-      padding-top: .5rem; } }
+      padding-top: .5rem; }
+  .reviews__list #comment-form-placeholder {
+    width: 100%; } }
 
 @media (max-width: 900px) {
   .slick-slide img {
@@ -5654,7 +5721,18 @@ form .thank {
     width: 90%; }
   .vcard {
     padding-left: 1.5rem;
-    padding-right: 1.5rem; } }
+    padding-right: 1.5rem; }
+  .reviews__list .d-flex {
+    display: block !important; }
+  .reviews__list #comment-form-placeholder .d-flex .form-group {
+    width: 100%; }
+  .reviews__list .btn {
+    width: 100%; }
+  .reviews__list .ticket-comment {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem; }
+    .reviews__list .ticket-comment-text {
+      text-align: justify; } }
 
 @media (max-width: 520px) {
   .rubric__plate {

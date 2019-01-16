@@ -362,6 +362,14 @@
 			}
 		}
 	}
+
+
+	// reviews__list
+	.reviews__list{
+		#comment-form-placeholder{
+			width: 100%;
+		}
+	}
 }
 
 
@@ -546,6 +554,27 @@
 	.vcard{
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
+	}
+
+
+	// reviews__list
+	.reviews__list{
+		.d-flex{
+			display: block !important;
+		}
+		#comment-form-placeholder .d-flex .form-group{
+			width: 100%;
+		}
+		.btn{
+			width: 100%;
+		}
+		.ticket-comment{
+			padding-left: 1.2rem;
+			padding-right: 1.2rem;
+			&-text{
+				text-align: justify;
+			}
+		}
 	}
 
 }

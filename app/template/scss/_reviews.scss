@@ -1,0 +1,83 @@
+.reviews__list{
+	ol{
+		list-style: none;
+	}
+	.ticket{
+		&-comment{
+			background-color: $color8;
+			font-style: italic;
+			margin: 3.4rem 0;
+			padding: 1rem .8rem 1.2rem 2.2rem; 
+			&-author{
+				border-bottom: 1px dashed ;
+				color: $color10;
+				font-size: 1.5rem;
+			}
+			&-text{
+				color: $color1;
+				margin-top: 1rem;
+				p{
+					margin: .3rem 0;
+				}
+			}
+		}
+	}
+
+	#comment-form-placeholder{
+		margin-left: auto;
+		margin-right: auto;
+		width: 800px;
+		h3{
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			position: relative;
+			text-align: center;
+			padding-top: 2rem;
+			color: $color1;
+			&:after{
+				@extend .before;
+				border-top: 2px solid $color4;
+				width: 250px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 0;
+			}
+		}
+
+		.d-flex{
+			.form-group{
+				width: 48%;
+			}
+		}
+	}
+
+	.form-control{
+		border-radius: 5px;
+		background: $color6;
+		border: none;
+		margin-top: 1.8rem;
+		padding-left: 1.4rem;
+		padding-right: 1.4rem;
+	}
+
+	input.form-control{
+		height: 3rem;
+		width: 100%;
+		flex-basis: 50%;
+		flex-shrink: 0
+	}
+
+	textarea.form-control{
+		height: 9.5rem;
+		width: 100%;
+	}
+
+	.btn{
+		border-radius: 5px;
+		display: block;
+		height: 3rem;
+		margin: 1.2rem auto 0;
+		padding: 0;
+		width: 30rem;
+	}
+}
