@@ -69,6 +69,7 @@
 						<div class="navmenu__inner">
 							<nav id="navbar" class="mainnav">
 								<div class="mainnav__list">
+								<!-- TemplateBeginEditable name="EditRegion6" -->
 									<ul class="nav nav-tabs">
 										<li><a href="../about.html" title="">О наc</a></li>
 										<li class="folder">
@@ -112,7 +113,8 @@
 										</li>
 										<li><a href="../contacts.html" title="">Контакты</a></li>
 									</ul>
-									<div class="show-sm">
+								<!-- TemplateEndEditable -->
+								<div class="show-sm">
 										<a href="tel:+74955524924" title="">+7 (495) 552 4924</a>
 										<a href="tel:+79265524924" title="">+7 (926) 552 4924</a>
 										<a href="mailto:info@polvinil.ru">info@polvinil.ru</a>
@@ -156,6 +158,15 @@
 	<!-- =main -->
 	<div class="main">
 		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="B_crumbBox">
+					<li class="B_crumb"><a href="/" title="">главная</a></li>
+					<li class="B_separator">-</li>
+					<!-- TemplateBeginEditable name="EditRegion5" -->
+					<li class="B_lastCrumb"><span class="B_currentCrumb"></span></li>
+					<!-- TemplateEndEditable -->
+				</ul>
+			</div>
 		<!-- TemplateBeginEditable name="EditRegion4" -->
 			<h1></h1>
 		<!-- TemplateEndEditable -->
