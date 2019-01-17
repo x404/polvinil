@@ -495,7 +495,7 @@ input.submit:disabled{
 	}
 	&:before{
 		@extend .before;
-		border-top: 1px solid #a3d8ac;
+		border-top: 1px solid $color12;
 		left: 50%;
 		top: 0;
 		transform: translate(-50%);

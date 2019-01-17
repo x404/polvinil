@@ -17,3 +17,12 @@
     margin: 4rem 7rem 3rem;
     justify-content: space-between;	
 }
+
+
+.video__list{
+    grid-template-columns: repeat(3, 365px);
+    margin: 4rem 5.5rem 3rem;
+    flex-wrap: wrap;
+    grid-row-gap: 2.8rem;
+    justify-content: space-between;	
+}
