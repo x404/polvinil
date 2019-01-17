@@ -19,6 +19,12 @@
 
 .breadcrumbs{
 	margin: 1.8rem 0;
+	a{
+		color: $color1;
+		&:hover{
+			color: $color4;
+		}	
+	}
 	ul{
 		display: flex;
 		flex-wrap: wrap;
