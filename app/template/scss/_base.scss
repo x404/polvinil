@@ -74,23 +74,22 @@ h1, h2, h3, h4{
 	font-weight: normal;
 }
 
-strong,
 .bold{
 	font-weight: normal;
 	font-family: "SegoeUIBold";
 }
-em, i, 
+
 .italic{
 	font-style: normal;
 	font-family: "SegoeUIItalic";
 }
 
-strong em,
-em strong
-{
-	font-weight: normal;
-	font-family: "SegoeUIBoldItalic";
-}
+// strong em,
+// em strong
+// {
+// 	font-weight: normal;
+// 	font-family: "SegoeUIBoldItalic";
+// }
 
 
 .tdn{

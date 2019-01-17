@@ -53,7 +53,72 @@
 		}
 	}
 
+}
+
+
+main{
+
+	h2, h3, h4{
+		margin: 1.5rem 0;
+		font-weight: bold;		
+	}
+
+	h2{
+		font-size: 1.5rem;
+	}
 	p{
 		margin: 1.5rem 0;
+	}	
+
+	ul{
+		li{
+			position: relative;
+			&:before{
+				display: inline-block;
+				content: "-";
+				margin-right: .5rem;
+			}
+		}
+	}
+
+	strong{ 
+		font-weight: bold;
+	}
+}
+
+.gallery{
+	margin: 3rem 0;
+	text-align: center;
+	a{
+		display: inline-block;
+		position: relative;
+		&:before{
+			@extend .before;
+			background: url(../images/zoom.png) no-repeat center rgba(71, 178, 89, .75);
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			opacity: 0;
+			transition: opacity .3s;
+		}
+		img{
+			vertical-align: top;
+			height: auto;
+			width: auto
+		}
+		&:hover{
+			&:before{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+#gallery-carousel{
+	display: flex;
+	justify-content: space-between;
+	&.slick-initialized{
+		display: block;
 	}
 }

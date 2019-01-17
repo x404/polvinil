@@ -92,6 +92,11 @@
 			padding: 2rem 0;
 		}
 	}
+
+
+	.inner.main-grid{
+		display: block;
+	}
 }
 
 @media (max-width: 767px){
@@ -121,7 +126,14 @@
 			}
 		}
 	}
+
 }
+
+
+@media (max-width: 650px){
+
+}
+
 
 @media (max-width: 450px){
 	.header__phones{

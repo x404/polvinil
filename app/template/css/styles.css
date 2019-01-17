@@ -3376,20 +3376,13 @@ h3 {
 h1, h2, h3, h4 {
   font-weight: normal; }
 
-strong,
 .bold {
   font-weight: normal;
   font-family: "SegoeUIBold"; }
 
-em, i,
 .italic {
   font-style: normal;
   font-family: "SegoeUIItalic"; }
-
-strong em,
-em strong {
-  font-weight: normal;
-  font-family: "SegoeUIBoldItalic"; }
 
 .tdn, .info__tabs .tab-content .more__link, #callback form .policy a,
 .modal form .policy a {
@@ -3407,7 +3400,7 @@ em strong {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after, .main h1:after, #comment-form-placeholder h3:after {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after, .main h1:after, .gallery a:before, #comment-form-placeholder h3:after {
   content: "";
   display: block;
   position: absolute; }
@@ -5065,8 +5058,53 @@ form .thank {
       left: 0;
       width: 100%;
       background: linear-gradient(to right, #fff 0%, #a2a7b1 50%, #fff 100%); }
-  .main p {
-    margin: 1.5rem 0; }
+
+main h2, main h3, main h4 {
+  margin: 1.5rem 0;
+  font-weight: bold; }
+
+main h2 {
+  font-size: 1.5rem; }
+
+main p {
+  margin: 1.5rem 0; }
+
+main ul li {
+  position: relative; }
+  main ul li:before {
+    display: inline-block;
+    content: "-";
+    margin-right: .5rem; }
+
+main strong {
+  font-weight: bold; }
+
+.gallery {
+  margin: 3rem 0;
+  text-align: center; }
+  .gallery a {
+    display: inline-block;
+    position: relative; }
+    .gallery a:before {
+      background: url(../images/zoom.png) no-repeat center rgba(71, 178, 89, 0.75);
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity .3s; }
+    .gallery a img {
+      vertical-align: top;
+      height: auto;
+      width: auto; }
+    .gallery a:hover:before {
+      opacity: 1; }
+
+#gallery-carousel {
+  display: flex;
+  justify-content: space-between; }
+  #gallery-carousel.slick-initialized {
+    display: block; }
 
 .reviews__list .ticket-comment {
   background-color: #f2f2f2;
@@ -5157,6 +5195,37 @@ form .thank {
     color: #fff; }
     .faq__list .ec-message.open .ec-message-text p {
       border-bottom-color: #fff; }
+
+.services__list {
+  margin-top: -1rem;
+  text-align: center; }
+
+.service__item {
+  flex-basis: 50%;
+  margin: 3rem 0; }
+
+.service__link {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  .service__link img {
+    transition: filter .3s;
+    filter: grayscale(1); }
+  .service__link:hover img {
+    filter: grayscale(0); }
+
+.service__title {
+  background-color: #47b259;
+  color: #fff;
+  font-size: 2.4rem;
+  left: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%; }
 
 /* =mobile-menu
 ---------------------------*/
@@ -5421,7 +5490,9 @@ form .thank {
       padding-bottom: 1rem; }
     .footer .social {
       min-height: 0;
-      padding: 2rem 0; } }
+      padding: 2rem 0; }
+  .inner.main-grid {
+    display: block; } }
 
 @media (max-width: 767px) {
   .header__center {
@@ -5549,7 +5620,13 @@ form .thank {
   .connection__subtitle {
     margin-top: .5rem; }
   .reviews #reviews-carousel {
-    width: 100%; } }
+    width: 100%; }
+  .service__item {
+    flex-shrink: 0;
+    width: 45%;
+    flex-basis: 45%; }
+    .service__item img {
+      max-width: 100%; } }
 
 @media (max-width: 1280px) {
   .btn-need,
@@ -5608,7 +5685,11 @@ form .thank {
   #reviews-carousel .slick-arrow {
     transform: scale(0.6); }
     #reviews-carousel .slick-arrow.slick-next {
-      transform: scale(0.6) rotate(180deg); } }
+      transform: scale(0.6) rotate(180deg); }
+  #gallery-carousel .slick-prev {
+    left: -40px; }
+  #gallery-carousel .slick-next {
+    right: -40px; } }
 
 @media (max-width: 1024px) and (max-height: 770px) {
   #iwant .modal-dialog,
@@ -5661,11 +5742,15 @@ form .thank {
       text-align: center !important;
       padding-top: .5rem; }
   #comment-form-placeholder {
-    width: 100%; } }
+    width: 100%; }
+  .service__item {
+    flex-shrink: 0;
+    flex-basis: 47%;
+    width: 47%; }
+  .service__title {
+    font-size: 2rem; } }
 
 @media (max-width: 900px) {
-  .slick-slide img {
-    height: 250px; }
   .info__tabs .slick-prev {
     left: -55px; }
   .info__tabs .slick-next {
@@ -5687,7 +5772,17 @@ form .thank {
   .advantage__link {
     width: 150px; }
   .connections {
-    padding-top: 3rem; } }
+    padding-top: 3rem; }
+  .services__list {
+    display: block !important; }
+  .service__item {
+    flex-shrink: 0;
+    flex-basis: 100%;
+    width: 100%; }
+  .service__title {
+    font-size: 2.4rem; }
+  iframe {
+    width: 100% !important; } }
 
 @media (max-width: 790px) and (max-height: 400px) {
   .modal {
@@ -5723,7 +5818,10 @@ form .thank {
       padding-right: 25px;
       text-align: center; }
   .slick-slide img {
-    height: auto; } }
+    height: auto; }
+  .gallery {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; } }
 
 @media (max-width: 580px) {
   .reviews .slick-arrow {
@@ -5749,6 +5847,10 @@ form .thank {
   .vcard {
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
+  main {
+    text-align: justify; }
+    main h1, main h2, main h3, main h4 {
+      text-align: center; }
   #comment-form-placeholder .d-flex .form-group {
     width: 100%; }
   .reviews__list .d-flex,
@@ -5850,7 +5952,9 @@ form .thank {
   .rubric__text {
     padding-top: .5rem; }
   .map:before {
-    display: none !important; } }
+    display: none !important; }
+  .service__title {
+    font-size: 2.2rem; } }
 
 @media (max-width: 385px) {
   .rubrics {
@@ -5902,7 +6006,9 @@ form .thank {
     width: 250px; }
   .rubric__more {
     font-size: 1.3rem;
-    right: 4px; } }
+    right: 4px; }
+  .service__title {
+    font-size: 2rem; } }
 
 @media (max-width: 320px) {
   .rubric__text {
