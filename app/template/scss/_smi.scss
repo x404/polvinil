@@ -1,0 +1,19 @@
+.gallery__list{
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 75px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	.photo{
+		&__item{
+			margin: 1.7rem 0;
+		}
+	}
+}
+
+.photos__list{
+    grid-template-columns: repeat(5, 204px);
+    grid-row-gap: 2.8rem;
+    flex-wrap: wrap;
+    margin: 4rem 7rem 3rem;
+    justify-content: space-between;	
+}

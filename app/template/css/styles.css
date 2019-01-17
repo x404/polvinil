@@ -4256,6 +4256,7 @@ label.error {
   display: flex;
   height: 100%;
   left: 0;
+  margin: 0;
   padding: 0 1rem;
   position: absolute;
   text-align: center;
@@ -5031,6 +5032,12 @@ form .thank {
 .inner .share {
   margin-top: 2rem; }
 
+.inner .info__tabs {
+  background: none;
+  margin-bottom: 2rem;
+  min-height: auto;
+  padding: 0; }
+
 .breadcrumbs {
   margin: 1.8rem 0; }
   .breadcrumbs a {
@@ -5223,13 +5230,30 @@ main strong {
 .service__title {
   background-color: #47b259;
   color: #fff;
+  font-weight: normal;
   font-size: 2.4rem;
   left: 0;
   position: absolute;
   text-transform: uppercase;
   top: 50%;
+  margin: 0;
   transform: translateY(-50%);
   width: 100%; }
+
+.gallery__list {
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 75px;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .gallery__list .photo__item {
+    margin: 1.7rem 0; }
+
+.photos__list {
+  grid-template-columns: repeat(5, 204px);
+  grid-row-gap: 2.8rem;
+  flex-wrap: wrap;
+  margin: 4rem 7rem 3rem;
+  justify-content: space-between; }
 
 /* =mobile-menu
 ---------------------------*/
@@ -5630,7 +5654,13 @@ main strong {
     width: 45%;
     flex-basis: 45%; }
     .service__item img {
-      max-width: 100%; } }
+      max-width: 100%; }
+  .gallery__list {
+    display: flex;
+    justify-content: space-around; }
+  .photos__list {
+    grid-template-columns: repeat(4, 204px);
+    margin: 0; } }
 
 @media (max-width: 1280px) {
   .btn-need,
@@ -5752,7 +5782,12 @@ main strong {
     flex-basis: 47%;
     width: 47%; }
   .service__title {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .photos__list {
+    display: flex;
+    justify-content: space-around; }
+    .photos__list .gal-item {
+      margin-bottom: 2.8rem; } }
 
 @media (max-width: 900px) {
   .info__tabs .slick-prev {
@@ -5896,7 +5931,7 @@ main strong {
   .advantage__link {
     width: 156px; }
   .connections {
-    padding-top: 3.5  rem; }
+    padding-top: 3.5rem; }
   .connection__img {
     height: 100%;
     width: auto;
@@ -5942,7 +5977,18 @@ main strong {
     left: 0;
     width: 100% !important; }
   .article__date {
-    margin-top: 1rem; } }
+    margin-top: 1rem; }
+  .gallery__list {
+    display: block; }
+    .gallery__list .photo__item {
+      margin-left: auto;
+      margin-right: auto;
+      width: auto; }
+      .gallery__list .photo__item img {
+        max-width: 360px;
+        width: 100%; }
+  .photos__list {
+    display: block; } }
 
 @media (max-width: 425px) {
   .htitle {
