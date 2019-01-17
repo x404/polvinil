@@ -3407,7 +3407,7 @@ em strong {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after, .main h1:after, .reviews__list #comment-form-placeholder h3:after {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .map:before, .map:after, .main h1:after, #comment-form-placeholder h3:after {
   content: "";
   display: block;
   position: absolute; }
@@ -3647,7 +3647,8 @@ input.submit:disabled {
           border-bottom: 8px solid #395e4b; }
         .navmenu .nav .subnav ul li {
           margin: .4rem; }
-          .navmenu .nav .subnav ul li.active > a {
+          .navmenu .nav .subnav ul li.active > a,
+          .navmenu .nav .subnav ul li.active > span {
             border-bottom-color: #fff; }
 
 /* =/header
@@ -5067,9 +5068,6 @@ form .thank {
   .main p {
     margin: 1.5rem 0; }
 
-.reviews__list ol {
-  list-style: none; }
-
 .reviews__list .ticket-comment {
   background-color: #f2f2f2;
   font-style: italic;
@@ -5085,27 +5083,30 @@ form .thank {
     .reviews__list .ticket-comment-text p {
       margin: .3rem 0; }
 
-.reviews__list #comment-form-placeholder {
+.comment-list {
+  list-style: none; }
+
+#comment-form-placeholder {
   margin-left: auto;
   margin-right: auto;
   width: 800px; }
-  .reviews__list #comment-form-placeholder h3 {
+  #comment-form-placeholder h3 {
     font-size: 1.5rem;
     text-transform: uppercase;
     position: relative;
     text-align: center;
     padding-top: 2rem;
     color: #000; }
-    .reviews__list #comment-form-placeholder h3:after {
+    #comment-form-placeholder h3:after {
       border-top: 2px solid #47b259;
       width: 250px;
       left: 50%;
       transform: translateX(-50%);
       top: 0; }
-  .reviews__list #comment-form-placeholder .d-flex .form-group {
+  #comment-form-placeholder .d-flex .form-group {
     width: 48%; }
 
-.reviews__list .form-control {
+#comment-form .form-control {
   border-radius: 5px;
   background: #e6e6e6;
   border: none;
@@ -5113,23 +5114,46 @@ form .thank {
   padding-left: 1.4rem;
   padding-right: 1.4rem; }
 
-.reviews__list input.form-control {
+#comment-form input.form-control {
   height: 3rem;
   width: 100%;
   flex-basis: 50%;
   flex-shrink: 0; }
 
-.reviews__list textarea.form-control {
+#comment-form textarea.form-control {
   height: 9.5rem;
   width: 100%; }
 
-.reviews__list .btn {
+#comment-form .btn {
   border-radius: 5px;
   display: block;
   height: 3rem;
   margin: 1.2rem auto 0;
   padding: 0;
   width: 30rem; }
+
+.faq__list .ec-message {
+  font-style: italic;
+  margin: 1rem 0 2rem;
+  font-family: "SegoeUI";
+  padding: 1rem 1.5rem;
+  transition: background-color .3s; }
+  .faq__list .ec-message-text {
+    cursor: pointer; }
+    .faq__list .ec-message-text p {
+      border-bottom: 1px dashed rgba(0, 0, 0, 0);
+      display: inline-block;
+      margin: 0;
+      transition: border-bottom .3s; }
+      .faq__list .ec-message-text p:hover {
+        border-bottom: 1px dashed; }
+  .faq__list .ec-message__reply {
+    display: none; }
+  .faq__list .ec-message.open {
+    background-color: #47b259;
+    color: #fff; }
+    .faq__list .ec-message.open .ec-message-text p {
+      border-bottom-color: #fff; }
 
 /* =mobile-menu
 ---------------------------*/
@@ -5633,7 +5657,7 @@ form .thank {
     .scheme .step__desc {
       text-align: center !important;
       padding-top: .5rem; }
-  .reviews__list #comment-form-placeholder {
+  #comment-form-placeholder {
     width: 100%; } }
 
 @media (max-width: 900px) {
@@ -5722,16 +5746,20 @@ form .thank {
   .vcard {
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
-  .reviews__list .d-flex {
+  #comment-form-placeholder .d-flex .form-group {
+    width: 100%; }
+  .reviews__list .d-flex,
+  .faq__list .d-flex {
     display: block !important; }
-  .reviews__list #comment-form-placeholder .d-flex .form-group {
+  .reviews__list .btn,
+  .faq__list .btn {
     width: 100%; }
-  .reviews__list .btn {
-    width: 100%; }
-  .reviews__list .ticket-comment {
+  .reviews__list .ticket-comment,
+  .faq__list .ticket-comment {
     padding-left: 1.2rem;
     padding-right: 1.2rem; }
-    .reviews__list .ticket-comment-text {
+    .reviews__list .ticket-comment-text,
+    .faq__list .ticket-comment-text {
       text-align: justify; } }
 
 @media (max-width: 520px) {

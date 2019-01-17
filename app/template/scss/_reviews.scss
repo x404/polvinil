@@ -1,7 +1,4 @@
 .reviews__list{
-	ol{
-		list-style: none;
-	}
 	.ticket{
 		&-comment{
 			background-color: $color8;
@@ -22,35 +19,41 @@
 			}
 		}
 	}
+}
 
-	#comment-form-placeholder{
-		margin-left: auto;
-		margin-right: auto;
-		width: 800px;
-		h3{
-			font-size: 1.5rem;
-			text-transform: uppercase;
-			position: relative;
-			text-align: center;
-			padding-top: 2rem;
-			color: $color1;
-			&:after{
-				@extend .before;
-				border-top: 2px solid $color4;
-				width: 250px;
-				left: 50%;
-				transform: translateX(-50%);
-				top: 0;
-			}
-		}
+.comment-list{
+	list-style: none;
+}
 
-		.d-flex{
-			.form-group{
-				width: 48%;
-			}
+#comment-form-placeholder{
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	h3{
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		position: relative;
+		text-align: center;
+		padding-top: 2rem;
+		color: $color1;
+		&:after{
+			@extend .before;
+			border-top: 2px solid $color4;
+			width: 250px;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 0;
 		}
 	}
 
+	.d-flex{
+		.form-group{
+			width: 48%;
+		}
+	}
+}
+
+#comment-form{	
 	.form-control{
 		border-radius: 5px;
 		background: $color6;
@@ -79,5 +82,51 @@
 		margin: 1.2rem auto 0;
 		padding: 0;
 		width: 30rem;
+	}
+}
+
+
+// faq
+.faq__list{
+	.ec{
+		&-message{
+			font-style: italic;
+			margin: 1rem 0 2rem;
+			font-family: "SegoeUI";
+			padding: 1rem 1.5rem;
+			transition: background-color .3s;
+			&-text{
+				cursor: pointer;
+				p{
+					border-bottom: 1px dashed rgba(0,0,0,0);
+					display: inline-block;
+					margin: 0;
+					transition: border-bottom .3s;
+					&:hover{
+						border-bottom: 1px dashed ;
+					}
+				}
+			}
+			&__reply{
+				display: none;
+			}
+
+			&.open{
+				background-color: $color4;
+				color: $color2;
+				.ec{
+					&-message{
+						&-text{
+							p{
+								border-bottom-color: $color2;
+							}
+						}
+						&__reply{
+
+						}
+					}
+				}
+			}
+		}
 	}
 }

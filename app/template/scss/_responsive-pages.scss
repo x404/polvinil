@@ -365,10 +365,8 @@
 
 
 	// reviews__list
-	.reviews__list{
-		#comment-form-placeholder{
-			width: 100%;
-		}
+	#comment-form-placeholder{
+		width: 100%;
 	}
 }
 
@@ -558,12 +556,13 @@
 
 
 	// reviews__list
-	.reviews__list{
+	#comment-form-placeholder .d-flex .form-group{
+		width: 100%;
+	}
+	.reviews__list,
+	.faq__list{
 		.d-flex{
 			display: block !important;
-		}
-		#comment-form-placeholder .d-flex .form-group{
-			width: 100%;
 		}
 		.btn{
 			width: 100%;

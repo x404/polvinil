@@ -433,7 +433,9 @@ input.submit:disabled{
 				li{
 					margin: .4rem;
 					&.active{
-						& > a{
+						& > a,
+						& > span
+						{
 							border-bottom-color: $color2;
 						}
 					}
