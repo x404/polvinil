@@ -1,0 +1,10 @@
+.catalog{
+	.nav-link{
+		background: #808080;
+		color: $color2;
+		border-radius: 8px;
+		&:hover{
+			background-color: $color4;
+		}
+	}
+}

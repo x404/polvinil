@@ -587,6 +587,7 @@
 		position: absolute;
 		top: 50%;
 		margin-top: -26px;
+		// transform: translateY(-50%);
 		transition: filter .3s;
 		width: 26px;
 		&:hover{

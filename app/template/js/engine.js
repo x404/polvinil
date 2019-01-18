@@ -306,7 +306,72 @@ $(document).ready(function(){
 			  }
 			}
 	    ]
-	})
+	});
+
+
+	$('#lastreviews-carousel').slick({
+ 		prevArrow: '<button type="button" class="slick-prev slick-arrow slick-arrow-gray" aria-label="Назад"></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow slick-arrow-gray" aria-label="Вперёд"></button>',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		responsive: [
+			{
+			  breakpoint: 550,
+			  settings: {
+			  	arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+		        centerMode: true,
+		        centerPadding: '10px'
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+			  	arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+		        centerMode: true,
+		        centerPadding: '50px'
+			  }
+			},
+			{
+			  breakpoint: 420,
+			  settings: {
+			  	arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+		        centerMode: true,
+		        centerPadding: '40px'
+			  }
+			},
+			{
+			  breakpoint: 400,
+			  settings: {
+			  	arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+		        centerMode: true,
+		        centerPadding: '25px'
+			  }
+			},
+			{
+			  breakpoint: 385,
+			  settings: {
+			  	arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+		        centerMode: true,
+		        centerPadding: '10px'
+			  }
+			}
+		]
+	});
+
+
 
 	$('#nav-video-tab').on('shown.bs.tab', function (e) {
 		$('#video-carousel').slick('setPosition');
