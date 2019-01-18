@@ -10,19 +10,32 @@
 	}
 }
 
+.photos,
+.video,
+.articles
+{
+	&__list{
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	    grid-row-gap: 2.8rem;
+	}
+}
+
 .photos__list{
     grid-template-columns: repeat(5, 204px);
-    grid-row-gap: 2.8rem;
-    flex-wrap: wrap;
     margin: 4rem 7rem 3rem;
-    justify-content: space-between;	
 }
 
 
 .video__list{
     grid-template-columns: repeat(3, 365px);
     margin: 4rem 5.5rem 3rem;
-    flex-wrap: wrap;
-    grid-row-gap: 2.8rem;
-    justify-content: space-between;	
+}
+
+.articles__list{
+    grid-template-columns: repeat(3, 365px);
+    margin: 4rem 5.5rem 3rem;
+    p{
+    	margin: 0;
+    }
 }

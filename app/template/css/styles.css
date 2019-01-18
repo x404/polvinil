@@ -4352,6 +4352,7 @@ label.error {
   font-size: 1.5rem;
   padding-top: 1.8rem;
   position: relative;
+  margin: 0;
   text-align: center;
   text-transform: uppercase; }
 
@@ -4360,6 +4361,7 @@ label.error {
   display: flex;
   flex-grow: 1;
   line-height: 1.3;
+  margin: .5rem 0;
   position: relative; }
 
 .article__date {
@@ -5282,19 +5284,26 @@ div.pagination {
   .gallery__list .photo__item {
     margin: 1.7rem 0; }
 
+.photos__list,
+.video__list,
+.articles__list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-row-gap: 2.8rem; }
+
 .photos__list {
   grid-template-columns: repeat(5, 204px);
-  grid-row-gap: 2.8rem;
-  flex-wrap: wrap;
-  margin: 4rem 7rem 3rem;
-  justify-content: space-between; }
+  margin: 4rem 7rem 3rem; }
 
 .video__list {
   grid-template-columns: repeat(3, 365px);
-  margin: 4rem 5.5rem 3rem;
-  flex-wrap: wrap;
-  grid-row-gap: 2.8rem;
-  justify-content: space-between; }
+  margin: 4rem 5.5rem 3rem; }
+
+.articles__list {
+  grid-template-columns: repeat(3, 365px);
+  margin: 4rem 5.5rem 3rem; }
+  .articles__list p {
+    margin: 0; }
 
 /* =mobile-menu
 ---------------------------*/
@@ -5705,7 +5714,8 @@ div.pagination {
   .photos__list {
     grid-template-columns: repeat(4, 204px);
     margin: 0; }
-  .video__list {
+  .video__list,
+  .articles__list {
     grid-template-columns: repeat(2, 365px);
     margin: 0; } }
 
@@ -5835,9 +5845,13 @@ div.pagination {
     justify-content: space-around; }
     .photos__list .gal-item {
       margin-bottom: 2.8rem; }
-  .video__list {
+  .video__list,
+  .articles__list {
     display: block; }
-    .video__list .video__item {
+    .video__list .video__item,
+    .video__list .article__item,
+    .articles__list .video__item,
+    .articles__list .article__item {
       margin-bottom: 3.4rem; } }
 
 @media (max-width: 900px) {
@@ -6051,7 +6065,15 @@ div.pagination {
     white-space: normal; }
   .video__list .video__link {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+  .articles__list .article__item img {
+    display: block;
+    height: min-content;
+    position: static;
+    max-height: 280px;
+    width: 100% !important; }
+  .articles__list .article__desc {
+    margin-top: 0; } }
 
 @media (max-width: 425px) {
   .htitle {
@@ -6114,9 +6136,10 @@ div.pagination {
   .review__item {
     width: 280px; }
   .photo__item,
-  .video__item,
-  .article__item {
+  .video__item {
     width: 250px; }
+  .article__item {
+    width: 100%; }
   .rubric__more {
     font-size: 1.3rem;
     right: 4px; }
