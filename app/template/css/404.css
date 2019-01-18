@@ -1,0 +1,11 @@
+.page-error .main {
+  background: url(../images/404.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 820px; }
+
+.page-error .subtitle {
+  font-size: 3rem;
+  text-align: center; }
+
+.page-error .footer {
+  margin-top: 0; }

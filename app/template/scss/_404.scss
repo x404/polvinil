@@ -1,0 +1,29 @@
+.page-error{
+	.main{
+		background: url(../images/404.jpg) no-repeat top 100px left 50%;
+		background-size: cover;
+		min-height: 820px;
+	}
+
+	.subtitle{
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	.reason{
+		background-color: $color4;
+		color: $color1;
+		font-size: 1.8rem; 
+		padding: .5rem 0;
+		margin: 60rem 0 15rem;
+		text-transform: uppercase;
+		&__title{
+			font-size: 3rem;
+			color: $color2;
+		}
+	}
+
+	.footer{
+		margin-top: 0;
+	}
+}

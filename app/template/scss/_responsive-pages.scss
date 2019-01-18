@@ -16,6 +16,16 @@
 	{
 		top: 535px;
 	}
+
+
+	.page-error{
+		.main{
+
+		}
+		.reason{
+			margin-top: 50rem;
+		}
+	}
 }
 
 
@@ -448,6 +458,28 @@
 	.feedback{
 		width: 100%;
 	}
+
+
+	.page-error{
+		.main{
+			padding-bottom: 1rem;
+			background-position: top 100px left 30%;
+			// min-height: 820px;
+		}
+
+		.subtitle{
+			font-size: 2.6rem;
+		}
+
+		.reason{
+			font-size: 1.8rem; 
+			padding: .5rem 1rem;
+			margin: 60rem 0 5rem;
+			&__title{
+				font-size: 2.2rem;
+			}
+		}
+	}
 }
 
 
@@ -537,6 +569,18 @@
 			display: block;
 		}
 	}
+
+	.page-error{
+		.main{
+			// background-position: top 100px left 30%;
+			min-height: 600px;
+		}
+
+		.reason{
+			margin: 40rem 0 5rem;
+		}
+	}
+
 }
 
 
@@ -576,6 +620,18 @@
 		&-house,
 		&-rec{
 			display: none;
+		}
+	}
+
+	.page-error{
+		.main{
+			background-position: top 120px left 32%;
+			min-height: 0;
+		}
+
+		.reason{
+			margin: 38rem 0 2rem;
+			padding: .5rem 1rem;
 		}
 	}
 }
@@ -734,6 +790,21 @@
 	.scheme{
 		display: block;
 	}
+
+
+	.page-error{
+		.main{
+			background-position: center;
+			background-size: contain;
+			min-height: 0;
+		}
+
+		.reason{
+			margin: 20rem 0 2rem;
+			padding: .5rem 1rem;
+		}
+	}
+
 }
 
 
