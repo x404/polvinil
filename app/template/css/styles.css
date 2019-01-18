@@ -3400,7 +3400,7 @@ h1, h2, h3, h4 {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .main h1:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .main h1:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after {
   content: "";
   display: block;
   position: absolute; }
@@ -5393,6 +5393,34 @@ div.pagination {
 .page-error .footer {
   margin-top: 0; }
 
+.sisea-results {
+  font-family: "SegoeUI";
+  padding-bottom: 2rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase; }
+  .sisea-results:after {
+    border-top: 1px solid #d5d5d5;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 445px; }
+
+.sisea-result {
+  margin: 2rem 0; }
+  .sisea-result p,
+  .sisea-result h3 {
+    margin: 0; }
+  .sisea-result h3 {
+    margin-bottom: .5rem; }
+  .sisea-result .extract {
+    margin-left: 1.2rem; }
+    .sisea-result .extract .sisea-highlight {
+      font-weight: bold; }
+
+.sisea-highlight {
+  color: #47b259; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
@@ -6084,7 +6112,10 @@ div.pagination {
     padding-right: 1.2rem; }
     .reviews__list .ticket-comment-text,
     .faq__list .ticket-comment-text {
-      text-align: justify; } }
+      text-align: justify; }
+  .sisea-results:after {
+    max-width: 445px;
+    width: 90%; } }
 
 @media (max-width: 520px) {
   .rubric__plate {

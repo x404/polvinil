@@ -1,0 +1,41 @@
+.sisea{
+	&-results{
+		font-family: "SegoeUI";
+		padding-bottom: 2rem;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		&:after{
+			@extend .before;
+			border-top: 1px solid #d5d5d5;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 445px;
+
+		}
+	}
+
+	&-result{
+		// display: list-item;
+		// list-style: decimal;
+		margin: 2rem 0;
+		p,
+		h3{
+			margin: 0;
+		}
+		h3{
+			margin-bottom: .5rem;
+		}
+		.extract{
+			margin-left: 1.2rem;
+			.sisea-highlight{
+				font-weight: bold;
+			}
+		}
+	}
+
+	&-highlight{
+		color: $color4;
+	}
+}
