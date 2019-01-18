@@ -636,6 +636,18 @@ $(document).ready(function(){
 	});
 
 
+	$('#feedback-form').validate({
+        rules : {
+            tel:{validphone:true}
+        },
+		submitHandler: function(form){
+			let strSubmit= $(form).serialize(),
+				url = $(form).attr('action');
+			sendform(url, strSubmit, form);		
+		}
+	});
+
+
 	$('#advantage').on('show.bs.modal', function (e) {
 		let $this = $(e.relatedTarget),
 			title = $this.data('title'),

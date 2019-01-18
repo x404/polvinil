@@ -1,0 +1,76 @@
+.feedback{
+	font-size: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 94rem;
+	margin-top: 1.7rem;
+	padding-top: 2.5rem;
+	color: $color1;
+	font-family: "SegoeUI";
+	&:before{
+		@extend .before;
+		border-top: 2px solid $color4;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		width: 254px;
+	}
+
+	&__title{
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+
+	&__form{
+		margin-top: 3rem;
+		.form-control{
+			display: block;
+			width: 100%;
+			background: $color6;
+			border-radius: 5px;
+			border: 1px solid $color6;
+			font-size: 1.4rem;
+			height: 3rem;
+			padding-left: 1.2rem;
+			padding-right: 1.2rem;
+			margin-bottom: 1.8rem;
+			&:disabled{
+				opacity: .8;
+			}
+		}
+
+		input.form-control{
+			height: 3rem;
+		}
+		textarea.form-control{
+			height: 9.4rem;
+		}
+	}
+
+	.submit{
+		border-radius: 6px;
+		height: 3rem;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+		&:disabled{
+			border-color: #ccc;
+			&:hover{
+				color: $color2;
+			}
+		}		
+	}
+
+	.policy{
+		font-size: 1.4rem;
+		font-style: italic;
+	}
+
+	.user-access:checked+label:after{
+		font-size: 2.2rem;
+		top: 0;
+		left: 10px;
+	}
+}

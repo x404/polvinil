@@ -44,7 +44,7 @@
 		<div class="container">
 			<div class="d-flex justify-content-between">
 				<div class="header__logo">
-					<a href="/" title="">
+					<a href="/" title="" aria-label="Главная">
 						<picture>
 							<source srcset="/template/images/logo.webp" type="image/webp">
 							<img src="/template/images/logo.png" alt="" />
@@ -189,6 +189,58 @@
 			</main>
 		<!-- InstanceEndEditable -->
 		</div>
+		<!-- InstanceBeginEditable name="EditRegion7" -->
+		<div class="map">
+			<div class="container">
+				<h3>СХЕМА ПРОЕЗДА</h3>
+			</div>
+			<div id="ymap"></div>
+		</div>
+
+		<div class="feedback">
+			<div class="container">
+				<div class="feedback__content text-center">
+					<p class="feedback__title">ОСТАЛИСЬ ВОПРОСЫ ?</p>
+					<div class="feedback__contacts text-center">
+						<p>г. Королёв, мкр. Костино, ул. Калининградская д.17, корп.1, офис XX</p>
+						<p>+7 (495) 552 49 24  |  <a href="mailto:info@polvinil.ru">info@polvinil.ru</a></p>
+					</div>
+				</div>
+
+				<form action="#" method="post" id="feedback-form" class="feedback__form form-policy">
+					<fieldset>
+						<div class="row">
+							<div class="col">
+								<label for="fb_name" class="visually-hidden">как вас зовут ?</label>
+								<input name="name" id="fb_name" type="text" value="" class="form-control required" placeholder="как вас зовут ?">						
+							</div>
+							<div class="col">
+								<label for="fb_tel" class="visually-hidden">ваш номер телефона</label>
+								<input name="tel" id="fb_tel" type="tel" value="" class="form-control required tel" placeholder="ваш номер телефона *">
+							</div>
+							<div class="col">
+								<label for="fb_email" class="visually-hidden">ваш e-mail</label>
+								<input name="email" id="fb_email" type="email" value="" class="form-control required email" placeholder="ваш e-mail *">						
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="fb_msg" class="visually-hidden">ваше сообщение</label>
+								<textarea name="msg" id="fb_msg" cols="30" rows="10" placeholder="ваше сообщение ... *" class="required form-control"></textarea>
+							</div>
+						</div>
+
+						<div class="policy">
+							<input type="checkbox" id="fbcheckbox1" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
+							<label for="fbcheckbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+						</div>
+
+						<input type="submit" name="feedback" class="submit btn btn-green" value="отправить" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<!-- InstanceEndEditable -->
 	</div>
 	<!-- =/main -->
 
@@ -216,7 +268,7 @@
 					</div>
 				</div>
 				<div class="footer__logo">
-					<a href="/" title="">
+					<a href="/" title="" aria-label="Главная">
 						<picture>
 							<source srcset="/template/images/logo2.webp" type="image/webp">
 							<img src="/template/images/logo2.png" alt="" />
@@ -301,9 +353,33 @@
 <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
 
-
-
 <!-- InstanceBeginEditable name="EditRegion3" -->
+<script src="https://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
+<script>
+var map;
+var myCollection;	
+ymaps.ready(function () {
+	map = new ymaps.Map('ymap', {
+		center: [ 55.913354, 37.841756 ],
+		zoom: 17
+	});
+    myPlacemark = new ymaps.Placemark(map.getCenter(), {
+            balloonContent: 'г. Королёв, мкр. Костино, ул. Калининградская д.17, корп.1, офис XX',
+            iconCaption: ''
+    }, {
+         preset: 'islands#redDotIcon'
+    }),
+	map.behaviors.disable('scrollZoom'); 
+	map.geoObjects.add(myPlacemark);
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+})
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
