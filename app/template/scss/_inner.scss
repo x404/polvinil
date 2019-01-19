@@ -48,6 +48,18 @@
 }
 
 
+.gradient-line{
+	position: relative;
+	&:after{
+		@extend .before;
+		background: linear-gradient(to right, #fff 0%, #a2a7b1 50%, #fff 100% );
+		bottom: -18px;
+		height: 1px;
+		left: 0;
+		width: 100%;
+	}
+}
+
 .main{
 	margin-top: .5rem;
 	h1{
@@ -55,15 +67,7 @@
 		font-size: 2.4rem;
 		text-align: center;
 		text-transform: uppercase;
-		position: relative;
-		&:after{
-			@extend .before;
-			background: linear-gradient(to right, #fff 0%, #a2a7b1 50%, #fff 100% );
-			bottom: -18px;
-			height: 1px;
-			left: 0;
-			width: 100%;
-		}
+		@extend .gradient-line;
 	}
 
 }
