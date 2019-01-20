@@ -3400,7 +3400,7 @@ h1, h2, h3, h4 {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after, .catalog .filter .types:after, .catalog .product__desc .labels .label:before, .catalog .product__desc .labels .label:after {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after, .catalog .filter .types:after, .catalog .products.loaded:before, .catalog .product__desc .labels .label:before, .catalog .product__desc .labels .label:after {
   content: "";
   display: block;
   position: absolute; }
@@ -5448,6 +5448,10 @@ div.pagination {
 .sisea-highlight {
   color: #47b259; }
 
+.hide {
+  display: none;
+  opacity: 0; }
+
 .catalog {
   margin-top: 2.5rem;
   padding-top: .2rem; }
@@ -5497,6 +5501,22 @@ div.pagination {
     .catalog .products:after {
       bottom: auto;
       top: 0; }
+    .catalog .products.loaded .product__item {
+      opacity: .5; }
+    .catalog .products.loaded:before {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.7) url(../images/ajax-loader.gif) no-repeat top 55% center;
+      bottom: -5px;
+      content: "";
+      display: flex;
+      font-size: 2rem;
+      justify-content: center;
+      left: 0;
+      margin: auto;
+      right: 0;
+      text-align: center;
+      top: 0;
+      z-index: 99; }
   .catalog .product__item {
     cursor: pointer;
     margin-top: 3.4rem;

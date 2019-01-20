@@ -189,15 +189,19 @@
 							</ul>
 						</div>
 						<div class="d-flex justify-content-center flex-column flex-md-row justify-content-center">
-							<ul class="d-flex types justify-content-center">
-								<li><button type="button" class="nav-link">КЛЕЕВОЙ</button></li>
-								<li><button type="button" class="nav-link">ЗАМКОВЫЙ</button></li>
-								<li><button type="button" class="nav-link active">ВСЕ ТИПЫ</button></li>
+							<ul class="types d-flex justify-content-center">
+								<li>
+									<button type="button" class="nav-link" data-filter="glue">КЛЕЕВОЙ</button>
+								</li>
+								<li>
+									<button type="button" class="nav-link" data-filter="lock">ЗАМКОВЫЙ</button>
+								</li>
+								<li><button type="button" class="nav-link active" data-filter="">ВСЕ ТИПЫ</button></li>
 							</ul>
-							<ul class="d-flex justify-content-center">
-								<li><button type="button" class="nav-link">34 КЛАСС</button></li>
-								<li><button type="button" class="nav-link">43 КЛАСС</button></li>
-								<li><button type="button" class="nav-link active">ВСЕ КЛАССЫ</button></li>
+							<ul class="classes d-flex justify-content-center">
+								<li><button type="button" class="nav-link" data-filter="class-34">34 КЛАСС</button></li>
+								<li><button type="button" class="nav-link" data-filter="class-43">43 КЛАСС</button></li>
+								<li><button type="button" class="nav-link active" data-filter="">ВСЕ КЛАССЫ</button></li>
 							</ul>
 						</div>
 					</div>
@@ -205,12 +209,12 @@
 
 					<!-- =products -->
 					<div id="products" class="products d-grid">
-						<div class="product__item">
+						<div class="product__item class-34 glue">
 							<div class="product__pic">
 								<img src="/images/catalog/a-rokwood.jpg" alt="alpinefloor - Дуб роквуд" />
 							</div>
 							<div class="product__desc">
-								<p class="product__title product__title-brand">Alpinefloor</p>
+								<p class="product__title product__title-brand">Alpinefloor - клей-34</p>
 								<p class="product__title product__title-name">Дуб роквуд</p>
 								<div class="labels">
 									<div class="label">
@@ -263,12 +267,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="product__item">
+						<div class="product__item class-43 glue">
 							<div class="product__pic">
 								<img src="/images/catalog/a-goodvik.jpg" alt="alpinefloor - Дуб гудвик" />
 							</div>
 							<div class="product__desc">
-								<p class="product__title product__title-brand">Alpinefloor</p>
+								<p class="product__title product__title-brand">Alpinefloor - клей-43</p>
 								<p class="product__title product__title-name">Дуб гудвик</p>
 								<div class="labels">
 									<div class="label">
@@ -321,12 +325,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="product__item">
+						<div class="product__item class-43 lock">
 							<div class="product__pic">
 								<img src="/images/catalog/f-rolen.jpg" alt="alpinefloor - Дуб ролен" />
 							</div>
 							<div class="product__desc">
-								<p class="product__title product__title-brand">finefloor</p>
+								<p class="product__title product__title-brand">finefloor - замок-43</p>
 								<p class="product__title product__title-name">Дуб ролен</p>
 								<div class="labels">
 									<div class="label">
@@ -379,12 +383,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="product__item">
+						<div class="product__item class-34 glue">
 							<div class="product__pic">
 								<img src="/images/catalog/a-meranti.jpg" alt="alpinefloor - Дуб меранти" />
 							</div>
 							<div class="product__desc">
-								<p class="product__title product__title-brand">Alpinefloor</p>
+								<p class="product__title product__title-brand">Alpinefloor - клей-34</p>
 								<p class="product__title product__title-name">Дуб меранти</p>
 								<div class="labels">
 									<div class="label">
@@ -437,12 +441,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="product__item">
+						<div class="product__item class-34 lock">
 							<div class="product__pic">
 								<img src="/images/catalog/a-brewih.jpg" alt="alpinefloor - Дуб роквуд" />
 							</div>
 							<div class="product__desc">
-								<p class="product__title product__title-brand">Alpinefloor</p>
+								<p class="product__title product__title-brand">Alpinefloor - замок-34</p>
 								<p class="product__title product__title-name">Дуб бревиш</p>
 								<div class="labels">
 									<div class="label">
@@ -822,6 +826,62 @@
 <script src="//yastatic.net/share2/share.js"></script>
 
 <!-- InstanceBeginEditable name="EditRegion3" -->
+<script>
+	//types
+	[].forEach.call( document.querySelectorAll('.filter .types .nav-link'), function(el, i){
+		el.addEventListener('click', function(e){
+			document.querySelector('.filter .types .nav-link.active').classList.remove('active')
+			el.classList.add('active');
+			productfilter();
+		})
+	});
+
+	//classes
+	[].forEach.call( document.querySelectorAll('.filter .classes .nav-link'), function(el, i){
+		el.addEventListener('click', function(e){
+			// set buttons
+			document.querySelector('.filter .classes .nav-link.active').classList.remove('active')
+			el.classList.add('active');
+			productfilter();
+		})
+	})
+
+
+	var arr = document.querySelectorAll('#products .product__item');
+	function productfilter(){
+		let filter = document.querySelector('.filter .classes .nav-link.active').dataset.filter,
+			type = document.querySelector('.filter .types .nav-link.active').dataset.filter;
+			document.querySelector('#products').classList.add('loaded');
+			setTimeout(function(){
+
+				// filter products
+				if (filter == '' && type == ''){ // если показываются все продукты
+					arr.forEach(function(item,i,arr){
+						item.classList.remove('hide');
+					})
+				} else {
+					arr.forEach(function(item, i , arr){ // проходим по всем элементам
+						if (type != '' && filter != ''){ // если выбран тип и класс продукта 
+							if (item.classList.contains(filter) && item.classList.contains(type)){
+								item.classList.remove('hide');
+							} else{
+								item.classList.add('hide');
+							}
+						} else { // если отображаются все типы продукта
+							if ( (type == '' && item.classList.contains(filter)) || (filter == '' && item.classList.contains(type))) {
+								item.classList.remove('hide');
+							}
+							else{
+								item.classList.add('hide');
+							}					
+						}
+					});
+				};
+
+				document.querySelector('#products').classList.remove('loaded');
+			}, 400 )
+	}
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
