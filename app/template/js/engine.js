@@ -782,52 +782,39 @@ $(document).ready(function(){
 
 
 	// products counters
+
+	$('#area').keyup(function() {
+		var submit = $('.product__submit'),
+			cost = 0,
+			area = document.querySelector('#area').value,
+			area_pack = $('#quantity').data('pack');
+
+		cnt = Math.ceil(area / area_pack);
+		calc(cnt);
+	});
+
+
 	$('.product__count #plus').on('click', function(e){
 		e.preventDefault();
-		var $this = $(this),
-			form = $this.closest('.calc'),
-			submit = form.find('.product__submit'),
-			priceEl = form.find('#sum'),
-			countEl = form.find('#quantity'),
-			price = countEl.data('price').toString().split('.').join(''),
-			cnt = parseInt(countEl.val())+1,
-			cost = 0;
+		var countEl = $('#quantity'),
+			submit = $('.product__submit'),
+			cnt = parseInt(countEl.val())+1;
 
-			console.log(price);
+		calc(cnt);
 
-		cost = cnt * price;
-
-		countEl.val(cnt);
-		priceEl.text(splitNums(' ', cost.toString()));
-		$('.product__submit-active').removeClass('product__submit-active');
-		submit.addClass('product__submit-active');
-		submit.removeAttr('disabled');
+		// $('.product__submit-active').removeClass('product__submit-active');
+		// submit.addClass('product__submit-active');
+		// submit.removeAttr('disabled');
 	});
 
 	$('.product__count #minus').on('click', function(e){
 		e.preventDefault();
-		var $this = $(this),
-			form = $this.closest('.calc'),
-			submit = form.find('.product__submit'),
-			priceEl = form.find('#sum'),
-			countEl = form.find('#quantity'),
-			price = countEl.data('price').toString().split('.').join(''),
+		var countEl = $('#quantity'),
+			submit = $('.product__submit'),
 			cnt = parseInt(countEl.val())-1,
 			cost = 0;
 
-
-		$('.product__submit-active').removeClass('product__submit-active');
-
-		if ( cnt <= 0 ) {
-			cnt = 0;
-			submit.prop('disabled', 'disabled');
-		} else {
-			submit.addClass('product__submit-active');			
-		};
-
-		cost = cnt * price;
-		countEl.val(cnt);
-		priceEl.text(splitNums('.', cost.toString()));
+		calc(cnt);
 	});
 
 
@@ -835,12 +822,34 @@ $(document).ready(function(){
 		var $this = $(this),
 			form = $this.closest('.calc'),
 			submit = form.find('.product__submit'),
-			priceEl = form.find('#sum'),
-			price = $this.data('price').toString().split('.').join(''),
 			cnt = 0,
-			cost = 0;
 
 		cnt = $(this).val();
+
+
+
+		calc(cnt);
+	});
+});
+
+
+function calc(cnt){
+	let form = $('.calc'),
+		submit = $('.product__submit'),
+		priceEl = form.find('#sum'),
+		countEl = form.find('#quantity'),
+		price = countEl.data('price').toString().split('.').join(''),
+
+		area = document.querySelector('#area').value,
+		areapacksEl = form.find('#areapacks'),
+		area_pack = countEl.data('pack'),
+		cost = 0;
+
+	count = cnt * area_pack;
+	cost = parseInt(cnt * area_pack * price);
+	areapacksEl.text(splitNums('.', count.toString()));
+	countEl.val(cnt);
+	priceEl.text(splitNums('.', cost.toString()));
 
 		$('.product__submit-active').removeClass('product__submit-active');		
 		if ( cnt <= 0 ) {
@@ -848,13 +857,9 @@ $(document).ready(function(){
 			submit.prop('disabled', 'disabled');
 		} else {
 			submit.removeAttr('disabled');
-			submit.addClass('product__submit-active');			
+			submit.addClass('product__submit-active');
 		};
-
-		cost = cnt *  price;
-		priceEl.text(splitNums(' ', cost.toString()));
-	});
-});
+}
 
 
 $(function() {  
