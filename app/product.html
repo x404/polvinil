@@ -240,35 +240,35 @@
 							</div>
 						</div>
 
-					</div>
-
-					<div class="calc">
-						<div class="d-flex flex-lg-row flex-column flex-wrap justify-content-between">
-							<div class="cell cell-1">
-								ваша площадь ?
-								<input type="number" class="form-control" value="0" id="area1" />
-								м<sup>2</sup>
-							</div>
-							<div class="cell cell-2">
-								нужно
-								<div class="form-container">
-									<button type="button" id="minus">-</button>
-									<input type="number" name="shk-count" class="form-control" value="0" id="quantity" data-price="2.239" />
-									<button type="button" id="plus">+</button>			
+						<div class="calc">
+							<div class="d-flex flex-lg-row flex-column flex-wrap justify-content-between">
+								<div class="cell cell-1">
+									ваша площадь ?
+									<input type="number" class="form-control" value="0" id="area1" />
+									<span>м<sup>2</sup></span>
 								</div>
-								м<sup>2</sup>
-							</div>
-							<div class="cell cell-3 justify-content-between">
-								итого : 
-								<div class="price">
-									<span id="sum">0</span> руб
+								<div class="cell cell-2">
+									нужно
+									<div class="product__count">
+										<button type="button" id="minus">-</button>
+										<input type="number" name="shk-count" class="form-control" value="0" id="quantity" data-price="2.239" />
+										<button type="button" id="plus">+</button>			
+									</div>
+									<p>уп (<span id="area2">0</span>)м<sup>2</sup></p>
 								</div>
-							</div>
-							<div class="cell cell-4">
-								<button type="submit" class="shk-but" disabled="disabled">в корзину</button>
+								<div class="cell cell-3 justify-content-between">
+									итого : 
+									<div class="price">
+										<span id="sum">0</span> руб
+									</div>
+								</div>
+								<div class="cell cell-4">
+									<button type="submit" class="shk-but product__submit" disabled="disabled">в корзину</button>
+								</div>
 							</div>
 						</div>
 					</div>
+
 
 
 				<section class="description">

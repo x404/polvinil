@@ -82,6 +82,94 @@
 	}
 }
 
+.calc{
+	.cell{
+		align-items: center;
+		border-radius: 8px;
+		display: flex;
+		justify-content: space-between;
+		font-family: "SegoeUI";
+		font-size: 1.5rem;
+		font-style: italic;
+		height: 62px;
+		padding: 0 2.5rem;
+		width: 24%;
+		&-1{
+			background: #e6e6e6
+		}
+		&-2{
+			background: #cccccc
+		}
+		&-3{
+			background: #b3b3b3
+		}
+		&-4{
+			padding: 0;
+		}
+
+	#minus,
+	#plus
+	{
+		background: none;
+		border: none;
+		color: $color1;
+		cursor: pointer;
+		font-size: 18px;
+		font-weight: normal;
+		padding: 0;
+		text-align: center;
+		width: 15px;
+	}
+
+
+		.shk-but{
+			border: none;
+			border-radius: 8px;
+			color: $color2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #3f8463;
+			background: linear-gradient(to bottom, #8ab9a2, #307a56);
+			height: 100%;
+			width: 100%;
+			font-style: italic;
+			&:hover{
+				background: linear-gradient(to bottom, #307a56, #8ab9a2);				
+			}
+		}
+
+		.product__submit{
+			transition: .3s;
+			&:disabled{
+				cursor: default;
+				// background: #ccc;
+				filter: grayscale(1);
+				opacity: .5;
+				&:hover{
+					background: linear-gradient(to bottom, #8ab9a2, #307a56);
+				}
+			}
+		}
+
+
+		.price{
+			font-size: 3rem;
+			color: $color2;
+		}
+
+		.form-control{
+			border-radius: 10px;
+			border: none;
+			height: 30px;
+			padding: 0;
+			width: 6rem;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+	}
+}
+
 .fadeout{
 	opacity: .5 !important;
 }

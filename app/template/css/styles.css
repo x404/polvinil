@@ -3384,6 +3384,18 @@ h1, h2, h3, h4 {
   font-style: normal;
   font-family: "SegoeUIItalic"; }
 
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 .tdn, .info__tabs .tab-content .more__link, #callback form .policy a,
 .modal form .policy a {
   text-decoration: none; }
@@ -5694,6 +5706,70 @@ div.pagination {
   .card .description:after {
     top: 0;
     bottom: auto; }
+
+.calc .cell {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "SegoeUI";
+  font-size: 1.5rem;
+  font-style: italic;
+  height: 62px;
+  padding: 0 2.5rem;
+  width: 24%; }
+  .calc .cell-1 {
+    background: #e6e6e6; }
+  .calc .cell-2 {
+    background: #cccccc; }
+  .calc .cell-3 {
+    background: #b3b3b3; }
+  .calc .cell-4 {
+    padding: 0; }
+  .calc .cell #minus,
+  .calc .cell #plus {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0;
+    text-align: center;
+    width: 15px; }
+  .calc .cell .shk-but {
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3f8463;
+    background: linear-gradient(to bottom, #8ab9a2, #307a56);
+    height: 100%;
+    width: 100%;
+    font-style: italic; }
+    .calc .cell .shk-but:hover {
+      background: linear-gradient(to bottom, #307a56, #8ab9a2); }
+  .calc .cell .product__submit {
+    transition: .3s; }
+    .calc .cell .product__submit:disabled {
+      cursor: default;
+      filter: grayscale(1);
+      opacity: .5; }
+      .calc .cell .product__submit:disabled:hover {
+        background: linear-gradient(to bottom, #8ab9a2, #307a56); }
+  .calc .cell .price {
+    font-size: 3rem;
+    color: #fff; }
+  .calc .cell .form-control {
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    padding: 0;
+    width: 6rem;
+    text-align: center;
+    font-size: 1.5rem; }
 
 .fadeout {
   opacity: .5 !important; }

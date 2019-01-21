@@ -779,6 +779,81 @@ $(document).ready(function(){
 			$(this).css({'-webkit-transform': 'scale(0.7, 0.7)', '-moz-transform': 'scale(0.7, 0.7)'});
 		  });
 		});
+
+
+	// products counters
+	$('.product__count #plus').on('click', function(e){
+		e.preventDefault();
+		var $this = $(this),
+			form = $this.closest('.calc'),
+			submit = form.find('.product__submit'),
+			priceEl = form.find('#sum'),
+			countEl = form.find('#quantity'),
+			price = countEl.data('price').toString().split('.').join(''),
+			cnt = parseInt(countEl.val())+1,
+			cost = 0;
+
+			console.log(price);
+
+		cost = cnt * price;
+
+		countEl.val(cnt);
+		priceEl.text(splitNums(' ', cost.toString()));
+		$('.product__submit-active').removeClass('product__submit-active');
+		submit.addClass('product__submit-active');
+		submit.removeAttr('disabled');
+	});
+
+	$('.product__count #minus').on('click', function(e){
+		e.preventDefault();
+		var $this = $(this),
+			form = $this.closest('.calc'),
+			submit = form.find('.product__submit'),
+			priceEl = form.find('#sum'),
+			countEl = form.find('#quantity'),
+			price = countEl.data('price').toString().split('.').join(''),
+			cnt = parseInt(countEl.val())-1,
+			cost = 0;
+
+
+		$('.product__submit-active').removeClass('product__submit-active');
+
+		if ( cnt <= 0 ) {
+			cnt = 0;
+			submit.prop('disabled', 'disabled');
+		} else {
+			submit.addClass('product__submit-active');			
+		};
+
+		cost = cnt * price;
+		countEl.val(cnt);
+		priceEl.text(splitNums('.', cost.toString()));
+	});
+
+
+	$('#quantity').keyup(function() {
+		var $this = $(this),
+			form = $this.closest('.calc'),
+			submit = form.find('.product__submit'),
+			priceEl = form.find('#sum'),
+			price = $this.data('price').toString().split('.').join(''),
+			cnt = 0,
+			cost = 0;
+
+		cnt = $(this).val();
+
+		$('.product__submit-active').removeClass('product__submit-active');		
+		if ( cnt <= 0 ) {
+			cnt = 0;
+			submit.prop('disabled', 'disabled');
+		} else {
+			submit.removeAttr('disabled');
+			submit.addClass('product__submit-active');			
+		};
+
+		cost = cnt *  price;
+		priceEl.text(splitNums(' ', cost.toString()));
+	});
 });
 
 
@@ -910,4 +985,11 @@ function sendform(url, strSubmit, form){
 	.catch (function (error) {
 	    console.log('Request failed', error);
 	});
+}
+
+
+function splitNums(delimiter, str){   
+	str = str.replace(/(\d+)(\.\d+)?/g,
+	function(c,b,a){return b.replace(/(\d)(?=(\d{3})+$)/g, '$1'+delimiter) + (a ? a : '')});
+	return str;
 }
