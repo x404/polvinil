@@ -1,0 +1,87 @@
+.product{
+	position: relative;
+	&__figure{
+
+	}
+
+	&__thumbs{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background: $color2;
+		border-radius: 10px 0 0 0;
+		padding: 1rem .8rem;
+		// &:before,
+		// &:after{
+		// 	@extend .before;
+		// 	height: 7px;
+		// 	width: 7px;
+		// }
+		// &:before{
+		// 	background-image: radial-gradient(circle at 0 0,transparent 6px,#fff 6px);
+		// 	bottom: 0;
+		// 	right: 100%;
+		// }
+		// &:after{
+		// 	background-image: radial-gradient(circle at 100% 0,transparent 6px,#fff 6px);
+		// 	left: 100%;
+		// 	top: 0;
+		// }
+		a{
+			margin: 0 .5rem; 
+		}
+		img{
+			border-radius: 8px;
+		}
+	}
+}
+
+.card{
+	.product{
+		&__title{
+			background: linear-gradient(to right,#fff,rgba(255,255,255,0));
+			color: $color1;
+		}
+		&__head{
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+		&__desc{
+			bottom: 0;
+			right: 0;
+		}
+		&__characteristics{
+			grid-template-columns: repeat(4, minmax(80px, max-content));
+			margin: 2rem 0 3.2rem;
+			.cell{
+				margin: 0 2.2rem;
+			}
+			.field{
+				margin-top: .5rem;
+			}
+		}
+	}
+
+	#mainimg{
+		opacity: 1;
+		transition: .3s;
+	}
+
+	.description{
+		@extend .gradient-line;
+		margin-top: 3rem;
+		padding-top: 1rem;
+		&:after{
+			top: 0;
+			bottom: auto;
+		}
+	}
+}
+
+.fadeout{
+	opacity: .5 !important;
+}

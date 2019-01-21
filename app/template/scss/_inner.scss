@@ -80,7 +80,8 @@ main{
 	}
 
 	h2{
-		font-size: 1.5rem;
+		font-size: 1.8rem;
+		font-weight: normal;
 	}
 
 	h3{
@@ -104,6 +105,16 @@ main{
 
 	strong{ 
 		font-weight: bold;
+	}
+
+	table{
+		border-collapse: collapse;
+		font-style: italic;
+		margin: 1rem 0;	
+		td{
+			border: 1px solid #d5d5d5;
+			padding: .6rem .8rem;
+		}
 	}
 }
 
