@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex,nofollow" />
+
+<!-- <link rel="apple-touch-icon" sizes="180x180" href="/the_favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/the_favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/the_favicon/favicon-16x16.png">
+<link rel="manifest" href="/the_favicon/site.webmanifest">
+<link rel="mask-icon" href="/the_favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/the_favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/the_favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"> -->
+<title>Корзина</title>
+<link rel="stylesheet" href="/template/css/styles.min.css" />
+<script src="/template/js/libs.min.js"></script>
+
+
+<link rel="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
+<script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
+<script src="/outdatedbrowser/detect.js"></script>
+
+<!--[if IE]>
+	<link href="/template/css/styles-ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+
+<div class="main-grid inner">
+	<!-- =header -->
+	<header class="header">
+		<div class="container">
+			<div class="d-flex justify-content-between">
+				<div class="header__logo">
+					<a href="/" title="">
+						<picture>
+							<source srcset="/template/images/logo.webp" type="image/webp">
+							<img src="/template/images/logo.png" alt="" />
+						</picture>
+					</a>
+				</div>
+
+				<!-- =center -->
+				<div class="header__center">
+					<div class="header__contacts d-flex justify-content-between">
+						<div class="header__address">
+							<p>г. Королёв, мкр. Костино</p>
+							<p>ул. Калининградская, д.17, корп.1, офис 01</p>
+						</div>
+						<div class="header__phones">
+							<p>+7 (495) 552 4924</p>
+							<p>+7 (926) 552 4924</p>
+						</div>
+					</div>
+					<!-- =menu -->
+					<div class="navmenu">
+						<div class="navmenu__inner">
+							<nav id="navbar" class="mainnav">
+								<div class="mainnav__list">
+									<ul class="nav nav-tabs">
+										<li><a href="about.html" title="">О наc</a></li>
+										<li class="folder">
+											<a href="#" title="">Наши полы</a>
+											<div class="subnav">
+												<ul>
+													<li><a href="#" title="">Ламинат Alpinefloor</a></li>
+													<li><a href="#" title="">Ламинат FineFloor</a></li>
+												</ul>
+											</div>
+										</li>
+										<li class="folder menu-3">
+											<a href="services.html" title="">Услуги</a>
+											<div class="subnav">
+												<ul>
+													<li><a href="service.html" title="">Замер наполных покрытий</a></li>
+													<li><a href="service.html" title="">Укладка напольных покрытий</a></li>
+													<li><a href="service.html" title="">Укладка ламината</a></li>
+													<li><a href="service.html" title="">Укладка виниловых полов</a></li>
+													<li><a href="service.html" title="">Укладка модульного паркета</a></li>
+													<li><a href="service.html" title="">Укладка пробковых покрытий</a></li>
+													<li><a href="service.html" title="">Укладка паркетной доски</a></li>
+													<li><a href="service.html" title="">Укладка штучного паркета</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="#" title="">Оплата</a></li>
+										<li><a href="#" title="">Дизайнерам</a></li>
+										<li><a href="#" title="">ТехИнфо</a></li>
+										<li class="folder">
+											<a href="#" title="">СМИ</a>
+											<div class="subnav">
+												<ul>
+													<li><a href="gallery.html" title="">Фото</a></li>
+													<li><a href="videl.html" title="">Видео</a></li>
+													<li><a href="articles.html" title="">Статьи</a></li>
+													<li><a href="faq.html" title="">Вопросы и Ответы</a></li>
+													<li><a href="reviews.html" title="">Отзывы</a></li>
+												</ul>
+											</div>
+										</li>
+										<li><a href="contacts.html" title="">Контакты</a></li>
+									</ul>
+								<div class="show-sm">
+										<a href="tel:+74955524924" title="">+7 (495) 552 4924</a>
+										<a href="tel:+79265524924" title="">+7 (926) 552 4924</a>
+										<a href="mailto:info@polvinil.ru">info@polvinil.ru</a>
+									</div>
+								</div>
+							</nav>	
+							<button type="button" class="close-menu"><img src="/template/images/close.png" alt="Закрыть меню" /></button>
+						</div>
+					</div>
+					<!-- =/menu -->					
+				</div>
+				<!-- =/center -->
+
+				<!-- =right -->
+				<div class="header__right">
+					<button type="button" class="btn btn-white hide" data-toggle="modal" data-target="#callback">консультация по телефону</button>
+					<div class="qcart">
+						<div class="shop-cart">
+							<div class="shop-cart-head">
+								<a href="#">корзина пополнена</a>
+							</div>							
+							<p class="count" id="shk_butOrder">
+								3шт: 12.748 руб.
+							</p>
+						</div>
+					</div>
+					<form action="#" class="sisea-search-form">
+						<fieldset>
+							<label>
+								<span class="visually-hidden">поиск по сайту</span>
+								<input class="form-control" type="text" name="search" id="search" value="" placeholder="поиск по сайту">
+							</label>
+							<input type="hidden" name="id" value="">
+							<button type="submit" class="submit" aria-label="найти"></button>
+						</fieldset>
+					</form>
+				</div>
+				<!-- =/right -->
+			</div>
+		</div>
+		<!-- =nav -->
+		<button type="button" class="navbar-toggle" aria-label="Показать/Скрыть меню">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<!-- =/nav -->
+	</header>
+	<!-- =/header -->
+
+	<!-- =main -->
+	<div class="main">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="B_crumbBox">
+					<li class="B_crumb"><a href="/" title="">главная</a></li>
+					<li class="B_separator">-</li>
+					<li class="B_lastCrumb"><span class="B_currentCrumb">Корзина</span></li>
+				</ul>
+			</div>
+			<main>
+				<h1>КОРЗИНА ПОКУПОК</h1>
+				<p>FineFloor – напольное покрытие высокого качества. Создается оно с применением новейших немецких технологий, которые способствуют появлению роскошного дизайна. Также очень важно, что Ламинат из коллекции FineFloor имеет множество различных вариантов – тем самым выбор окажется достаточно простым делом.</p>
+				<div class="cart">
+					<div class="full">
+						<form action="#" method="post">
+							<fieldset>
+								<div class="cart__table">
+									<div class="row cart-order">
+										<div class="col col-product">
+											<div class="product__item ">
+												<div class="product__pic">
+													<img src="/images/catalog/a-rokwood.jpg" alt="alpinefloor - Дуб роквуд" />
+												</div>
+												<div class="product__desc">
+													<p class="product__title product__title-brand">Alpinefloor</p>
+													<p class="product__title product__title-name">Дуб роквуд</p>
+													<div class="labels">
+														<div class="label">
+															<img src="/template/images/label-glue.png" alt="">
+														</div>
+														<div class="label">34</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col col-articul">
+											<p>
+												FF1320 <br>
+												пл. 17.88 м<sup>2</sup>
+											</p>
+										</div>
+										<div class="col col-count">
+											<div class="d-flex align-items-center">
+												количество
+												<div class="product__count">
+												    <button class="shk_count_button " type="button">-</button><input class="shk-count form-control count" type="number" min="0" size="2" name="count[]" maxlength="3" title="изменить количество" value="1" style="display: inline-block;"><button class="shk_count_button " type="button">+</button>
+												</div>
+												уп.
+											</div>
+										</div>
+										<div class="col col-price">
+											<p>
+												цена за единицу <br>
+												3366 руб.
+											</p>
+										</div>
+										<div class="col col-sum">
+											<p>
+												стоимость <br>
+												<strong>40033 руб.</strong>
+											</p>
+										</div>
+										<div class="col col-del">
+											<a href="?shk_action=remove&amp;n=0" title="Удалить" class="shk-del del" role="button">
+												<svg width="14" height="14">
+													<line x1="0" y1="0" x2="14" y2="14"/>
+													<line x1="14" y1="0" x2="0" y2="14"/>
+												</svg>
+											</a>
+										</div>
+									</div>
+									<div class="row cart-order">
+										<div class="col col-product">
+											<div class="product__item ">
+												<div class="product__pic">
+													<img src="/images/catalog/f-rolen.jpg" alt="alpinefloor - Дуб роквуд" />
+												</div>
+												<div class="product__desc">
+													<p class="product__title product__title-brand">Finefloor</p>
+													<p class="product__title product__title-name">Дуб ролен</p>
+													<div class="labels">
+														<div class="label">
+															<img src="/template/images/label-lock.png" alt="">
+														</div>
+														<div class="label">43</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col col-articul">
+											<p>
+												FF1323 <br>
+												пл. 22.35 м<sup>2</sup>
+											</p>
+										</div>
+										<div class="col col-count">
+											<div class="d-flex align-items-center">
+												количество
+												<div class="product__count">
+												    <button class="shk_count_button " type="button">-</button><input class="shk-count form-control count" type="number" min="0" size="2" name="count[]" maxlength="3" title="изменить количество" value="1" style="display: inline-block;"><button class="shk_count_button " type="button">+</button>
+												</div>
+												уп.
+											</div>
+										</div>
+										<div class="col col-price">
+											<p>
+												цена за единицу <br>
+												3366 руб.
+											</p>
+										</div>
+										<div class="col col-sum">
+											<p>
+												стоимость <br>
+												<strong>50040 руб.</strong>
+											</p>
+										</div>
+										<div class="col col-del">
+											<a href="?shk_action=remove&amp;n=0" title="Удалить" class="shk-del del" role="button">
+												<svg width="14" height="14">
+													<line x1="0" y1="0" x2="14" y2="14"/>
+													<line x1="14" y1="0" x2="0" y2="14"/>
+												</svg>
+											</a>
+										</div>
+									</div>
+									<div class="row cart-order">
+										<div class="col col-product">
+											<div class="product__item ">
+												<div class="product__pic">
+													<img src="/images/catalog/a-rokwood.jpg" alt="alpinefloor - Дуб роквуд" />
+												</div>
+												<div class="product__desc">
+													<p class="product__title product__title-brand">Alpinefloor</p>
+													<p class="product__title product__title-name">Дуб роквуд</p>
+													<div class="labels">
+														<div class="label">
+															<img src="/template/images/label-glue.png" alt="">
+														</div>
+														<div class="label">34</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col col-articul">
+											<p>
+												FF1320 <br>
+												пл. 17.88 м<sup>2</sup>
+											</p>
+										</div>
+										<div class="col col-count">
+											<div class="d-flex align-items-center">
+												количество
+												<div class="product__count">
+												    <button class="shk_count_button " type="button">-</button><input class="shk-count form-control count" type="number" min="0" size="2" name="count[]" maxlength="3" title="изменить количество" value="1" style="display: inline-block;"><button class="shk_count_button " type="button">+</button>
+												</div>
+												уп.
+											</div>
+										</div>
+										<div class="col col-price">
+											<p>
+												цена за единицу <br>
+												3366 руб.
+											</p>
+										</div>
+										<div class="col col-sum">
+											<p>
+												стоимость <br>
+												<strong>40033 руб.</strong>
+											</p>
+										</div>
+										<div class="col col-del">
+											<a href="?shk_action=remove&amp;n=0" title="Удалить" class="shk-del del" role="button">
+												<svg width="14" height="14">
+													<line x1="0" y1="0" x2="14" y2="14"/>
+													<line x1="14" y1="0" x2="0" y2="14"/>
+												</svg>
+											</a>
+										</div>
+									</div>	
+								</div>	
+								<div class="cart__row cart__row-footer d-flex">
+									<p>итого:</p>
+									<p class="cost">216841 руб.</p>
+								</div>
+							</fieldset>
+						</form>						
+					</div>
+				</div>
+
+				<form action="#" id="shopOrderForm" class="form-policy cart__form">
+					<fieldset>
+						<button type="submit" class="btn btn-submit">оформить заказ</button>
+					</fieldset>
+				</form>
+
+
+			</main>
+		</div>
+
+		<div class="container">
+			<section class="payments">
+				<div class="payments__inner">
+					 <header>
+					 	<h1>ПРИНИМАЕМ К ОПЛАТЕ</h1>
+					 </header>
+					 <div class="payment__text">
+					 	<p>Банковские карты  -   Электронные кошельки   -   Мобильная коммерция   -   Интернет-банкинг</p>
+					 </div>
+
+					<div class="d-flex justify-content-center flex-wrap payment-icon">
+						<img src="/images/payments/visa.png" alt="" />
+						<img src="/images/payments/mc.png" alt="" />
+						<img src="/images/payments/mir.png" alt="" />
+						<img src="/images/payments/wm.png" alt="" />
+						<img src="/images/payments/ym.png" alt="" />
+						<img src="/images/payments/qiwi.png" alt="" />
+						<img src="/images/payments/beeline.png" alt="" />
+						<img src="/images/payments/s.png" alt="" />
+						<img src="/images/payments/mts.png" alt="" />
+						<img src="/images/payments/sberb.png" alt="" />
+						<img src="/images/payments/alpha.png" alt="" />
+						<img src="/images/payments/psb.png" alt="" />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- =/main -->
+
+
+
+	<!-- =footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="d-flex justify-content-between flex-lg-row flex-column">
+				<div class="footer__left">
+					<div class="footer__contacts">
+						<p class="tel">+7 (495) 552-49-24</p>
+						<p><a href="mailto:info@polvinil.ru" title="">info@polvinil.ru</a></p>
+						<p>С понедельника по воскресенье: с 09.00 до 19.00 </p>
+					</div>
+					<div class="copyright">
+						<p>
+							Copyright 2018 © <a href="/" title="">Polvinil.ru</a>
+						</p>
+					</div>
+				</div>
+				<div class="footer__logo">
+					<a href="/" title="">
+						<picture>
+							<source srcset="/template/images/logo2.webp" type="image/webp">
+							<img src="/template/images/logo2.png" alt="" />
+						</picture>
+					</a>
+				</div>
+				<div class="footer__right">
+					<div class="social">
+						<a href="#" title="" target="_blank"><img src="template/images/social/fb.gif" width="35" height="35" alt="Facebook"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/vk.gif" width="35" height="35" alt="Вконтакте"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/twitter.gif" width="35" height="35" alt="Twitter"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/odn.gif" width="35" height="35" alt="Одноклассники"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/inst.gif" width="35" height="35" alt="Instagram"></a>
+						<a href="#" title="" target="_blank"><img src="template/images/social/googleplus.gif" width="35" height="35" alt="Google Plus"></a>
+					</div>
+					<div class="creators">
+						<p>Дизайн сайта <a href="https://kreotif.com" title="Дизайн сайтов" target="_blank">DA Kreotif</a></p>
+						<p>Программирование сайта - <a href="https://proverstka.com.ua" title="Создание сайтов" target="_blank">Провёрстка</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- =/footer -->	
+</div>
+
+<button type="button" class="btn-gradient btn-need" aria-label="Нужно" ></button>
+<button type="button" class="btn-gradient btn-house" aria-label="Дом" ></button>
+<button type="button" class="btn-gradient btn-rec" aria-label="Рекомендуем" ></button>
+
+<!-- =callback -->
+<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-container">
+			<button type="button" data-dismiss="modal" class="close-modal" tabindex="10">
+				<svg width="17" height="17">
+					<line x1="0" y1="0" x2="17" y2="17"/>
+					<line x1="17" y1="0" x2="0" y2="17"/>
+				</svg>
+			</button>
+            
+			<form action="#" method="post" class="form-policy" id="callback-form">
+				<fieldset>
+					<label for="callback-name" class="visually-hidden">как вас зовут</label>
+				    <input type="text" name="name" id="callback-name" class="form-control required" value="" tabindex="0" placeholder="как вас зовут" autofocus /><span class="error"></span>
+
+				    <label for="callback-tel" class="visually-hidden">ваш телефон</label>
+					<input type="tel" name="tel" id="callback-tel" class="form-control required tel" value="" tabindex="1" placeholder="Ваш телефон" /><span class="error"></span>
+
+					<input type="submit" name="callback_submit" class="submit" tabindex="2" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox1" value="" name="checkbox" checked="checked" class="user-access" tabindex="4" />
+						<label for="checkbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- =/callback -->
+
+
+
+<div id="outdated"></div>
+<link rel="stylesheet" property="stylesheet" href="/template/css/jquery.fancybox.min.css" />
+<link rel="stylesheet" property="stylesheet" href="/template/css/animation.css" />
+<script src="/template/js/slick.min.js"></script>
+<script src="/template/js/jquery.fancybox.min.js"></script>
+
+<script src="/template/js/inputmask/inputmask.js"></script>
+<script src="/template/js/inputmask/inputmask.phone.extensions.js"></script>
+<script src="/template/js/inputmask/jquery.inputmask.js"></script>
+
+<script src="/template/js/jquery.scrollbar.min.js"></script>
+
+<script src="/template/js/engine.js"></script>
+
+<script src="/template/js/fm.revealator.jquery.js"></script>
+<link rel="stylesheet" property="stylesheet" href="/template/css/fm.revealator.jquery.css" />
+
+</body>
+
+</html>

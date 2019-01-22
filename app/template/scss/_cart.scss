@@ -1,0 +1,181 @@
+.qcart{
+	font-family: "SegoeUI";
+	font-size: 1.5rem;
+	font-style: italic;
+	padding-left: 15px;
+	margin-top: 1.4rem;
+	a{
+		color: #e5e5e5;
+		@extend .tdn;
+	}
+	.shop-cart{
+		background: url(../images/cart.png) no-repeat left center;
+		padding-left: 43px;
+	}
+}
+
+.cart{
+	font-size: 1.5rem;
+	font-style: italic;
+	font-family: "SegoeUI";
+	&__table{
+		@extend .gradient-line;
+		padding-bottom: 1.5rem;
+	}
+	.row{
+		margin-top: 3.4rem;
+		padding: 0;
+		.col{
+			background: #e6e6e6;
+			padding: 0 2rem;
+			display: flex;
+			align-items: center;
+			&-product{
+				padding: 0;
+			}
+			.product__count{
+				margin: .4rem 0;
+			}
+			&-count{
+				.d-flex{
+					flex-direction: column;					
+				}
+				.form-control{
+					background: $color2;
+					border-radius: 10px;
+					border: none;
+					height: 3rem;
+					text-align: center;
+					width: 6rem;
+					padding: 0;
+				}
+				.shk_count_button{
+					background: none;
+					border: none;
+					padding: 0;
+					margin: 0 .5rem
+				}
+			}
+			&-price{
+				white-space: nowrap;
+			}
+			&-del{
+				flex-shrink: 1 !important;
+				flex-grow: 0 !important;
+				line{
+					stroke: #7f7f7f;
+					stroke-width:4
+			
+				}
+				.del:hover{
+					line{
+						stroke: $color7;
+					}
+				}
+			}
+		}
+	}
+
+	&__row{
+		&-footer{
+			margin: 3rem 0;
+			padding-right: 9rem;
+			justify-content: flex-end;
+			.cost{
+				margin-left: 11rem;
+				font-weight: bold;
+			}
+		}
+	}
+	.product{
+		&__item{
+			cursor: default;
+			box-shadow: none;
+			font-style: normal;
+			margin-top: 0;
+			&:hover{
+				height: auto;
+				.product{
+					&__pic{
+						height: auto;
+						img{
+							min-height: 0
+						}
+					}
+				}
+			}
+		}
+		&__desc{
+			height: 100%;
+		}
+	}
+}
+
+
+.payments{
+	border-left: 1px solid $color13;
+	border-right: 1px solid $color13;
+	margin: 6rem 0; 
+	padding: 0 13rem; 
+	position: relative;
+	&:before,
+	&:after{
+		@extend .before;
+		background: linear-gradient(to right, $color13, $color2);
+		height: 1px;
+		width: 22rem;
+	}
+	&:before{
+		top: 0;
+		left: 0;
+	}
+	&:after{
+		bottom: 0;
+		left: 0;
+	}
+
+	&__inner{
+		padding-bottom: 2rem;
+		&:before,
+		&:after{
+			@extend .before;
+			background: linear-gradient(to right, $color2, $color13);
+			height: 1px;
+			width: 22rem;
+			right: 0;
+		}
+		&:before{
+			top: 0;
+		}
+		&:after{
+			bottom: 0;
+		}
+	}
+	header{
+		font-size: 2.4em;
+		color: #808080;
+		position: relative;
+		top: -2rem;
+		h1{
+			&:after{
+				display: none;
+			}
+		}
+	}
+	.payment-icon{
+		margin: 4rem 0 ;
+	}
+	.payment__text{
+		color: #404040;
+		display: flex;
+		font-size: 1.8rem;
+		font-style: italic;
+		justify-content: center;
+		text-align: center;
+		margin-top: -3rem;
+		p{
+			padding-bottom: .5rem;
+			border-bottom: 1px dashed;
+		}
+	}
+}

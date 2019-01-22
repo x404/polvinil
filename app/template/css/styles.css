@@ -3397,10 +3397,10 @@ input::-webkit-inner-spin-button {
   margin: 0; }
 
 .tdn, .info__tabs .tab-content .more__link, #callback form .policy a,
-.modal form .policy a {
+.modal form .policy a, .qcart a {
   text-decoration: none; }
   .tdn:hover, .info__tabs .tab-content .more__link:hover, #callback form .policy a:hover,
-  .modal form .policy a:hover {
+  .modal form .policy a:hover, .qcart a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -3412,7 +3412,7 @@ input::-webkit-inner-spin-button {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .card .description:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after, .product__desc .labels .label:before, .product__desc .labels .label:after, .catalog .filter .types:after, .catalog .products.loaded:before {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .card .description:after, .cart__table:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after, .product__desc .labels .label:before, .product__desc .labels .label:after, .catalog .filter .types:after, .catalog .products.loaded:before, .payments:before, .payments:after, .payments__inner:before, .payments__inner:after {
   content: "";
   display: block;
   position: absolute; }
@@ -5075,9 +5075,9 @@ form .thank {
     color: #47b259;
     text-decoration: underline; }
 
-.gradient-line, .main h1, .catalog, .catalog .products, .card .description {
+.gradient-line, .main h1, .catalog, .catalog .products, .card .description, .cart__table {
   position: relative; }
-  .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .card .description:after {
+  .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .card .description:after, .cart__table:after {
     background: linear-gradient(to right, #fff 0%, #a2a7b1 50%, #fff 100%);
     bottom: -18px;
     height: 1px;
@@ -5773,6 +5773,130 @@ div.pagination {
 
 .fadeout {
   opacity: .5 !important; }
+
+.qcart {
+  font-family: "SegoeUI";
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-left: 15px;
+  margin-top: 1.4rem; }
+  .qcart a {
+    color: #e5e5e5; }
+  .qcart .shop-cart {
+    background: url(../images/cart.png) no-repeat left center;
+    padding-left: 43px; }
+
+.cart {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: "SegoeUI"; }
+  .cart__table {
+    padding-bottom: 1.5rem; }
+  .cart .row {
+    margin-top: 3.4rem;
+    padding: 0; }
+    .cart .row .col {
+      background: #e6e6e6;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center; }
+      .cart .row .col-product {
+        padding: 0; }
+      .cart .row .col .product__count {
+        margin: .4rem 0; }
+      .cart .row .col-count .d-flex {
+        flex-direction: column; }
+      .cart .row .col-count .form-control {
+        background: #fff;
+        border-radius: 10px;
+        border: none;
+        height: 3rem;
+        text-align: center;
+        width: 6rem;
+        padding: 0; }
+      .cart .row .col-count .shk_count_button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0 .5rem; }
+      .cart .row .col-price {
+        white-space: nowrap; }
+      .cart .row .col-del {
+        flex-shrink: 1 !important;
+        flex-grow: 0 !important; }
+        .cart .row .col-del line {
+          stroke: #7f7f7f;
+          stroke-width: 4; }
+        .cart .row .col-del .del:hover line {
+          stroke: #307a56; }
+  .cart__row-footer {
+    margin: 3rem 0;
+    padding-right: 9rem;
+    justify-content: flex-end; }
+    .cart__row-footer .cost {
+      margin-left: 11rem;
+      font-weight: bold; }
+  .cart .product__item {
+    cursor: default;
+    box-shadow: none;
+    font-style: normal;
+    margin-top: 0; }
+    .cart .product__item:hover {
+      height: auto; }
+      .cart .product__item:hover .product__pic {
+        height: auto; }
+        .cart .product__item:hover .product__pic img {
+          min-height: 0; }
+  .cart .product__desc {
+    height: 100%; }
+
+.payments {
+  border-left: 1px solid #bdbdbe;
+  border-right: 1px solid #bdbdbe;
+  margin: 6rem 0;
+  padding: 0 13rem;
+  position: relative; }
+  .payments:before, .payments:after {
+    background: linear-gradient(to right, #bdbdbe, #fff);
+    height: 1px;
+    width: 22rem; }
+  .payments:before {
+    top: 0;
+    left: 0; }
+  .payments:after {
+    bottom: 0;
+    left: 0; }
+  .payments__inner {
+    padding-bottom: 2rem; }
+    .payments__inner:before, .payments__inner:after {
+      background: linear-gradient(to right, #fff, #bdbdbe);
+      height: 1px;
+      width: 22rem;
+      right: 0; }
+    .payments__inner:before {
+      top: 0; }
+    .payments__inner:after {
+      bottom: 0; }
+  .payments header {
+    font-size: 2.4em;
+    color: #808080;
+    position: relative;
+    top: -2rem; }
+    .payments header h1:after {
+      display: none; }
+  .payments .payment-icon {
+    margin: 4rem 0; }
+  .payments .payment__text {
+    color: #404040;
+    display: flex;
+    font-size: 1.8rem;
+    font-style: italic;
+    justify-content: center;
+    text-align: center;
+    margin-top: -3rem; }
+    .payments .payment__text p {
+      padding-bottom: .5rem;
+      border-bottom: 1px dashed; }
 
 /* =mobile-menu
 ---------------------------*/
