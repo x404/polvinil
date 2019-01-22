@@ -251,6 +251,29 @@
 		}
 	}
 
+
+	// cart
+	.cart{
+		.product{
+			&__item{
+				width: 400px;				
+			}
+		}
+		.row{
+			.col{
+				&:not(.col-product){
+					padding: 0 1rem;
+				}
+				&-del{
+					.del{
+						position: relative;
+						left: -10px;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -612,11 +635,41 @@
 			justify-content: center;
 			height: auto;
 		}
-		&__pic{
-			// height: 200px;
-		}
 	}
 
+	//cart
+	.cart{ 
+		// max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		.product{
+			&__item{
+				height: 135px;
+				width: 900px;
+				&:hover{
+					height: 100%;
+					.product{
+						&__pic{
+
+						}
+					}
+				}
+			}
+
+			&__pic{
+				img{
+					width: 100%;
+				}
+			}
+		}
+		.col{
+			text-align: center;
+			justify-content: center;
+			&-product{
+				width: 900px
+			}
+		}
+	}
 
 }
 
@@ -768,6 +821,30 @@
 			width: 300px;
 		}
 	}
+
+	// cart
+	//cart
+	.cart{ 
+		.product{
+			&__item{
+				height: auto;
+			}
+
+			&__pic{
+				img{
+					width: 100%;
+				}
+			}
+		}
+		.col{
+			&-product{
+				flex-basis: 100%;
+				width: 100%
+			}
+		}
+	}
+
+
 }
 
 
@@ -956,6 +1033,25 @@
 	.catalog .select-text{
 		font-size: 1.6rem;
 	}
+
+
+	// cart
+	.cart{
+		.row{
+			position: relative;
+			display: block !important;
+			.col{
+				&-del{
+					background: none;
+					position: absolute;
+					right: 0;
+					top: 110px;
+					display: block !important;
+					width: auto !important;
+				}
+			}
+		}
+	}
 }
 
 
@@ -1070,6 +1166,17 @@
 			}
 			&__characteristics{
 				grid-row-gap: .4rem;
+			}
+		}
+	}
+
+	// cart
+	.cart{
+		.row{
+			.col{
+				&-del{
+					top: 100px;
+				}
 			}
 		}
 	}
@@ -1246,6 +1353,26 @@
 			font-size: 2.2rem;
 		}
 	}
+
+
+	// cart
+	.cart{
+		.row{
+			.col{
+				&-del{
+					top: 110px;
+					right: 0;
+				}
+			}
+			.product{
+				&__pic{
+					img{
+						height: 100px;
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -1297,6 +1424,21 @@
 		}
 		&__text{
 			font-size: 1.6rem;
+		}
+	}
+
+	// cart
+	.cart{
+		.row{
+			.product__desc .labels{
+				right: .1rem;
+				.label{
+					height: 45px;
+					margin: 0 .2rem;
+					padding-bottom: 1rem;
+					width: 33px;
+				}
+			}
 		}
 	}
 }
