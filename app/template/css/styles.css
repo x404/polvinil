@@ -6601,7 +6601,23 @@ div.pagination {
     width: auto;
     display: block; }
   .review__item {
-    width: 300px; } }
+    width: 300px; }
+  .catalog .product__pic, .catalog .product__item, .catalog .product__desc {
+    height: 17rem; }
+  .catalog .product__desc {
+    padding-top: 6rem; }
+  .catalog .product__pic {
+    height: 100%; }
+    .catalog .product__pic img {
+      height: 100%; }
+  .catalog .product__item:hover {
+    height: 26.5rem; }
+    .catalog .product__item:hover .product__pic {
+      height: 100%; }
+  .catalog .product__panel {
+    top: 159px; }
+  .catalog .product__characteristics {
+    grid-row-gap: .4rem; } }
 
 @media (max-width: 450px) {
   .homeslider {

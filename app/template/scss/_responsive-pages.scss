@@ -1035,6 +1035,44 @@
 	.review__item{
 		width: 300px;
 	}
+
+	//catalog
+	.catalog{
+		$h: 17rem;
+		.product{
+			&__pic,
+			&__item,
+			&__desc
+			{
+				height: $h
+			}
+			&__desc{
+				padding-top: 6rem;
+			}
+
+			&__pic{
+				height: 100%;
+				img{
+					height: 100%;
+				}
+			}
+			&__item{
+				&:hover{
+					height: 26.5rem;
+					.product__pic{
+						height: 100%;
+					}
+				}
+			}
+
+			&__panel{
+				top: 159px;
+			}
+			&__characteristics{
+				grid-row-gap: .4rem;
+			}
+		}
+	}
 }
 
 
@@ -1164,7 +1202,6 @@
 
 
 	// product
-
 	.card .product__characteristics{
 		justify-content: space-evenly !important;
 		.cell{
@@ -1172,6 +1209,8 @@
 			width: 34%;
 		}
 	}
+
+	
 
 }
 
