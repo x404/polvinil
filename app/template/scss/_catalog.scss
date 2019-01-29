@@ -6,35 +6,35 @@
 
 .product{
 	&__item{
-		$h: 11.8rem;
-		cursor: pointer;
-		margin-top: 3.4rem;
+		// $h: 11.8rem;
+		// cursor: pointer;
+		margin-top: 7.6rem;
 		position: relative;
 		transition: .3s;
-		height: $h;
+		// height: $h;
 		&:hover{
-			$h1: 22rem;
-			box-shadow: 0 0 11px rgba(0,0,0,.75);
-			height: $h1;
-			position: relative;
-			z-index: 9;
-			.product{
-				&__pic{
-					height: $h1;
-					position: relative;
-					z-index: 99;
-					img{
-						min-height: 220px;
-					}
-				}
-				&__desc{
-					z-index: 100;
-				}
-				&__panel{
-					z-index: 100;
-					opacity: 1;
-				}
-			}
+			// $h1: 22rem;
+			// box-shadow: 0 0 11px rgba(0,0,0,.75);
+			// height: $h1;
+			// position: relative;
+			// z-index: 9;
+			// .product{
+			// 	&__pic{
+			// 		height: $h1;
+			// 		position: relative;
+			// 		z-index: 99;
+			// 		img{
+			// 			min-height: 220px;
+			// 		}
+			// 	}
+			// 	&__desc{
+			// 		z-index: 100;
+			// 	}
+			// 	&__panel{
+			// 		z-index: 100;
+			// 		opacity: 1;
+			// 	}
+			// }
 		}
 	}
 	&__pic{
@@ -55,41 +55,79 @@
 		.labels{
 			position: absolute;
 			display: flex;
-			right: .6rem;
+			right: 0;
 			top: 0;
+			top: -3.2rem;
 			.label{
-				align-items: flex-end;
-				background: #858585;
-				background: linear-gradient(to bottom, #e0e0e0, #fff 20%, #858585 100% );
-				display: flex;
-				font-family: Corbel;
-				font-size: 2.4rem;
-				font-weight: normal;
-				height: 63px;
-				justify-content: center;
-				line-height: 1.2;
-				margin: 0 .8rem;
-				padding-bottom: 1.3rem;
-				width: 48px;
-				position: relative;
-				z-index: 2;
-				&:before,
-				&:after{
-					@extend .before;
-					height: 44px;
-					width: 7px;
-					background: url(../images/label-shadow.png) no-repeat left top;
-					top: 0;
+				&-class{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					font-family: "SegoeUI";
+					margin-right: 1.6rem;
+					width: 112px;
+					&:hover{
+						.label-title{
+							color: $color2;
+							background-color: $color4;
+						}
+					}
 				}
-				&:before{
-					left: -4px;						
+				&-title{
+					background: #e6e6e6;
+					border-radius: 5px 5px 0 0;
+					color: $color1;
+					text-align: center;
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 3.2rem;
+					transition: background-color .3s;
+					cursor: default;
+					&:hover{
+						background: #e6e6e6 !important;
+						color: $color1 !important;
+					}
 				}
-				&:after{
-					right: -4px;
-					transform: scale(-1,1);
-				}
-				img{
-					display: block;
+				&-type{
+					align-items: flex-end;
+					background: #858585;
+					background: linear-gradient(to bottom, #e0e0e0, #fff 20%, #858585 100% );
+					display: flex;
+					font-family: Corbel;
+					font-size: 2.4rem;
+					font-weight: normal;
+					height: 63px;
+					justify-content: center;
+					line-height: 1.2;
+					// margin: 0 .8rem;
+					padding-bottom: 1.3rem;
+					width: 48px;
+					position: relative;
+					z-index: 2;
+					&:before,
+					&:after{
+						@extend .before;
+						height: 44px;
+						width: 7px;
+						background: url(../images/label-shadow.png) no-repeat left top;
+						top: 0;
+					}
+					&:before{
+						left: -4px;						
+					}
+					&:after{
+						right: -4px;
+						transform: scale(-1,1);
+					}
+					img{
+						display: block;
+					}
+
+					&:hover{
+						background: linear-gradient(to bottom, #c4dcd0, #fff 20%, #327b57 100% );
+					}					
 				}
 			}
 		}
@@ -108,18 +146,18 @@
 
 	&__panel{
 		// display: none;
-		z-index: -1;
-		opacity: 0;
+		// z-index: -1;
+		// opacity: 0;
 		transition: .1s;
-		background: #fff;
-		background: linear-gradient(to right, rgba(255,255,255,.7) 0%, rgba(255,255,255,.2) 70%, rgba(255,255,255,.7) 100%);
-		bottom: 8px;
-		left: 8px;
+		background: #e6e6e6;
+		// background: linear-gradient(to right, rgba(255,255,255,.7) 0%, rgba(255,255,255,.2) 70%, rgba(255,255,255,.7) 100%);
+		// bottom: 8px;
+		// left: 8px;
 		min-height: 10rem;
-		padding: 1rem 6.5rem 1rem 1.5rem;
-		position: absolute;
-		top: 104px;
-		width: calc(100% - 16px);
+		padding: 1rem 6.5rem 1rem 2.3rem;
+		// position: absolute;
+		// top: 104px;
+		// width: calc(100% - 16px);
 		.d-flex{
 			align-items: center;
 			justify-content: space-between;				
@@ -134,12 +172,19 @@
 		grid-row-gap: 1rem;
 		font-family: Tahoma;
 		font-size: 1.3rem;
-		// width: 36rem;
 		.title{
 			color: #737373;
 		}
 		.field{
 			color: #000;
+		}
+	}
+
+	&__link{
+		filter: grayscale(1);
+		transition: filter .3s;
+		&:hover{
+			filter: grayscale(0);
 		}
 	}
 
@@ -208,7 +253,7 @@
 	.products{
 		@extend .gradient-line;
 		grid-template-columns: repeat(2, 625px);
-		grid-auto-rows: 150px;
+		// grid-auto-rows: 150px;
 		justify-content: space-between;
 		margin-top: 2.5rem;
 		padding-top: .2rem;

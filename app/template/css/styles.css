@@ -3412,7 +3412,7 @@ input::-webkit-inner-spin-button {
   font-family: "SegoeUI";
   font-style: italic; }
 
-.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .card .description:after, .cart__table:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after, .product__desc .labels .label:before, .product__desc .labels .label:after, .catalog .filter .types:after, .catalog .products.loaded:before, .payments:before, .payments:after, .payments__inner:before, .payments__inner:after {
+.before, .header .sisea-search-form:before, .header .sisea-search-form:after, .navmenu .nav .subnav ul:before, .share:before, .homeslider .slick-dots:before, .homeslider .slick-dots:after, .homeslider .slick-dots li button:after, .about__item:after, .connections .htitle:before, .connections .htitle:after, .step:before, .step__num:before, .video__link:before, .article__desc:before, .homepage .map:before, .homepage .map:after, .gradient-line:after, .main h1:after, .catalog:after, .catalog .products:after, .card .description:after, .cart__table:after, .gallery a:before, #comment-form-placeholder h3:after, .feedback:before, .sisea-results:after, .product__desc .labels .label-type:before, .product__desc .labels .label-type:after, .catalog .filter .types:after, .catalog .products.loaded:before, .payments:before, .payments:after, .payments__inner:before, .payments__inner:after {
   content: "";
   display: block;
   position: absolute; }
@@ -5191,9 +5191,11 @@ div.pagination {
 .lastreviews {
   position: relative;
   margin-top: 5rem; }
-  .lastreviews h1:after {
-    top: -18px;
-    bottom: auto; }
+  .lastreviews h1 {
+    margin-bottom: 2rem; }
+    .lastreviews h1:after {
+      top: -18px;
+      bottom: auto; }
   .lastreviews .more {
     font-size: 1.8rem;
     font-style: italic;
@@ -5474,27 +5476,9 @@ div.pagination {
   opacity: 0; }
 
 .product__item {
-  cursor: pointer;
-  margin-top: 3.4rem;
+  margin-top: 7.6rem;
   position: relative;
-  transition: .3s;
-  height: 11.8rem; }
-  .product__item:hover {
-    box-shadow: 0 0 11px rgba(0, 0, 0, 0.75);
-    height: 22rem;
-    position: relative;
-    z-index: 9; }
-    .product__item:hover .product__pic {
-      height: 22rem;
-      position: relative;
-      z-index: 99; }
-      .product__item:hover .product__pic img {
-        min-height: 220px; }
-    .product__item:hover .product__desc {
-      z-index: 100; }
-    .product__item:hover .product__panel {
-      z-index: 100;
-      opacity: 1; }
+  transition: .3s; }
 
 .product__pic {
   overflow: hidden;
@@ -5512,9 +5496,35 @@ div.pagination {
   .product__desc .labels {
     position: absolute;
     display: flex;
-    right: .6rem;
-    top: 0; }
-    .product__desc .labels .label {
+    right: 0;
+    top: 0;
+    top: -3.2rem; }
+    .product__desc .labels .label-class {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-family: "SegoeUI";
+      margin-right: 1.6rem;
+      width: 112px; }
+      .product__desc .labels .label-class:hover .label-title {
+        color: #fff;
+        background-color: #47b259; }
+    .product__desc .labels .label-title {
+      background: #e6e6e6;
+      border-radius: 5px 5px 0 0;
+      color: #000;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3.2rem;
+      transition: background-color .3s;
+      cursor: default; }
+      .product__desc .labels .label-title:hover {
+        background: #e6e6e6 !important;
+        color: #000 !important; }
+    .product__desc .labels .label-type {
       align-items: flex-end;
       background: #858585;
       background: linear-gradient(to bottom, #e0e0e0, #fff 20%, #858585 100%);
@@ -5525,23 +5535,24 @@ div.pagination {
       height: 63px;
       justify-content: center;
       line-height: 1.2;
-      margin: 0 .8rem;
       padding-bottom: 1.3rem;
       width: 48px;
       position: relative;
       z-index: 2; }
-      .product__desc .labels .label:before, .product__desc .labels .label:after {
+      .product__desc .labels .label-type:before, .product__desc .labels .label-type:after {
         height: 44px;
         width: 7px;
         background: url(../images/label-shadow.png) no-repeat left top;
         top: 0; }
-      .product__desc .labels .label:before {
+      .product__desc .labels .label-type:before {
         left: -4px; }
-      .product__desc .labels .label:after {
+      .product__desc .labels .label-type:after {
         right: -4px;
         transform: scale(-1, 1); }
-      .product__desc .labels .label img {
+      .product__desc .labels .label-type img {
         display: block; }
+      .product__desc .labels .label-type:hover {
+        background: linear-gradient(to bottom, #c4dcd0, #fff 20%, #327b57 100%); }
 
 .product__title {
   background: linear-gradient(to right, #848484, rgba(132, 132, 132, 0.5));
@@ -5554,18 +5565,10 @@ div.pagination {
   text-transform: uppercase; }
 
 .product__panel {
-  z-index: -1;
-  opacity: 0;
   transition: .1s;
-  background: #fff;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.7) 100%);
-  bottom: 8px;
-  left: 8px;
+  background: #e6e6e6;
   min-height: 10rem;
-  padding: 1rem 6.5rem 1rem 1.5rem;
-  position: absolute;
-  top: 104px;
-  width: calc(100% - 16px); }
+  padding: 1rem 6.5rem 1rem 2.3rem; }
   .product__panel .d-flex {
     align-items: center;
     justify-content: space-between; }
@@ -5580,6 +5583,12 @@ div.pagination {
     color: #737373; }
   .product__characteristics .field {
     color: #000; }
+
+.product__link {
+  filter: grayscale(1);
+  transition: filter .3s; }
+  .product__link:hover {
+    filter: grayscale(0); }
 
 .catalog {
   margin-top: 2.5rem;
@@ -5623,7 +5632,6 @@ div.pagination {
       top: 4px; }
   .catalog .products {
     grid-template-columns: repeat(2, 625px);
-    grid-auto-rows: 150px;
     justify-content: space-between;
     margin-top: 2.5rem;
     padding-top: .2rem; }
