@@ -229,6 +229,13 @@
 				padding-right: 1rem;
 			}
 		}
+
+		&-similar{
+			.product__desc .labels .label-class{
+				margin-right: .5rem;
+				width: 100px;
+			}
+		}
 	}
 
 	// card
@@ -1149,10 +1156,10 @@
 			&__item,
 			&__desc
 			{
-				height: $h
+				// height: $h
 			}
 			&__desc{
-				padding-top: 6rem;
+				// padding-top: 6rem;
 			}
 
 			&__pic{
@@ -1163,9 +1170,9 @@
 			}
 			&__item{
 				&:hover{
-					height: 26.5rem;
+					// height: 26.5rem;
 					.product__pic{
-						height: 100%;
+						// height: 100%;
 					}
 				}
 			}

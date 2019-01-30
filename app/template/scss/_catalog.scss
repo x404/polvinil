@@ -38,8 +38,8 @@
 		}
 	}
 	&__pic{
-		overflow: hidden;
-		transition: height .3s;
+		// overflow: hidden;
+		// transition: height .3s;
 		
 	}
 	&__desc{
@@ -71,6 +71,10 @@
 							color: $color2;
 							background-color: $color4;
 						}
+					}
+					.label-title.active{
+						color: $color2;
+						background-color: $color4;						
 					}
 				}
 				&-title{
@@ -125,8 +129,9 @@
 						display: block;
 					}
 
+					&.active,
 					&:hover{
-						background: linear-gradient(to bottom, #c4dcd0, #fff 20%, #327b57 100% );
+						background: linear-gradient(to bottom, #c4dcd0, #fff 17%, #75ab91 40%, #317b57 100% );
 					}					
 				}
 			}
