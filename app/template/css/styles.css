@@ -5703,6 +5703,8 @@ div.pagination {
       .card .product__desc .labels .label-title.active {
         background: #47b259 !important;
         color: #fff !important; }
+      .card .product__desc .labels .label-type:not(.active) {
+        opacity: .5; }
   .card .product__characteristics {
     grid-template-columns: repeat(4, minmax(80px, max-content));
     margin: 2rem 0 3.2rem; }

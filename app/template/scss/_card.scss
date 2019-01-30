@@ -63,9 +63,14 @@
 			top: -32px;
 			.labels{
 				position: static;
-				.label-title.active{
-					background: $color4 !important;
-					color: $color2 !important;
+				.label-title{
+					&.active{
+						background: $color4 !important;
+						color: $color2 !important;
+					}
+				}
+				.label-type:not(.active){
+					opacity: .5;
 				}
 			}
 		}
