@@ -342,20 +342,76 @@
 									</div>	
 								</div>	
 								<div class="cart__row cart__row-footer d-flex">
-									<p>итого:</p>
-									<p class="cost">216841 руб.</p>
+									<p><strong>Итого : </strong></p>
+									<p class="cost"><span>216841</span> руб.</p>
+									<p> ( с учетом доставки )</p>
 								</div>
 							</fieldset>
 						</form>						
 					</div>
 				</div>
 
-				<form action="#" id="shopOrderForm" class="form-policy cart__form">
-					<fieldset>
-						<button type="submit" class="btn btn-submit">оформить заказ</button>
-					</fieldset>
-				</form>
-
+    <form method="post" action="cart.html" id="shopOrderForm" class="form-policy cart__form">
+        <fieldset>
+            <input type="text" name="nospam:blank" value="" style="display:none;" />
+            <input type="hidden" name="order" value="1" />
+            <section>
+                <p class="title">ОФОРМЛЕНИЕ ЗАКАЗА</p>
+                <div class="cart__orderinfo">
+                	<div class="d-flex">
+                		<div class="cart__column">
+                			<div class="cart__column-head">Данные получателя:</div>
+                			<div class="cart__column-body">
+                                <label for="fullname" class="visually-hidden">имя *</label><input id="fullname" name="fullname" size="30" class="textfield form-control required" type="text" value="" placeholder="имя" />
+                                <div></div>
+                                <label for="email" class="visually-hidden">e-mail *</label><input id="email" name="email" size="30" class="textfield form-control required" type="text" value="" placeholder="e-mail" />
+                                <div></div>
+                                <label for="phone" class="visually-hidden">телефон *</label><input id="phone" name="phone" size="30" class="textfield form-control required" type="text" value="" placeholder="телефон" />
+                                <div></div>
+            				</div>
+            			</div>
+            			<div class="cart__column">
+            				<div class="cart__column-head">Варианты доставки:</div>
+            				<div class="cart__column-body">
+                                 <input type="radio" name="shk_delivery" class="radio" value="Доставка курьером (до МКАД, 300руб.)" id="id___1"  /> <label for="id___1"">самовывоз</label>
+								<input type="radio" name="shk_delivery" class="radio" value="Доставка курьером (за МКАД, 500руб.)" id="id___2"  /> <label for="id___2"">доставка курьером (3000 руб.)</label>
+	
+                                <div></div>		   
+            				</div>
+            			</div>
+            			<div class="cart__column">
+            				<div class="cart__column-head">Способы оплаты:</div>
+            				<div class="cart__column-body">
+                                <input type="radio" name="shk_payment" class="radio" value="Оплата наличными" id="id___11"" /><label for="id___11"">оплата наличными</label>
+	
+                                <div></div>                    
+            				</div>
+            			</div>
+            			<div class="cart__column">
+            				<div class="cart__column-head">Адрес доставки:</div>
+            				<div class="cart__column-body">	  
+    							<label for="zip" class="visually-hidden">почтовый индекс *</label><input type="text" name="zip" id="zip" class="form-control required" required="required" value="" placeholder="почтовый индекс"> <div></div>	
+    							<label for="region" class="visually-hidden">область *</label><input type="text" name="region" id="region" class="form-control required" required="required" value="" placeholder="область"> <div></div>	
+    							<label for="city" class="visually-hidden">город *</label><input type="text" name="city" id="city" class="form-control required" required="required" value="" placeholder="город"> <div></div>	
+    							<label for="house" class="visually-hidden">улица/дом/квартира *</label><input type="text" name="house" id="house" class="form-control required" required="required" value="" placeholder="улица/дом/квартира"> <div></div>	
+            				</div>
+            			</div>
+            		</div>
+					<textarea name="msg" id="msg" cols="30" rows="10" placeholder="Сообщите максимально всю информацию, которая упростит доставку выбранных вами товаров." class="form-control "></textarea>
+                	<div class="policy">
+                		<input type="checkbox" id="checkbox1" value="" name="checkbox" checked="checked" class="user-access">
+                		<label for="checkbox1">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+                	</div>
+                </div>
+            </section>  
+        	<div class="cart__row cart__row-submit">
+        		<button type="submit" class="btn btn-submit">оформить заказ</button>
+        	</div>
+        	<div class="cart__text text-center">
+        		<p>После отправки заказа с Вами свяжутся наши консультанты по указанным контактным данным, для того чтобы подтвердить заказ, уточнить детали, сроки доставки и стоимость медикамента. После подтверждения заказа необходимо вызвать нашего курьера и сделать предоплату. Стоимость доставки и наших услуг зависит от суммы заказа.</p>
+        	</div>
+        </fieldset>
+    </form>
 
 			</main>
 		</div>

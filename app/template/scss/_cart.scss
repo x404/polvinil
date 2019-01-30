@@ -78,13 +78,28 @@
 
 	&__row{
 		&-footer{
-			margin: 3rem 0;
-			padding-right: 9rem;
-			justify-content: flex-end;
+			background-color: $color9;
+			color: $color3;
+			text-align: center;
+			font-size: 1.8rem;
+			margin-top: 4rem;
+			justify-content: center;
+			font-style: normal;
+			width: 1180px;
+			margin-left: auto;
+			margin-right: auto;
 			.cost{
-				margin-left: 11rem;
-				font-weight: bold;
+				margin-left: 1rem;
+				span{
+					font-weight: bold;
+					color: $color4;					
+				}
 			}
+		}
+
+		&-submit{
+			background: $color9;
+			padding: .9rem 0;
 		}
 	}
 	.product{
@@ -115,7 +130,7 @@
 .payments{
 	border-left: 1px solid $color13;
 	border-right: 1px solid $color13;
-	margin: 6rem 0; 
+	margin: 8rem 0 5rem; 
 	padding: 0 13rem; 
 	position: relative;
 	&:before,
@@ -135,7 +150,7 @@
 	}
 
 	&__inner{
-		padding-bottom: 2rem;
+		padding-bottom: .5rem;
 		&:before,
 		&:after{
 			@extend .before;
@@ -155,7 +170,8 @@
 		font-size: 2.4em;
 		color: #808080;
 		position: relative;
-		top: -2rem;
+		padding-top: 1rem;
+		top: -3rem;
 		h1{
 			&:after{
 				display: none;
@@ -177,5 +193,227 @@
 			padding-bottom: .5rem;
 			border-bottom: 1px dashed;
 		}
+	}
+}
+
+
+
+
+.shop-cart{
+	&-thank{
+		display: flex;
+		height: calc(100% - 140px);
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.empty{
+		font-size: 20px;
+		margin: 50px 0;
+	}
+
+	.shop-cart-empty{
+		margin-bottom: 20px;
+	}
+}
+
+
+
+.cart{
+	&__form{
+		@extend .gradient-line;
+
+		margin-left: auto;
+		margin-right: auto;
+		width: 1180px;
+		.title{
+			font-family: "SegoeUI";
+			color: $color4;
+			text-transform: uppercase;
+			font-size: 1.8rem;
+			font-weight: bold;
+			margin-top: 2.5rem;
+		}
+		.policy{
+			font-style: italic;
+			color: $color3;
+			margin-top: 1.5rem;
+			a{
+				color: $color4;
+			}
+		}
+		.btn{
+			display: none;
+			&-submit{
+				background-color: #337c58;
+				background: linear-gradient(to bottom, #8bbaa3, #317b57 );
+				border-radius: 4px;
+				color: $color2;
+				display: block;
+				height: 3.6rem;
+				font-size: 15px;
+				font-style: normal;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0 1.3rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				&:hover{
+					background: linear-gradient(to bottom, #317b57, #8bbaa3 );					
+				}
+				&:disabled{
+					background-color: #b3b3b3;
+					cursor: default;
+				}
+			}
+		}
+
+		.radio + label {
+			font-style: italic;
+			border-radius: 3px;
+			cursor: pointer;
+			transition: .3s;
+			margin-top: 1.8rem;
+			margin-bottom: -.8rem;
+			&:hover{
+				background-color: $color4;
+				color: $color2;
+			}
+		}
+
+		.radio:not(checked) {
+			position: absolute;
+			opacity: 0;
+		}
+		.radio:not(checked) + label {
+			// background-color: $color9;
+			background-color: #e6e6e6;
+			display: block;
+			position: relative;
+			padding: 4px 12px;
+			min-height: 3rem;
+		}
+
+		.radio:checked + label{
+			background-color: $color4;
+			color: $color2;
+		}
+
+		.radio:disabled + label{
+			background-color: #ccc !important;
+			color: $color2;
+		}
+	}
+
+	&__column{
+		flex-basis: 25%;
+		&-head{
+			background-color: $color9;
+			color: $color3;
+			padding: 10px 3rem 10px .5rem;
+		}
+		&-body{
+			margin-top: .8rem;
+			padding-right: 2.5rem;
+			.item{
+				margin-top: 10px;
+				label{
+					display: inline-block;
+					margin: 0;
+				}
+
+				&:first-child{
+					margin-top: 1.7rem;
+				}
+			}
+		}
+
+		.form-control{
+			@include transition;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			color: $color1;
+			height: 30px;
+			padding: 5px 10px;
+			margin-top: 1rem;
+			width: 245px;
+			&:focus,
+			&:active
+			{
+				background: #fff;
+				outline: 1px solid $color4;
+			}
+			&:disabled{
+				// opacity: .8;
+				border-color: #d8d8d8;
+			}
+		}
+
+
+
+		&:last-child{
+			.cart__column-body{
+				padding-right: 0;
+			}	
+		}
+	}
+
+
+
+	&__column,
+	&__msg{
+		label{
+			font-family: "SegoeUI";
+			font-style: italic;
+			display: block;
+			color: $color3;
+			padding-left: 1.2rem;
+			margin: 10px 0 .5rem;
+		}		
+	}
+
+
+	&__msg{
+		textarea{
+			font-style: italic;
+			@include transition;
+			color: $color4;
+			padding: .5rem 10px;			
+			width: 100%;
+			&:focus,
+			&:active
+			{
+				outline: 1px solid $color4;
+			}			
+		}
+	}
+
+	.currency{
+		span{
+			font-size: 18px;
+		}
+	}
+
+
+	&__orderinfo{
+		padding: 5px 0 25px;
+		a{
+			@extend .tdu;
+		}
+		textarea.form-control{
+			border-color: #ccc;
+			border-radius: 4px;
+			height: 9.2rem;
+			margin-top: 1rem;
+			padding: .5rem 1.2rem;
+			width: calc(100% - 50px);
+		}
+	}
+
+	&__text{
+		font-size: 15px;
+		font-style: italic;
+		color: $color3;
+		padding: 10px 0 0;
 	}
 }
