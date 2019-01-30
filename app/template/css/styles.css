@@ -5480,10 +5480,6 @@ div.pagination {
   position: relative;
   transition: .3s; }
 
-.product__pic {
-  overflow: hidden;
-  transition: height .3s; }
-
 .product__desc {
   color: #fff;
   display: flex;
@@ -5507,6 +5503,9 @@ div.pagination {
       margin-right: 1.6rem;
       width: 112px; }
       .product__desc .labels .label-class:hover .label-title {
+        color: #fff;
+        background-color: #47b259; }
+      .product__desc .labels .label-class .label-title.active {
         color: #fff;
         background-color: #47b259; }
     .product__desc .labels .label-title {
@@ -5551,8 +5550,8 @@ div.pagination {
         transform: scale(-1, 1); }
       .product__desc .labels .label-type img {
         display: block; }
-      .product__desc .labels .label-type:hover {
-        background: linear-gradient(to bottom, #c4dcd0, #fff 20%, #327b57 100%); }
+      .product__desc .labels .label-type.active, .product__desc .labels .label-type:hover {
+        background: linear-gradient(to bottom, #c4dcd0, #fff 17%, #75ab91 40%, #317b57 100%); }
 
 .product__title {
   background: linear-gradient(to right, #848484, rgba(132, 132, 132, 0.5));
@@ -5668,45 +5667,59 @@ div.pagination {
 
 .product {
   position: relative; }
+  .product__pic {
+    overflow: hidden; }
   .product__thumbs {
-    position: absolute;
-    right: 5px;
-    bottom: -3px;
-    padding: 1rem 0; }
+    margin: 1.8rem 0;
+    display: flex;
+    justify-content: center; }
     .product__thumbs a {
       margin: 0 .4rem; }
     .product__thumbs img {
       border-radius: 8px; }
 
-.card .product__title {
-  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  color: #000; }
-
-.card .product__head {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%); }
-
-.card .product__desc {
-  bottom: 0;
-  right: 0; }
-
-.card .product__characteristics {
-  grid-template-columns: repeat(4, minmax(80px, max-content));
-  margin: 2rem 0 3.2rem; }
-  .card .product__characteristics .cell {
-    margin: 0 2.2rem; }
-  .card .product__characteristics .field {
-    margin-top: .5rem; }
+.card .product {
+  margin-top: 4rem;
+  position: relative; }
+  .card .product__title {
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+    color: #000; }
+  .card .product__head {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+  .card .product__desc {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    width: auto;
+    transform: translateX(-50%);
+    top: -32px; }
+    .card .product__desc .labels {
+      position: static; }
+      .card .product__desc .labels .label-title.active {
+        background: #47b259 !important;
+        color: #fff !important; }
+  .card .product__characteristics {
+    grid-template-columns: repeat(4, minmax(80px, max-content));
+    margin: 2rem 0 3.2rem; }
+    .card .product__characteristics .cell {
+      margin: 0 2.2rem; }
+    .card .product__characteristics .field {
+      margin-top: .5rem; }
+  .card .product__package {
+    width: 90px;
+    text-align: right; }
 
 .card #mainimg {
-  opacity: 1;
-  transition: .3s;
+  display: block;
   border-radius: 10px;
-  max-width: 100%; }
+  max-width: 100%;
+  opacity: 1;
+  transition: .3s; }
 
 .card .description {
   margin-top: 3rem;
@@ -5729,7 +5742,8 @@ div.pagination {
   .calc .cell-1 {
     background: #e6e6e6; }
   .calc .cell-2 {
-    background: #cccccc; }
+    background: #cccccc;
+    padding-right: 2rem; }
   .calc .cell-3 {
     background: #b3b3b3; }
   .calc .cell-4 {
@@ -6332,6 +6346,9 @@ div.pagination {
     width: 40px; }
   .catalog .product__panel {
     padding-right: 1rem; }
+  .catalog-similar .product__desc .labels .label-class {
+    margin-right: .5rem;
+    width: 100px; }
   .calc .cell {
     width: 32%;
     margin-bottom: 1.2rem; }
@@ -6779,17 +6796,9 @@ div.pagination {
     display: block; }
   .review__item {
     width: 300px; }
-  .catalog .product__pic, .catalog .product__item, .catalog .product__desc {
-    height: 17rem; }
-  .catalog .product__desc {
-    padding-top: 6rem; }
   .catalog .product__pic {
     height: 100%; }
     .catalog .product__pic img {
-      height: 100%; }
-  .catalog .product__item:hover {
-    height: 26.5rem; }
-    .catalog .product__item:hover .product__pic {
       height: 100%; }
   .catalog .product__panel {
     top: 159px; }

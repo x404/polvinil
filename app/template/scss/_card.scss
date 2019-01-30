@@ -1,16 +1,18 @@
 .product{
 	position: relative;
-	&__figure{
-
+	&__pic{
+		overflow: hidden;
 	}
 
 	&__thumbs{
-		position: absolute;
-		right: 5px;
-		bottom: -3px;
+		// position: absolute;
+		// right: 5px;
+		// bottom: -3px;
 		// background: $color2;
 		// border-radius: 10px 0 0 0;
-		padding: 1rem 0;
+		margin: 1.8rem 0;
+		display: flex;
+		justify-content: center;
 		// &:before,
 		// &:after{
 		// 	@extend .before;
@@ -38,6 +40,8 @@
 
 .card{
 	.product{
+		margin-top: 4rem;
+		position: relative;
 		&__title{
 			background: linear-gradient(to right,#fff,rgba(255,255,255,0));
 			color: $color1;
@@ -51,8 +55,19 @@
 			transform: translateY(-50%);
 		}
 		&__desc{
-			bottom: 0;
-			right: 0;
+			position: absolute;
+			left: 50%;
+			right: auto;
+			width: auto;
+			transform: translateX(-50%);
+			top: -32px;
+			.labels{
+				position: static;
+				.label-title.active{
+					background: $color4 !important;
+					color: $color2 !important;
+				}
+			}
 		}
 		&__characteristics{
 			grid-template-columns: repeat(4, minmax(80px, max-content));
@@ -64,13 +79,19 @@
 				margin-top: .5rem;
 			}
 		}
+
+		&__package{
+			width: 90px;
+			text-align: right;
+		}
 	}
 
 	#mainimg{
+		display: block;
+		border-radius: 10px;
+		max-width: 100%;
 		opacity: 1;
 		transition: .3s;
-		border-radius: 10px;
-		max-width: 100%
 	}
 
 	.description{
@@ -100,7 +121,8 @@
 			background: #e6e6e6
 		}
 		&-2{
-			background: #cccccc
+			background: #cccccc;
+			padding-right: 2rem;
 		}
 		&-3{
 			background: #b3b3b3
