@@ -90,7 +90,7 @@ input[type="number"] {
 }
 input[type="number"]:hover,
 input[type="number"]:focus {
-	-moz-appearance: number-input;
+	-moz-appearance: texfield;
 }
 
 input::-webkit-outer-spin-button,
@@ -178,6 +178,7 @@ button{
 
 .d-grid{
 	display: flex;
+	flex-wrap: wrap;
 }
 @supports (display:grid) {
 	.d-grid{
@@ -412,16 +413,18 @@ input.submit:disabled{
 
 			&.menu-3{
 				.subnav{
+					transform: translateX(-41%);
 					width: 25rem;
+					margin-left: 0;
 				}
 			}
 		}
 		.subnav{
 			left: 0;
-			margin-left: -6rem;
+			margin-left: -7rem;
 			position: absolute;
 			top: 27px;
-			width: 16rem;
+			width: 17rem;
 			z-index: -9999;
 			ul{
 				background-color: $color5;

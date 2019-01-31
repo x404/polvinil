@@ -3389,7 +3389,7 @@ input[type="number"] {
 
 input[type="number"]:hover,
 input[type="number"]:focus {
-  -moz-appearance: number-input; }
+  -moz-appearance: texfield; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -3451,7 +3451,8 @@ button {
     width: 23rem; }
 
 .d-grid {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 @supports (display: grid) {
   .d-grid {
@@ -3626,13 +3627,15 @@ input.submit:disabled {
       .navmenu .nav > li.active > a {
         border-bottom-color: #fff; }
       .navmenu .nav > li.menu-3 .subnav {
-        width: 25rem; }
+        transform: translateX(-41%);
+        width: 25rem;
+        margin-left: 0; }
     .navmenu .nav .subnav {
       left: 0;
-      margin-left: -6rem;
+      margin-left: -7rem;
       position: absolute;
       top: 27px;
-      width: 16rem;
+      width: 17rem;
       z-index: -9999; }
       .navmenu .nav .subnav ul {
         background-color: #395e4b;
@@ -4406,7 +4409,6 @@ label.error {
   margin: 3rem 0 2rem; }
 
 .vcard {
-  font-family: "SegoeUI";
   font-size: 1.5rem;
   margin-top: 1.5rem; }
   .vcard a {
@@ -6276,6 +6278,13 @@ div.pagination {
   display: none; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .navmenu .nav .subnav {
+    top: 10px; }
+  .navmenu .nav .subnav ul {
+    display: none;
+    opacity: 1; }
+  .navmenu .nav > li:hover .subnav ul {
+    display: block; }
   .advantages .d-grid {
     flex-wrap: wrap;
     justify-content: space-between; }
@@ -6294,7 +6303,26 @@ div.pagination {
   .article__item {
     height: 278px; }
   .article__text {
-    margin: 1.2rem 0; } }
+    margin: 1.2rem 0; }
+  .product__characteristics {
+    justify-content: space-between;
+    width: 100%; }
+    .product__characteristics > div {
+      width: 25%;
+      margin-bottom: 1rem; }
+  .card .product__desc .labels .label-type {
+    top: -16px; }
+  .catalog-similar .product__desc .labels .label-type {
+    top: 0; }
+  .card .product__characteristics .cell {
+    width: auto; }
+  .gal-item {
+    margin: 1rem 0; }
+    .gal-item img {
+      display: block; }
+  .video__item,
+  .article__item {
+    margin: 2rem 0; } }
 
 @media (max-width: 1299px) {
   .header .d-flex {

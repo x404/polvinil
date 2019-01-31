@@ -845,7 +845,7 @@ function calc(cnt){
 		area_pack = countEl.data('pack'),
 		cost = 0;
 
-	count = cnt * area_pack;
+	count = Math.round(cnt * area_pack*100)/100;
 	cost = parseInt(cnt * area_pack * price);
 	areapacksEl.text(splitNums('.', count.toString()));
 	countEl.val(cnt);

@@ -938,9 +938,9 @@
 <script src="//yastatic.net/share2/share.js"></script>
 
 <!-- InstanceBeginEditable name="EditRegion3" -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+
 <script>
-
-
 	//types
 	[].forEach.call( document.querySelectorAll('.filter .types .nav-link'), function(el, i){
 		el.addEventListener('click', function(e){
@@ -987,7 +987,7 @@
 					} else { // если отображаются все ТИПЫ продукта
 						if ( ($type == '' && item.className.split(' ').some(c => new RegExp($class, 'i').test(c))) || ($class == '' && item.className.split(' ').some(c => new RegExp($type, 'i').test(c)))) {
 							item.classList.remove('hide');
-						} else{ 
+						} else { 
 							item.classList.add('hide');
 						}
 					}
