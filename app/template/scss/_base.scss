@@ -26,23 +26,14 @@ html {
 
 
 body{
-	// @include flexbox;
 	@include font-size(1.4);
-	// flex-flow: column;
 	font-display: swap;
-	// height: 100vh;
 	font-family: Corbel;
 }
 
 html, body{
 	height: 100%
 }
-
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	//ie11
-}
-
 
 
 input::-moz-focus-inner{
@@ -57,7 +48,6 @@ input::-moz-focus-inner{
 }
 
 /*** standart classes *****/
-p{}
 a{
 	color: $color4;
 	transition: .3s;
@@ -166,9 +156,6 @@ button{
 		}
 	}
 
-	&-gray{
-
-	}
 
 	&-faq{
 		padding: 1.8rem 0;
@@ -463,22 +450,6 @@ input.submit:disabled{
 ---------------------------*/
 
 
-
-/* =navigation
----------------------------*/
-/* =/navigation
----------------------------*/
-
-/* =main
----------------------------*/
-
-.main{
-	aside{
-	}
-}
-
- 
-
 .visually-hidden{
 	position: absolute;
 	width: 1px;
@@ -486,8 +457,6 @@ input.submit:disabled{
 	overflow: hidden;
 	clip: rect(0 0 0 0);
 }
-
-
 
 #ymap{
 	height: 33rem;

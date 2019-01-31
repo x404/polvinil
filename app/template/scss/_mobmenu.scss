@@ -160,11 +160,14 @@ $color_2: #35694d;
 		background-color:$color_2;
 		a{
 			border-bottom: none !important;
-			font-size: 18px;
+			font-size: 1.8rem;
 			font-weight: 400;
 			&:hover{
 				text-decoration: none;
 			}
+		}
+		span{
+			font-size: 1.8rem;
 		}
 		.container{
 			padding: 0;
@@ -216,6 +219,10 @@ $color_2: #35694d;
 							color : #fff;
 						}
 					}
+					a,
+					span{
+						text-decoration: underline;
+					}
 				}
 
 				&.folder{
@@ -243,6 +250,7 @@ $color_2: #35694d;
 						position: static;
 						width: 100%;
 						margin-left: 0;
+						transform: translateX(0) !important;
 						ul{
 							background: none;
 							margin-top: -10px;
