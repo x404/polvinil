@@ -6631,6 +6631,13 @@ div.pagination {
   .lastreviews .slick-next {
     right: -45px; } }
 
+@media (max-width: 1025px) and (orientation: landscape) {
+  .btn-need,
+  .btn-rec {
+    top: 100px; }
+  .btn-house {
+    top: 320px; } }
+
 @media (max-width: 1024px) {
   .slick-prev {
     left: -20px; }
